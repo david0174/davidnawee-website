@@ -173,3 +173,86 @@
         max-width: 640px;
     }
 }
+
+/* homepage offers: coaching, teaching, workshops side by side */
+.cards-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 900px) {
+    .cards-3 {
+        grid-template-columns: 1fr;
+        max-width: 640px;
+    }
+}
+
+/* coaching ↔ teaching: short pointer under the topic cards */
+.offer-switch {
+    max-width: 760px;
+    margin: 28px auto 0;
+    color: var(--muted);
+    text-align: center;
+}
+
+.offer-switch a {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.section-soft {
+    background: var(--soft);
+}
+
+/* four menu items: keep each on one line, tighten on mid-size screens */
+nav > a {
+    white-space: nowrap;
+}
+
+@media (max-width: 1180px) {
+    nav {
+        gap: 16px;
+    }
+
+    nav > a:not(.nav-cta) {
+        letter-spacing: .06em;
+        font-size: .8rem;
+    }
+
+    .brand-name {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 1040px) {
+    nav {
+        gap: 12px;
+    }
+
+    nav > a:not(.nav-cta) {
+        letter-spacing: .03em;
+        font-size: .76rem;
+    }
+
+    .nav-cta {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* below 1000px the burger menu takes over (four menu items no longer fit next to the button) */
+@media (max-width: 1000px) {
+    nav > a:not(.nav-cta) {
+        display: none;
+    }
+
+    .language-switch {
+        display: none;
+    }
+
+    nav .menu-switch {
+        display: block;
+    }
+}
