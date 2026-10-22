@@ -207,7 +207,7 @@
 }
 
 /* four menu items: keep each on one line, tighten on mid-size screens */
-nav > a {
+.site-header nav > a {
     white-space: nowrap;
 }
 
@@ -216,7 +216,7 @@ nav > a {
         gap: 16px;
     }
 
-    nav > a:not(.nav-cta) {
+    .site-header nav > a:not(.nav-cta) {
         letter-spacing: .06em;
         font-size: .8rem;
     }
@@ -231,7 +231,7 @@ nav > a {
         gap: 12px;
     }
 
-    nav > a:not(.nav-cta) {
+    .site-header nav > a:not(.nav-cta) {
         letter-spacing: .03em;
         font-size: .76rem;
     }
@@ -244,7 +244,7 @@ nav > a {
 
 /* below 1000px the burger menu takes over (four menu items no longer fit next to the button) */
 @media (max-width: 1000px) {
-    nav > a:not(.nav-cta) {
+    .site-header nav > a:not(.nav-cta) {
         display: none;
     }
 
