@@ -158,3 +158,18 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* "Für wen?": three audience cards side by side */
+#fuer-wen .cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 900px) {
+    #fuer-wen .cards {
+        grid-template-columns: 1fr;
+        max-width: 640px;
+    }
+}
