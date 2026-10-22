@@ -142,8 +142,8 @@ backToTop.addEventListener("click", () => {
     if (skip) skip.focus({ preventScroll: true });
 });
 
-// Language: on a first visit with a different browser language, ask once whether to switch to the other
-// language version (no forced redirect, so search engines still see every page), and remember the choice.
+// Language: remember the language a visitor picks in the menu and open that version on later visits
+// (no popup; search engines still see every page in both languages)
 (() => {
     const PREF_KEY = "nawee-lang";
     const lang = document.documentElement.lang.startsWith("de") ? "de" : "en";
@@ -158,40 +158,9 @@ backToTop.addEventListener("click", () => {
 
     const alternate = document.querySelector(`link[rel="alternate"][hreflang="${other}"]`);
     if (!alternate) return; // page exists in one language only
-    const target = (new URL(alternate.href).pathname.split("/").pop() || "index.html") + location.hash;
-
-    const pref = getPref();
-    const preview = new URLSearchParams(location.search).has("lang-preview"); // ?lang-preview always shows the box (nothing is saved)
-    if (!preview && pref === other) { location.replace(target); return; } // visitor chose the other language before
-    if (!preview && pref) return;
-
-    const browserLangs = (navigator.languages || [navigator.language || ""]).map((l) => l.toLowerCase());
-    const suggest = preview || (lang === "de"
-        ? !browserLangs.some((l) => l.startsWith("de")) // German page, browser without German
-        : (browserLangs[0] || "").startsWith("de")); // English page, browser set to German first
-    if (!suggest) return;
-
-    // first visit with a different browser language: ask once in a small box, remember the answer.
-    // Only the two language names, so it is understandable without reading either language.
-    const names = { de: "Deutsch", en: "English" };
-    const overlay = document.createElement("div");
-    overlay.className = "lang-modal";
-    overlay.innerHTML = `<div class="lang-modal-box" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title">
-        <svg class="lang-modal-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18"></path><path d="M12 3a14 14 0 0 0 0 18"></path></svg>
-        <p class="lang-modal-title" id="lang-modal-title"><span lang="en">Language</span> · <span lang="de">Sprache</span></p>
-        <div class="lang-modal-actions">
-            <a class="button primary" href="${target}" lang="${other}">${names[other]}</a>
-            <button type="button" class="button secondary" lang="${lang}">${names[lang]}</button>
-        </div>
-    </div>`;
-    const close = () => { if (!preview) setPref(lang); overlay.remove(); document.removeEventListener("keydown", onKey); };
-    const onKey = (event) => { if (event.key === "Escape") close(); };
-    overlay.querySelector("a").addEventListener("click", () => { if (!preview) setPref(other); });
-    overlay.querySelector("button").addEventListener("click", close);
-    overlay.addEventListener("click", (event) => { if (event.target === overlay) close(); });
-    document.addEventListener("keydown", onKey);
-    document.body.append(overlay);
-    overlay.querySelector("a").focus();
+    if (getPref() === other) {
+        location.replace((new URL(alternate.href).pathname.split("/").pop() || "index.html") + location.hash);
+    }
 })();
 
 // Homepage: underline "Über mich" / "About Me" in the menu while the About Me section is on screen
