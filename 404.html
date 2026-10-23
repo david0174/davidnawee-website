@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Seite nicht gefunden | David Nawee</title>
+    <link rel="icon" type="image/png" href="/assets/favicon.png?v=2">
+    <!-- shown by GitHub Pages for every address that doesn't exist; all paths are absolute because it can appear at any depth -->
+    <style>
+        @font-face { font-family: "Playfair Display"; src: url("/fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype"); font-weight: 400 900; font-display: swap; }
+        @font-face { font-family: "Source Sans 3"; src: url("/fonts/SourceSans3-Variable.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
+        :root { --blue: #2b5c9e; --dark: #172b45; --accent: #d9a04a; --soft: #f8f6f2; --muted: #5b6575; }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 32px 16px;
+            background: radial-gradient(circle at 50% 30%, var(--soft), #fff 70%);
+            color: var(--dark); font-family: "Source Sans 3", system-ui, sans-serif; text-align: center;
+        }
+        main { max-width: 520px; }
+        .logo { display: inline-block; margin-bottom: 26px; animation: float 5s ease-in-out infinite; }
+        .logo { display: grid; justify-items: center; gap: 14px; color: var(--dark); text-decoration: none; }
+        .logo img { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 14px 30px rgba(23, 43, 69, .18); }
+        .logo strong { font-family: "Playfair Display", Georgia, serif; font-size: 2rem; letter-spacing: -.02em; line-height: 1; }
+        .logo small { margin-top: -8px; color: var(--accent); font-size: .72rem; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; }
+        .code { margin: 0 0 6px; color: var(--accent); font-weight: 800; letter-spacing: .2em; font-size: .85rem; }
+        h1 { margin: 0 0 12px; font-family: "Playfair Display", Georgia, serif; font-size: clamp(2rem, 6vw, 2.8rem); line-height: 1.1; }
+        p { margin: 0 0 26px; color: var(--muted); font-size: 1.1rem; line-height: 1.55; }
+        .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+        .actions a { padding: 13px 22px; border-radius: 12px; font-weight: 700; text-decoration: none; }
+        .primary { background: var(--blue); color: #fff; box-shadow: 0 5px 0 var(--accent); }
+        .secondary { border: 1.5px solid var(--blue); color: var(--blue); }
+        span[lang="en"] { display: none; }
+        html.en span[lang="de"] { display: none; }
+        html.en span[lang="en"] { display: inline; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        @media (prefers-reduced-motion: reduce) { .logo { animation: none; } }
+    </style>
+    <script>
+        // German or English, depending on the visitor's browser
+        if (!/^de/i.test(navigator.language || "")) { document.documentElement.classList.add("en"); document.documentElement.lang = "en"; }
+    </script>
+</head>
+<body>
+    <main>
+        <a class="logo" href="/" data-en="/index-en.html" aria-label="David Nawee"><img src="/assets/favicon.png?v=2" alt="" width="96" height="96"><strong>David Nawee</strong><small>Coaching</small></a>
+        <p class="code">404</p>
+        <h1><span lang="de">Diese Seite gibt es nicht.</span><span lang="en">This page doesn’t exist.</span></h1>
+        <p><span lang="de">Vielleicht hat sich die Adresse geändert oder ein Buchstabe ist verrutscht. Hier geht’s weiter:</span><span lang="en">Maybe the address changed or a letter slipped. Here’s where to go next:</span></p>
+        <div class="actions">
+            <a class="primary" href="/" data-en="/index-en.html"><span lang="de">Zur Startseite</span><span lang="en">Go to the homepage</span></a>
+            <a class="secondary" href="https://cal.com/nawee/15min"><span lang="de">Kostenloses Erstgespräch</span><span lang="en">Book a free call</span></a>
+        </div>
+    </main>
+    <script>
+        if (document.documentElement.lang === "en") document.querySelectorAll("[data-en]").forEach((a) => { a.href = a.dataset.en; });
+    </script>
+</body>
+</html>
