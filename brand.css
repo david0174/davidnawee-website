@@ -313,3 +313,27 @@
 .courses-teaser .course-card h3 {
     margin-bottom: 4px;
 }
+
+/* coaching page: pointer to the free Business English course on nawee.net, inside the test band */
+.test-band-more {
+    margin-top: 12px;
+    font-size: .95rem;
+    opacity: .9;
+}
+
+.test-band-more a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* the band's description is no longer the last paragraph – keep its light color and width */
+.test-band-inner > div > p:not(.eyebrow) {
+    max-width: 620px;
+    color: #d7e3f7;
+}
+
+.test-band-inner > div > p:has(+ .test-band-more) {
+    margin: 0;
+}
