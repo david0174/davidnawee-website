@@ -337,3 +337,28 @@
 .test-band-inner > div > p:has(+ .test-band-more) {
     margin: 0;
 }
+
+/* header: link to nawee.net (free learning platform) */
+.site-header nav > a.nav-ext {
+    color: var(--blue, #2457a6);
+}
+
+/* homepage nawee.net band: what's on the platform */
+.nawee-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nawee-features li {
+    padding: 6px 12px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 600;
+}
