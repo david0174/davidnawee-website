@@ -362,3 +362,18 @@
     font-size: .9rem;
     font-weight: 600;
 }
+
+/* homepage: outcome cards (communicate · AI · grow) */
+.outcome-card { display: flex; flex-direction: column; }
+.outcome-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.outcome-icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: var(--soft, #f8f6f2); font-size: 1.6rem; }
+.outcome-badge { padding: 4px 12px; border-radius: 99px; background: var(--blue, #2457a6); color: #fff; font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.outcome-card .text-link { margin-top: 6px; }
+.outcome-card .text-link:first-of-type { margin-top: auto; padding-top: 12px; }
+
+/* AI training page */
+.ai-act { max-width: 1000px; margin: 28px auto 0; padding: 22px 26px; border-left: 5px solid var(--blue, #2457a6); border-radius: 14px; background: var(--soft, #f8f6f2); }
+.ai-act h3 { margin: 0 0 8px; }
+.ai-act p { margin: 0 0 8px; }
+.ai-act-note { color: var(--muted); font-size: .9rem; }
+.ai-project h3 { margin-bottom: 6px; }
