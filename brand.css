@@ -400,3 +400,15 @@
 .proj-imgs img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 12px 30px rgba(20, 33, 61, .08); }
 .proj-imgs figcaption { margin-top: 6px; color: var(--muted); font-size: .82rem; }
 @media (max-width: 900px) { .proj { grid-template-columns: 1fr; gap: 20px; } }
+
+/* KI-Schulung Hannover: pilot offer + FAQ */
+.pilot-card { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; padding: 32px 36px; border-radius: 20px; background: var(--blue-dark, #172b45); color: #f8f6f2; }
+.pilot-card .eyebrow { color: var(--yellow, #d9a04a); }
+.pilot-card h2 { margin: 6px 0 6px; color: #fff; font-size: clamp(2rem, 4vw, 2.8rem); }
+.pilot-card ul { margin: 14px 0; padding-left: 20px; display: grid; gap: 6px; }
+.pilot-sub { color: #c9d6e8; font-size: .95rem; margin: 0; }
+.faq { max-width: 860px; margin: 0 auto; display: grid; gap: 10px; }
+.faq-item { border: 1px solid var(--line, #e7e2da); border-radius: 14px; background: #fff; padding: 14px 18px; }
+.faq-item summary { cursor: pointer; font-weight: 700; color: var(--blue-dark, #172b45); }
+.faq-item p { margin: 10px 0 0; }
+@media (max-width: 760px) { .pilot-card { grid-template-columns: 1fr; padding: 24px; } }
