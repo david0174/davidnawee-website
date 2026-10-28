@@ -471,3 +471,35 @@ footer nav.footer-links > a:not(.nav-cta) { display: block; margin: 0 0 10px; br
 .site-header > .theme-toggle {
     margin-left: auto;
 }
+
+/* homepage hero without portrait (2026-10-28): one centred block, the three points side by side */
+.me-hero--solo {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 1080px;
+    text-align: center;
+}
+
+.me-hero--solo h1 { font-size: clamp(2.4rem, 5.4vw, 4.6rem); }
+.me-hero--solo .hero-claim { font-size: 1.25rem; }
+
+.me-hero--solo .hero-points {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin: 34px 0 34px;
+    text-align: left;
+}
+
+.me-hero--solo .hero-points li {
+    padding: 18px 18px 18px 52px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--white);
+}
+
+.me-hero--solo .hero-points li::before { left: 18px; top: 20px; }
+.me-hero--solo .hero-points li strong { display: block; margin-bottom: 2px; }
+.me-hero--solo .hero-actions { justify-content: center; }
+
+@media (max-width: 860px) {
+    .me-hero--solo .hero-points { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+}

@@ -274,6 +274,7 @@
     html:not([data-theme="light"]) .hero-points li strong { color: var(--dm-head); }
     html:not([data-theme="light"]) .hero-claim { color: var(--yellow-dark, #e9c386); }
     html:not([data-theme="light"]) .theme-toggle { background: var(--dm-bg); color: var(--dm-head); }
+    html:not([data-theme="light"]) .me-hero--solo .hero-points li { background: var(--dm-bg); }
     html:not([data-theme="light"]) body { background: var(--dm-bg); color: var(--ink); }
     html:not([data-theme="light"]) .language-toggle img { filter: invert(1); }
     html:not([data-theme="light"]) h1, html:not([data-theme="light"]) h2, html:not([data-theme="light"]) h3, html:not([data-theme="light"]) h4 { color: var(--dm-head); }
@@ -551,6 +552,7 @@ html[data-theme="dark"] .hero-points li { color: var(--muted, #d1d3d6); }
 html[data-theme="dark"] .hero-points li strong { color: var(--dm-head); }
 html[data-theme="dark"] .hero-claim { color: var(--yellow-dark, #e9c386); }
 html[data-theme="dark"] .theme-toggle { background: var(--dm-bg); color: var(--dm-head); }
+html[data-theme="dark"] .me-hero--solo .hero-points li { background: var(--dm-bg); }
 html[data-theme="dark"] body { background: var(--dm-bg); color: var(--ink); }
 html[data-theme="dark"] .language-toggle img { filter: invert(1); }
 html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4 { color: var(--dm-head); }
