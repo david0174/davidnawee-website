@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Nawee – Visitenkarte</title>
+    <meta name="description" content="Digitale Visitenkarte von David Nawee, KI-Trainer und Kommunikationscoach in Hannover und online.">
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#172b45">
+    <link rel="icon" type="image/png" href="assets/favicon.png?v=2">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2">
+    <meta property="og:title" content="David Nawee – KI-Trainer & Kommunikationscoach">
+    <meta property="og:description" content="Englisch-Coaching · KI-Training · Workshops – Hannover & online">
+    <meta property="og:image" content="https://davidnawee.com/assets/david-portrait.jpg">
+    <!-- Cloudflare Web Analytics: cookie-free visit statistics (see privacy policy, section 3) --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "552f8a72f1cd42bfa6e620ea5f4efcd0"}'></script><!-- End Cloudflare Web Analytics -->
+    <style>
+        :root { --blue: #2b5c9e; --blue-dark: #172b45; --blue-soft: #eef2f7; --yellow: #d9a04a; --ink: #1c2633; --line: #e7e2da; --soft: #f8f6f2; --card: #fff; --muted: #5b6675; }
+        @media (prefers-color-scheme: dark) {
+            :root { --blue: #8fb4e6; --blue-dark: #e8eef7; --blue-soft: #1f2b3b; --ink: #e8eef7; --line: #2c3a4d; --soft: #0f1722; --card: #172233; --muted: #a9b4c3; }
+        }
+        * { box-sizing: border-box; }
+        body { margin: 0; min-height: 100vh; background: var(--soft); color: var(--ink); font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        main { max-width: 440px; margin: 0 auto; padding: 24px 16px 40px; }
+        .card { background: var(--card); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; box-shadow: 0 10px 30px rgba(23, 43, 69, .08); }
+        .top { background: #172b45; color: #fff; text-align: center; padding: 28px 20px 22px; border-bottom: 4px solid var(--yellow); }
+        .top img { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; }
+        h1 { margin: 12px 0 2px; font-size: 1.6rem; letter-spacing: -.01em; }
+        .role { margin: 0; font-weight: 600; }
+        .role-en { margin: 2px 0 0; opacity: .8; font-size: .9rem; }
+        .place { margin: 8px 0 0; color: var(--yellow); font-size: .85rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+        .actions { display: grid; gap: 10px; padding: 18px; }
+        .btn { display: flex; align-items: center; gap: 12px; padding: 13px 16px; border: 1.5px solid var(--line); border-radius: 14px; background: var(--card); color: var(--ink); text-decoration: none; font-weight: 600; font-size: 1rem; cursor: pointer; width: 100%; font-family: inherit; text-align: left; }
+        .btn:hover { border-color: var(--blue); }
+        .btn .ic { width: 22px; text-align: center; font-size: 1.15rem; }
+        .btn small { display: block; color: var(--muted); font-weight: 500; font-size: .8rem; }
+        .btn.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
+        .btn.primary small { color: rgba(255, 255, 255, .85); }
+        @media (prefers-color-scheme: dark) { .btn.primary { color: #0f1722; } .btn.primary small { color: rgba(15, 23, 34, .75); } }
+        .qr { border-top: 1px solid var(--line); padding: 18px; text-align: center; }
+        .qr img { width: 220px; max-width: 70%; height: auto; background: #fff; padding: 10px; border-radius: 12px; image-rendering: pixelated; }
+        .qr p { margin: 8px 0 0; color: var(--muted); font-size: .9rem; }
+        .offers { margin: 18px 4px 0; color: var(--muted); font-size: .9rem; text-align: center; }
+        .legal { margin-top: 18px; text-align: center; font-size: .8rem; }
+        .legal a { color: var(--muted); }
+        .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: #172b45; color: #fff; padding: 10px 16px; border-radius: 999px; font-size: .9rem; opacity: 0; transition: opacity .2s; pointer-events: none; }
+        .toast.show { opacity: 1; }
+    </style>
+</head>
+<body>
+<main>
+    <div class="card">
+        <div class="top">
+            <img src="assets/david-portrait.jpg" alt="David Nawee">
+            <h1>David Nawee</h1>
+            <p class="role">KI-Trainer &amp; Kommunikationscoach</p>
+            <p class="role-en">AI Trainer &amp; Communication Coach</p>
+            <p class="place">Hannover · Online</p>
+        </div>
+        <div class="actions">
+            <a class="btn primary" href="david-nawee.vcf" download><span class="ic" aria-hidden="true">👤</span><span>Kontakt speichern<small>Save contact</small></span></a>
+            <a class="btn" href="tel:+4951193676970"><span class="ic" aria-hidden="true">📞</span><span>Anrufen · Call<small>+49 511 936 76970</small></span></a>
+            <a class="btn" href="mailto:david@nawee.net"><span class="ic" aria-hidden="true">✉️</span><span>E-Mail<small>david@nawee.net</small></span></a>
+            <a class="btn" href="https://cal.com/nawee/15min" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">📅</span><span>Kostenloses Erstgespräch<small>Free 15-minute intro call</small></span></a>
+            <a class="btn" href="https://davidnawee.com/"><span class="ic" aria-hidden="true">🌐</span><span>davidnawee.com<small>Coaching · KI-Training · Workshops</small></span></a>
+            <a class="btn" href="https://nawee.net/" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">📚</span><span>nawee.net<small>Kostenlos Englisch lernen · Learn English for free</small></span></a>
+            <a class="btn" href="https://www.linkedin.com/company/146650137" target="_blank" rel="noopener noreferrer"><span class="ic" aria-hidden="true">in</span><span>LinkedIn</span></a>
+            <button class="btn" type="button" data-share><span class="ic" aria-hidden="true">🔗</span><span>Karte teilen<small>Share this card</small></span></button>
+        </div>
+        <div class="qr">
+            <img src="assets/card-qr.png" alt="QR-Code zu davidnawee.com/karte.html">
+            <p>Scannen, um diese Karte zu öffnen · Scan to open this card</p>
+        </div>
+    </div>
+    <p class="offers">Englisch-Coaching · KI-Training · Coaching für Selbstvertrauen · Workshops für Teams</p>
+    <p class="legal"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+</main>
+<div class="toast" role="status" data-toast></div>
+<script>
+    // share the card: the phone's share menu (WhatsApp, Mail, …) or copy the link
+    document.querySelector("[data-share]").addEventListener("click", async () => {
+        const url = "https://davidnawee.com/karte.html";
+        const data = { title: "David Nawee – KI-Trainer & Kommunikationscoach", url };
+        if (navigator.share) { try { await navigator.share(data); } catch { /* closed */ } return; }
+        try { await navigator.clipboard.writeText(url); } catch { return; }
+        const t = document.querySelector("[data-toast]");
+        t.textContent = "Link kopiert · Link copied";
+        t.classList.add("show");
+        setTimeout(() => t.classList.remove("show"), 2000);
+    });
+</script>
+</body>
+</html>
