@@ -48,7 +48,7 @@
 }
 
 .footer-free {
-    margin-top: 14px;
+    margin-top: 0; /* same spacing as the other footer items (flex gap) */
     font-size: .9rem;
     color: var(--muted);
 }
@@ -438,3 +438,9 @@
 .hero-points li strong { color: var(--blue-dark, #172b45); }
 .hero-points li::before { content: ""; position: absolute; left: 0; top: 2px; width: 22px; height: 22px; border-radius: 50%; background: var(--yellow, #d9a04a) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center / 14px no-repeat; }
 .hero-claim { margin: 14px 0 0; font-size: 1.15rem; font-weight: 600; color: var(--yellow-dark, #9a6a1c); font-style: italic; }
+
+/* footer navigation: two evenly balanced columns for any number of links (replaces the fixed-row grid) */
+footer .footer-links { display: block; columns: 2; column-gap: 36px; }
+footer .footer-links .footer-heading { column-span: all; margin-bottom: 12px; }
+footer nav.footer-links > a:not(.nav-cta) { display: block; margin: 0 0 10px; break-inside: avoid; }
+@media (max-width: 560px) { footer .footer-links { column-gap: 14px; } }
