@@ -2,3 +2,5 @@
 body { background: var(--dm-bg); color: var(--ink); }
 .language-toggle img { filter: invert(1); }
 h1, h2, h3, h4 { color: var(--dm-head); }
+/* round photo in the hero: yellow ring in dark mode */
+.hero-person img { border-color: var(--yellow); }
