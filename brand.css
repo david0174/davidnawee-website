@@ -115,8 +115,11 @@
 
 @media (max-width: 860px) {
     .me-hero {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
+
+    .me-hero h1 { font-size: clamp(2rem, 9vw, 3rem); }
+    .me-hero-copy, .hero-points li { min-width: 0; overflow-wrap: break-word; }
 
     .me-hero-photo {
         order: -1;
@@ -419,3 +422,19 @@
 .guide-card p { margin: 0; }
 .guide-actions { display: grid; gap: 10px; justify-items: center; }
 @media (max-width: 760px) { .guide-card { grid-template-columns: 1fr; padding: 22px; } .guide-actions { justify-items: start; } }
+
+/* testimonials (testimonials.js) – hidden until a real one exists */
+.testimonial-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.testimonial { position: relative; margin: 0; padding: 28px 26px 22px; border-radius: 18px; background: #fff; border: 1px solid var(--line, #e7e2da); display: flex; flex-direction: column; justify-content: space-between; gap: 18px; }
+.testimonial blockquote { margin: 0; font-size: 1.05rem; line-height: 1.55; color: var(--ink, #1c2633); }
+.testimonial figcaption { display: flex; gap: 12px; align-items: center; font-size: .92rem; color: var(--muted, #5b6675); }
+.testimonial-avatar { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: var(--blue-soft, #eef2f7); color: var(--blue, #2b5c9e); font-weight: 700; flex: none; }
+.testimonial-sample { position: absolute; top: -11px; left: 18px; background: #b42318; color: #fff; font-size: .7rem; font-weight: 800; letter-spacing: .06em; padding: 3px 10px; border-radius: 99px; }
+.testimonial-note { text-align: center; color: var(--muted, #5b6675); font-size: .85rem; margin-top: 16px; }
+
+/* hero: three strong points instead of a paragraph */
+.hero-points { list-style: none; margin: 22px 0 26px; padding: 0; display: grid; gap: 10px; }
+.hero-points li { position: relative; padding-left: 34px; font-size: 1.08rem; line-height: 1.45; color: var(--muted, #3b4555); }
+.hero-points li strong { color: var(--blue-dark, #172b45); }
+.hero-points li::before { content: ""; position: absolute; left: 0; top: 2px; width: 22px; height: 22px; border-radius: 50%; background: var(--yellow, #d9a04a) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center / 14px no-repeat; }
+.hero-claim { margin: 14px 0 0; font-size: 1.15rem; font-weight: 600; color: var(--yellow-dark, #9a6a1c); font-style: italic; }
