@@ -1,6 +1,4 @@
-/* hand-written dark-mode fixes (appended to dark.css by drafts/build-dark-css.py) */
-@media (prefers-color-scheme: dark) {
-    body { background: var(--dm-bg); color: var(--ink); }
-    .language-toggle img { filter: invert(1); }
-    h1, h2, h3, h4 { color: var(--dm-head); }
-}
+/* hand-written dark-mode fixes – plain rules, the generator scopes them to dark mode (device setting + theme button) */
+body { background: var(--dm-bg); color: var(--ink); }
+.language-toggle img { filter: invert(1); }
+h1, h2, h3, h4 { color: var(--dm-head); }

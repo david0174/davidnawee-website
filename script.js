@@ -295,3 +295,42 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
     window.addEventListener("resize", setOffset);
 })();
 
+
+// THEME BUTTON – light/dark. Without a choice the site follows the device (dark.css); the choice is remembered
+// in localStorage ("dn-theme") and set on <html data-theme> by a tiny script in <head> before the page paints.
+(function () {
+    const root = document.documentElement;
+    const media = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+    const isDark = () => root.dataset.theme ? root.dataset.theme === "dark" : !!(media && media.matches);
+    const lang = (root.lang || "en").slice(0, 2);
+    const LABELS = { de: ["Dunkles Design", "Helles Design"], he: ["מצב כהה", "מצב בהיר"], en: ["Dark mode", "Light mode"] };
+    const [toDark, toLight] = LABELS[lang] || LABELS.en;
+    const MOON = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.7 14.6A8.5 8.5 0 0 1 9.4 3.3a.7.7 0 0 0-.9-.9A10 10 0 1 0 21.6 15.5a.7.7 0 0 0-.9-.9z"/></svg>';
+    const SUN = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1.8v2.4M12 19.8v2.4M1.8 12h2.4M19.8 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M4.8 19.2l1.7-1.7M17.5 6.5l1.7-1.7"/></g></svg>';
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "theme-toggle";
+
+    function render() {
+        const dark = isDark();
+        button.innerHTML = dark ? SUN : MOON;
+        button.setAttribute("aria-label", dark ? toLight : toDark);
+        button.title = dark ? toLight : toDark;
+    }
+
+    button.addEventListener("click", () => {
+        const next = isDark() ? "light" : "dark";
+        root.dataset.theme = next;
+        try { localStorage.setItem("dn-theme", next); } catch (e) { /* private mode: works until reload */ }
+        render();
+    });
+    if (media && media.addEventListener) media.addEventListener("change", render);
+
+    const header = document.querySelector(".site-header");
+    if (header) {
+        const spot = header.querySelector(".language-switch, .menu-switch");
+        if (spot) spot.before(button); else header.appendChild(button);
+    }
+    render();
+})();

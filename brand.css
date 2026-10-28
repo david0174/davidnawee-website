@@ -444,3 +444,30 @@ footer .footer-links { display: block; columns: 2; column-gap: 36px; }
 footer .footer-links .footer-heading { column-span: all; margin-bottom: 12px; }
 footer nav.footer-links > a:not(.nav-cta) { display: block; margin: 0 0 10px; break-inside: avoid; }
 @media (max-width: 560px) { footer .footer-links { column-gap: 14px; } }
+
+/* THEME BUTTON (sun/moon) – added to the header by script.js */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--blue-dark);
+    cursor: pointer;
+    flex: none;
+    transition: transform .2s, border-color .2s;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    transform: rotate(-15deg);
+    border-color: var(--blue);
+}
+
+.site-header > .theme-toggle {
+    margin-left: auto;
+}
