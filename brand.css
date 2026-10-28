@@ -412,3 +412,10 @@
 .faq-item summary { cursor: pointer; font-weight: 700; color: var(--blue-dark, #172b45); }
 .faq-item p { margin: 10px 0 0; }
 @media (max-width: 760px) { .pilot-card { grid-template-columns: 1fr; padding: 24px; } }
+
+/* free guide download box */
+.guide-card { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; padding: 28px 32px; border-radius: 20px; border: 2px solid var(--yellow, #d9a04a); background: var(--soft, #f8f6f2); }
+.guide-card h3 { margin: 4px 0 8px; }
+.guide-card p { margin: 0; }
+.guide-actions { display: grid; gap: 10px; justify-items: center; }
+@media (max-width: 760px) { .guide-card { grid-template-columns: 1fr; padding: 22px; } .guide-actions { justify-items: start; } }
