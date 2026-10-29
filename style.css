@@ -6371,3 +6371,7 @@ footer .footer-links .footer-heading {
 @media (max-width: 640px) {
     .nl-start { grid-template-columns: minmax(0, 1fr); }
 }
+
+.nl-form--soon .newsletter-fields {
+    opacity: .5;
+}

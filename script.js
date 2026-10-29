@@ -357,9 +357,15 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
             status.classList.toggle("nl-status--error", !ok);
             status.hidden = false;
         };
+        // no Brevo form link yet → show the box, but greyed out with a "starting soon" note
+        if (!/^https:\/\/[\w.-]+\.sibforms\.com\//.test(form.getAttribute("action") || "")) {
+            form.querySelectorAll("input, button").forEach((el) => { el.disabled = true; });
+            form.classList.add("nl-form--soon");
+            show(form.dataset.soon || "", true);
+            return;
+        }
         form.addEventListener("submit", async (event) => {
             event.preventDefault();
-            if (!/^https:\/\/[\w.-]+\.sibforms\.com\//.test(form.getAttribute("action") || "")) { show(form.dataset.error, false); return; }
             if (form.nl_zx_hp && form.nl_zx_hp.value) { show(form.dataset.error, false); return; } // spam trap
             if (form.email_address_check) form.email_address_check.value = "";
             if (subscribed().includes(fingerprint(form.EMAIL.value))) { show(form.dataset.already, false); return; }
