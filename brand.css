@@ -509,3 +509,71 @@ footer nav.footer-links > a:not(.nav-cta) { display: block; margin: 0 0 10px; br
    inherited it as a fixed size → even tighter. Own spacing per line, matched to its size. */
 .me-hero h1 { letter-spacing: -.022em; }
 h1 span { letter-spacing: -.012em; word-spacing: .04em; }
+
+/* small screens (burger menu): the language button stays in the header, the sun/moon switch moves into the burger menu */
+.theme-toggle-row {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .site-header .language-switch {
+        display: block;
+    }
+
+    .site-header .theme-toggle {
+        display: none;
+    }
+
+    .menu-switch .mobile-menu .theme-toggle-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        margin: 4px 0;
+        padding: 12px 14px;
+        border: 0;
+        border-top: 1px solid var(--line);
+        background: transparent;
+        color: var(--blue-dark);
+        font: inherit;
+        font-weight: 600;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .menu-switch .mobile-menu .theme-toggle-row:hover {
+        background: var(--blue-soft);
+    }
+}
+
+/* homepage: nawee.net hint at the very end – smaller and calmer than the coaching sections */
+.test-band--quiet {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    background: var(--soft);
+    border-top: 1px solid var(--line);
+}
+
+.test-band--quiet .test-band-inner {
+    max-width: 980px;
+}
+
+.test-band--quiet h2 {
+    font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+}
+
+.test-band--quiet .eyebrow {
+    color: var(--muted);
+}
+
+.test-band--quiet h2 {
+    color: var(--blue-dark);
+}
+
+.test-band--quiet .test-band-inner > div > p:not(.eyebrow) {
+    color: var(--ink);
+}
+
+.test-band--quiet .test-band-inner > div > p strong {
+    color: var(--blue-dark);
+}

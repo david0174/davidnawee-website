@@ -158,9 +158,20 @@ backToTop.addEventListener("click", () => {
 
     const alternate = document.querySelector(`link[rel="alternate"][hreflang="${other}"]`);
     if (!alternate) return; // page exists in one language only
-    if (getPref() === other) {
-        location.replace((new URL(alternate.href).pathname.split("/").pop() || "index.html") + location.hash);
-    }
+    const go = () => location.replace((new URL(alternate.href).pathname.split("/").pop() || "index.html") + location.search + location.hash);
+    if (getPref() === other) { go(); return; }
+    if (getPref()) return; // the visitor already chose this language
+    // first visit: the device's language and region decide (no IP lookup – nothing leaves the browser).
+    // German stays for German-language devices and devices set to Germany, Austria or Switzerland; everyone else gets English.
+    // (English pages never redirect to German, so nobody gets bounced while browsing.)
+    const bot = /bot|crawl|spider|slurp|google|bing|yandex|duckduck|baidu|facebookexternalhit|linkedinbot|preview/i.test(navigator.userAgent);
+    if (bot || navigator.webdriver) return; // search engines see each page as it is
+    const langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ""];
+    let zone = "";
+    try { zone = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch { /* ignore */ }
+    const germanRegion = langs.some((l) => /-(DE|AT|CH|LI)\b/i.test(l)) || /^Europe\/(Berlin|Busingen|Vienna|Zurich|Vaduz)$/.test(zone);
+    const wantsGerman = /^de\b/i.test(langs[0] || "") || germanRegion;
+    if (lang === "de" && !wantsGerman) go(); // e.g. a phone in the US lands on the English page
 })();
 
 // Homepage: underline "Über mich" / "About Me" in the menu while the About Me section is on screen
@@ -312,25 +323,35 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
     button.type = "button";
     button.className = "theme-toggle";
 
+    // on small screens the switch sits inside the burger menu as a labelled row (the language button stays in the header)
+    const menuButton = document.createElement("button");
+    menuButton.type = "button";
+    menuButton.className = "theme-toggle-row";
+
     function render() {
         const dark = isDark();
         button.innerHTML = dark ? SUN : MOON;
         button.setAttribute("aria-label", dark ? toLight : toDark);
         button.title = dark ? toLight : toDark;
+        menuButton.innerHTML = `${dark ? SUN : MOON}<span>${dark ? toLight : toDark}</span>`;
     }
 
-    button.addEventListener("click", () => {
+    const toggleTheme = () => {
         const next = isDark() ? "light" : "dark";
         root.dataset.theme = next;
         try { localStorage.setItem("dn-theme", next); } catch (e) { /* private mode: works until reload */ }
         render();
-    });
+    };
+    button.addEventListener("click", toggleTheme);
+    menuButton.addEventListener("click", toggleTheme);
     if (media && media.addEventListener) media.addEventListener("change", render);
 
     const header = document.querySelector(".site-header");
     if (header) {
         const spot = header.querySelector(".language-switch, .menu-switch");
         if (spot) spot.before(button); else header.appendChild(button);
+        const menu = header.querySelector(".mobile-menu");
+        if (menu) { const langs = menu.querySelector(".mobile-menu-languages"); if (langs) langs.before(menuButton); else menu.appendChild(menuButton); }
     }
     render();
 })();

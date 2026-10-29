@@ -9,3 +9,7 @@ h1, h2, h3, h4 { color: var(--dm-head); }
 .nl-topic span { background: #141b26; border-color: #2e3a4d; color: #e9eef5; }
 .nl-topic input:checked + span { background: #1e2f4a; border-color: #7fa6dd; }
 .nl-topics legend { color: #e9eef5; }
+
+/* nawee.net hint at the end of the homepage: plain, calm strip */
+.test-band--quiet { background: #121822; border-top-color: #232c3a; }
+.test-band--quiet .test-band-inner { border: 0; background: transparent; box-shadow: none; }
