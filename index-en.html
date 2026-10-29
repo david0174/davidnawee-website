@@ -10,9 +10,9 @@
     <link rel="alternate" hreflang="en" href="https://davidnawee.com/index-en.html">
     <link rel="alternate" hreflang="he" href="https://davidnawee.com/he.html">
     <link rel="alternate" hreflang="x-default" href="https://davidnawee.com/">
-    <link rel="stylesheet" href="style.css?v=20261029a">
-    <link rel="stylesheet" href="brand.css?v=20261029a">
-    <link rel="stylesheet" href="dark.css?v=20261029a">
+    <link rel="stylesheet" href="style.css?v=20261029b">
+    <link rel="stylesheet" href="brand.css?v=20261029b">
+    <link rel="stylesheet" href="dark.css?v=20261029b">
     <script>try{var t=localStorage.getItem("dn-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
     <link rel="icon" type="image/png" href="assets/favicon.png?v=2">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2">
@@ -312,6 +312,51 @@
             </div>
         </section>
 
+        <!-- Newsletter "Smart Tools, Strong Voice": sent to Brevo by script.js only when someone clicks the button -->
+        <section class="newsletter section" id="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-copy">
+      <p class="eyebrow">NEWSLETTER</p>
+      <h2>Smart Tools, Strong Voice</h2>
+      <span class="nl-momentum" aria-hidden="true"></span>
+      <p class="nl-lead">Three minutes a week: what AI can really do right now, one prompt to try and one tip to communicate more clearly.</p>
+      <ul class="nl-perks">
+        <li><span aria-hidden="true">🤖</span><div><strong>AI explained</strong>One current development – explained simply, with sources</div></li>
+        <li><span aria-hidden="true">🛠️</span><div><strong>Try this week</strong>One prompt or workflow for your working day</div></li>
+        <li><span aria-hidden="true">🎯</span><div><strong>Communicate better</strong>Meetings, presentations, presence – one concrete tip</div></li>
+      </ul>
+      <p class="nl-meta"><span>📬 Every Tuesday</span><span>⏱️ 3 minutes</span><span>🇬🇧 In English</span></p>
+    </div>
+    <div class="newsletter-form">
+      <div class="nl-preview" aria-hidden="true">
+        <p class="nl-preview-tag">TRY THIS WEEK</p>
+        <p class="nl-preview-phrase">“Summarize this email in 3 bullet points and suggest a short, friendly reply.”</p>
+        <p class="nl-preview-de">🛠️ A prompt you can use right away.</p>
+      </div>
+      <p class="nl-form-h">Every Tuesday in your inbox</p>
+      <form class="nl-form" method="POST" action="BREVO_FORM_URL"
+            data-success="📩 Almost there! Please check your inbox and click the confirmation link – then your first issue is on its way."
+            data-error="Your subscription could not be saved. Please try again later or write to david@nawee.net."
+            data-already="This email address is already subscribed. 📬 Check your inbox – or write to david@nawee.net if no emails arrive."
+            data-sending="Sending …">
+        <div class="newsletter-fields">
+          <label class="visually-hidden" for="VORNAME">Your first name (optional)</label>
+          <input type="text" id="VORNAME" name="VORNAME" autocomplete="given-name" placeholder="First name (optional)" maxlength="40">
+          <label class="visually-hidden" for="EMAIL">Your email address</label>
+          <input type="email" id="EMAIL" name="EMAIL" autocomplete="email" placeholder="Your email address" required>
+          <button class="button primary" type="submit">Subscribe <span class="nl-arrow" aria-hidden="true">→</span></button>
+        </div>
+        <p class="nl-status" role="status" aria-live="polite" hidden></p>
+        <p class="newsletter-note">No spam. Unsubscribe anytime with one click. More in the <a href="privacy-policy.html#newsletter">privacy policy</a>.</p>
+        <!-- spam trap: real visitors never fill this in -->
+        <input type="text" name="nl_zx_hp" value="" class="nl-trap" tabindex="-1" autocomplete="off" data-lpignore="true" data-1p-ignore aria-hidden="true">
+        <input type="hidden" name="email_address_check" value="">
+        <input type="hidden" name="locale" value="en">
+      </form>
+    </div>
+  </div>
+        </section>
+
         <section class="section testimonials" data-testimonials="all" hidden>
             <div class="section-heading centered"><p class="eyebrow">TESTIMONIALS</p><h2>What my clients say</h2></div>
             <div class="testimonial-grid" data-testimonials-list></div>
@@ -486,7 +531,7 @@ We’ll talk about your goals and your current challenges.            </p>
     <div class="sticky-cta">
         <a class="button primary" href="https://cal.com/nawee/15min" target="_blank" rel="noopener">Book a free consultation <span>→</span></a>
     </div>
-    <script src="script.js?v=20261029a"></script>
-    <script src="testimonials.js?v=20261029a"></script>
+    <script src="script.js?v=20261029b"></script>
+    <script src="testimonials.js?v=20261029b"></script>
 </body>
 </html>

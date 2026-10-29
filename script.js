@@ -334,3 +334,61 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
     }
     render();
 })();
+
+// Newsletter "Smart Tools, Strong Voice": send the form to Brevo in the background and show the result in place
+// (same logic as nawee.net). Nothing is loaded from Brevo until someone clicks the button.
+(() => {
+    // addresses signed up from this browser – only a scrambled fingerprint is kept, never the address itself
+    const fingerprint = (email) => {
+        let h = 5381;
+        for (const c of String(email).trim().toLowerCase()) h = ((h * 33) ^ c.codePointAt(0)) >>> 0;
+        return h.toString(36);
+    };
+    const KEY = "dn-nl-done";
+    const subscribed = () => { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch { return []; } };
+    const remember = (email) => { try { localStorage.setItem(KEY, JSON.stringify([...new Set([...subscribed(), fingerprint(email)])].slice(-5))); } catch { /* ignore */ } };
+
+    document.querySelectorAll(".nl-form").forEach((form) => {
+        const button = form.querySelector('button[type="submit"]');
+        const status = form.querySelector(".nl-status");
+        const buttonHTML = button.innerHTML;
+        const show = (message, ok) => {
+            status.textContent = message;
+            status.classList.toggle("nl-status--error", !ok);
+            status.hidden = false;
+        };
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            if (!/^https:\/\/[\w.-]+\.sibforms\.com\//.test(form.getAttribute("action") || "")) { show(form.dataset.error, false); return; }
+            if (form.nl_zx_hp && form.nl_zx_hp.value) { show(form.dataset.error, false); return; } // spam trap
+            if (form.email_address_check) form.email_address_check.value = "";
+            if (subscribed().includes(fingerprint(form.EMAIL.value))) { show(form.dataset.already, false); return; }
+            button.disabled = true;
+            button.textContent = form.dataset.sending;
+            try {
+                const send = (data) => fetch(form.action, { method: "POST", body: new URLSearchParams(data) })
+                    .then(async (r) => ({ ok: r.ok, result: await r.json().catch(() => ({})) }));
+                const fields = new FormData(form); fields.delete("nl_zx_hp");
+                let { ok, result } = await send(fields);
+                if ((!ok || !result.success) && form.VORNAME && form.VORNAME.value) {
+                    // safety net: if Brevo rejects the optional first name, sign up with the email address only
+                    const data = new FormData(form); data.delete("VORNAME"); data.delete("nl_zx_hp");
+                    ({ ok, result } = await send(data));
+                }
+                if (!ok || !result.success) {
+                    const text = JSON.stringify(result || {}).toLowerCase();
+                    if (/already|bereits|exist|déjà/.test(text)) { show(form.dataset.already, false); return; }
+                    throw new Error("not saved");
+                }
+                remember(form.EMAIL.value);
+                form.reset();
+                show(form.dataset.success, true);
+            } catch {
+                show(form.dataset.error, false);
+            } finally {
+                button.disabled = false;
+                button.innerHTML = buttonHTML;
+            }
+        });
+    });
+})();

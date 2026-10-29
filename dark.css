@@ -243,6 +243,15 @@
         var(--dm-band); }
     html:not([data-theme="light"]) .account-google { background: var(--dm-bg); color: #dedede; }
     html:not([data-theme="light"]) .account-google:hover { border-color: #232a35; background: #131a24; }
+    html:not([data-theme="light"]) .nl-perks li > span { background: var(--dm-bg); }
+    html:not([data-theme="light"]) .nl-perks strong { color: var(--dm-head); }
+    html:not([data-theme="light"]) .nl-meta span { background: var(--dm-bg); }
+    html:not([data-theme="light"]) .nl-preview { background: linear-gradient(135deg, var(--dm-band), var(--blue)); color: #ffffff; }
+    html:not([data-theme="light"]) .nl-form-h { color: var(--dm-head); }
+    html:not([data-theme="light"]) .newsletter-fields input[type="text"]#VORNAME { border: 1px solid #1f252e; background: #14181f; }
+    html:not([data-theme="light"]) .nl-status:not(.nl-status--error) { background: #192a21; border: 1px solid #294134; color: #8ce3bc; }
+    html:not([data-theme="light"]) .nl-start a { background: var(--dm-bg); }
+    html:not([data-theme="light"]) .nl-start strong { color: var(--dm-head); }
     html:not([data-theme="light"]) .brand-text { color: var(--dm-head); }
     html:not([data-theme="light"]) .brand-text:hover .brand-name { color: var(--dm-link); }
     html:not([data-theme="light"]) .footer-wordmark { color: var(--dm-head); }
@@ -522,6 +531,15 @@ html[data-theme="dark"] #free-course .test-band-inner { background: radial-gradi
         var(--dm-band); }
 html[data-theme="dark"] .account-google { background: var(--dm-bg); color: #dedede; }
 html[data-theme="dark"] .account-google:hover { border-color: #232a35; background: #131a24; }
+html[data-theme="dark"] .nl-perks li > span { background: var(--dm-bg); }
+html[data-theme="dark"] .nl-perks strong { color: var(--dm-head); }
+html[data-theme="dark"] .nl-meta span { background: var(--dm-bg); }
+html[data-theme="dark"] .nl-preview { background: linear-gradient(135deg, var(--dm-band), var(--blue)); color: #ffffff; }
+html[data-theme="dark"] .nl-form-h { color: var(--dm-head); }
+html[data-theme="dark"] .newsletter-fields input[type="text"]#VORNAME { border: 1px solid #1f252e; background: #14181f; }
+html[data-theme="dark"] .nl-status:not(.nl-status--error) { background: #192a21; border: 1px solid #294134; color: #8ce3bc; }
+html[data-theme="dark"] .nl-start a { background: var(--dm-bg); }
+html[data-theme="dark"] .nl-start strong { color: var(--dm-head); }
 html[data-theme="dark"] .brand-text { color: var(--dm-head); }
 html[data-theme="dark"] .brand-text:hover .brand-name { color: var(--dm-link); }
 html[data-theme="dark"] .footer-wordmark { color: var(--dm-head); }
