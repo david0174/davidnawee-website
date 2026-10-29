@@ -504,3 +504,8 @@ footer nav.footer-links > a:not(.nav-cta) { display: block; margin: 0 0 10px; br
     .me-hero--solo .hero-points { grid-template-columns: minmax(0, 1fr); gap: 10px; }
 }
 .me-hero--solo .hero-person { text-align: left; }
+
+/* headline letter spacing: the global -.045em was cramped on long lines, and the smaller second line (span)
+   inherited it as a fixed size → even tighter. Own spacing per line, matched to its size. */
+.me-hero h1 { letter-spacing: -.022em; }
+h1 span { letter-spacing: -.012em; word-spacing: .04em; }
