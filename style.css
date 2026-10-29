@@ -6375,3 +6375,53 @@ footer .footer-links .footer-heading {
 .nl-form--soon .newsletter-fields {
     opacity: .5;
 }
+
+/* newsletter: topic choice (AI / communication / both) → Brevo attribute THEMEN */
+.nl-topics {
+    margin: 0 0 12px;
+    padding: 0;
+    border: 0;
+}
+
+.nl-topics legend {
+    margin-bottom: 8px;
+    color: var(--blue-dark);
+    font-size: .95rem;
+    font-weight: 700;
+}
+
+.nl-topic-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nl-topic input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nl-topic span {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1.5px solid var(--line);
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--blue-dark);
+    font-size: .92rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+}
+
+.nl-topic input:checked + span {
+    border-color: var(--blue);
+    background: var(--blue-soft);
+    box-shadow: 0 2px 0 var(--yellow);
+}
+
+.nl-topic input:focus-visible + span {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+}

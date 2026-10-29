@@ -4,3 +4,8 @@ body { background: var(--dm-bg); color: var(--ink); }
 h1, h2, h3, h4 { color: var(--dm-head); }
 /* round photo in the hero: yellow ring in dark mode */
 .hero-person img { border-color: var(--yellow); }
+
+/* newsletter topic pills */
+.nl-topic span { background: #141b26; border-color: #2e3a4d; color: #e9eef5; }
+.nl-topic input:checked + span { background: #1e2f4a; border-color: #7fa6dd; }
+.nl-topics legend { color: #e9eef5; }

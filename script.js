@@ -376,9 +376,9 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
                     .then(async (r) => ({ ok: r.ok, result: await r.json().catch(() => ({})) }));
                 const fields = new FormData(form); fields.delete("nl_zx_hp");
                 let { ok, result } = await send(fields);
-                if ((!ok || !result.success) && form.VORNAME && form.VORNAME.value) {
-                    // safety net: if Brevo rejects the optional first name, sign up with the email address only
-                    const data = new FormData(form); data.delete("VORNAME"); data.delete("nl_zx_hp");
+                if (!ok || !result.success) {
+                    // safety net: if Brevo rejects the optional fields (first name, topics), sign up with the email address only
+                    const data = new FormData(form); data.delete("VORNAME"); data.delete("THEMEN"); data.delete("nl_zx_hp");
                     ({ ok, result } = await send(data));
                 }
                 if (!ok || !result.success) {

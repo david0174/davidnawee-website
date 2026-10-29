@@ -252,6 +252,8 @@
     html:not([data-theme="light"]) .nl-status:not(.nl-status--error) { background: #192a21; border: 1px solid #294134; color: #8ce3bc; }
     html:not([data-theme="light"]) .nl-start a { background: var(--dm-bg); }
     html:not([data-theme="light"]) .nl-start strong { color: var(--dm-head); }
+    html:not([data-theme="light"]) .nl-topics legend { color: var(--dm-head); }
+    html:not([data-theme="light"]) .nl-topic span { background: var(--dm-bg); color: var(--dm-head); }
     html:not([data-theme="light"]) .brand-text { color: var(--dm-head); }
     html:not([data-theme="light"]) .brand-text:hover .brand-name { color: var(--dm-link); }
     html:not([data-theme="light"]) .footer-wordmark { color: var(--dm-head); }
@@ -288,6 +290,9 @@
     html:not([data-theme="light"]) .language-toggle img { filter: invert(1); }
     html:not([data-theme="light"]) h1, html:not([data-theme="light"]) h2, html:not([data-theme="light"]) h3, html:not([data-theme="light"]) h4 { color: var(--dm-head); }
     html:not([data-theme="light"]) .hero-person img { border-color: var(--yellow); }
+    html:not([data-theme="light"]) .nl-topic span { background: #141b26; border-color: #2e3a4d; color: #e9eef5; }
+    html:not([data-theme="light"]) .nl-topic input:checked + span { background: #1e2f4a; border-color: #7fa6dd; }
+    html:not([data-theme="light"]) .nl-topics legend { color: #e9eef5; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -540,6 +545,8 @@ html[data-theme="dark"] .newsletter-fields input[type="text"]#VORNAME { border: 
 html[data-theme="dark"] .nl-status:not(.nl-status--error) { background: #192a21; border: 1px solid #294134; color: #8ce3bc; }
 html[data-theme="dark"] .nl-start a { background: var(--dm-bg); }
 html[data-theme="dark"] .nl-start strong { color: var(--dm-head); }
+html[data-theme="dark"] .nl-topics legend { color: var(--dm-head); }
+html[data-theme="dark"] .nl-topic span { background: var(--dm-bg); color: var(--dm-head); }
 html[data-theme="dark"] .brand-text { color: var(--dm-head); }
 html[data-theme="dark"] .brand-text:hover .brand-name { color: var(--dm-link); }
 html[data-theme="dark"] .footer-wordmark { color: var(--dm-head); }
@@ -576,6 +583,9 @@ html[data-theme="dark"] body { background: var(--dm-bg); color: var(--ink); }
 html[data-theme="dark"] .language-toggle img { filter: invert(1); }
 html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4 { color: var(--dm-head); }
 html[data-theme="dark"] .hero-person img { border-color: var(--yellow); }
+html[data-theme="dark"] .nl-topic span { background: #141b26; border-color: #2e3a4d; color: #e9eef5; }
+html[data-theme="dark"] .nl-topic input:checked + span { background: #1e2f4a; border-color: #7fa6dd; }
+html[data-theme="dark"] .nl-topics legend { color: #e9eef5; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }
