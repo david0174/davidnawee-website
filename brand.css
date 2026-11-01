@@ -28,10 +28,11 @@
 .brand-role {
     margin-top: 4px;
     color: var(--yellow);
-    font-size: .68rem;
+    font-size: .62rem;
     font-weight: 700;
-    letter-spacing: .28em;
+    letter-spacing: .16em; /* "Consulting & Coaching" stays about as wide as the name */
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .brand-text:hover .brand-name {
