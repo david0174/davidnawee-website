@@ -577,3 +577,106 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
 .test-band--quiet .test-band-inner > div > p strong {
     color: var(--blue-dark);
 }
+
+/* KI-Beratung / AI consulting (ki-beratung.html, ai-consulting.html) */
+.ai-map {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--white);
+}
+
+.ai-map-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+    gap: 16px;
+    padding: 14px 20px;
+    border-top: 1px solid var(--line);
+}
+
+.ai-map-row:first-child {
+    border-top: 0;
+}
+
+.ai-map-head {
+    background: var(--blue-dark);
+    color: #fff;
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.ai-map-row span[role="cell"]:first-child {
+    color: var(--blue-dark);
+    font-weight: 700;
+}
+
+.ai-map-row span[aria-hidden="true"] {
+    color: var(--yellow);
+    font-weight: 800;
+}
+
+.ai-offer {
+    border-top: 5px solid var(--yellow);
+}
+
+.ai-offer-tag {
+    margin: 0 0 6px;
+    color: var(--yellow-dark, #9a6a1c);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+}
+
+.ai-note {
+    max-width: 760px;
+    margin: 18px auto 0;
+    color: var(--muted);
+    text-align: center;
+}
+
+.ai-tools {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.ai-tools li {
+    display: grid;
+    gap: 2px;
+    padding: 14px 18px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--white);
+}
+
+.ai-tools strong {
+    color: var(--blue-dark);
+}
+
+.ai-tools span {
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+@media (max-width: 760px) {
+    .ai-map-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 4px;
+    }
+
+    .ai-map-head span:last-child {
+        display: none;
+    }
+
+    .ai-tools {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

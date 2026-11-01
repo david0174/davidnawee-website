@@ -288,6 +288,12 @@
     html:not([data-theme="light"]) .me-hero--solo .hero-points li { background: var(--dm-bg); }
     html:not([data-theme="light"]) .test-band--quiet h2 { color: var(--dm-head); }
     html:not([data-theme="light"]) .test-band--quiet .test-band-inner > div > p strong { color: var(--dm-head); }
+    html:not([data-theme="light"]) .ai-map { background: var(--dm-bg); }
+    html:not([data-theme="light"]) .ai-map-head { background: var(--dm-band); color: #ffffff; }
+    html:not([data-theme="light"]) .ai-map-row span[role="cell"]:first-child { color: var(--dm-head); }
+    html:not([data-theme="light"]) .ai-offer-tag { color: var(--yellow-dark, #e9c386); }
+    html:not([data-theme="light"]) .ai-tools li { background: var(--dm-bg); }
+    html:not([data-theme="light"]) .ai-tools strong { color: var(--dm-head); }
     html:not([data-theme="light"]) body { background: var(--dm-bg); color: var(--ink); }
     html:not([data-theme="light"]) .language-toggle img { filter: invert(1); }
     html:not([data-theme="light"]) h1, html:not([data-theme="light"]) h2, html:not([data-theme="light"]) h3, html:not([data-theme="light"]) h4 { color: var(--dm-head); }
@@ -585,6 +591,12 @@ html[data-theme="dark"] .theme-toggle { background: var(--dm-bg); color: var(--d
 html[data-theme="dark"] .me-hero--solo .hero-points li { background: var(--dm-bg); }
 html[data-theme="dark"] .test-band--quiet h2 { color: var(--dm-head); }
 html[data-theme="dark"] .test-band--quiet .test-band-inner > div > p strong { color: var(--dm-head); }
+html[data-theme="dark"] .ai-map { background: var(--dm-bg); }
+html[data-theme="dark"] .ai-map-head { background: var(--dm-band); color: #ffffff; }
+html[data-theme="dark"] .ai-map-row span[role="cell"]:first-child { color: var(--dm-head); }
+html[data-theme="dark"] .ai-offer-tag { color: var(--yellow-dark, #e9c386); }
+html[data-theme="dark"] .ai-tools li { background: var(--dm-bg); }
+html[data-theme="dark"] .ai-tools strong { color: var(--dm-head); }
 html[data-theme="dark"] body { background: var(--dm-bg); color: var(--ink); }
 html[data-theme="dark"] .language-toggle img { filter: invert(1); }
 html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4 { color: var(--dm-head); }
