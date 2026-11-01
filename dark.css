@@ -294,6 +294,7 @@
     html:not([data-theme="light"]) .ai-offer-tag { color: var(--yellow-dark, #e9c386); }
     html:not([data-theme="light"]) .ai-tools li { background: var(--dm-bg); }
     html:not([data-theme="light"]) .ai-tools strong { color: var(--dm-head); }
+    html:not([data-theme="light"]) .motto-band { background: var(--dm-band); }
     html:not([data-theme="light"]) body { background: var(--dm-bg); color: var(--ink); }
     html:not([data-theme="light"]) .language-toggle img { filter: invert(1); }
     html:not([data-theme="light"]) h1, html:not([data-theme="light"]) h2, html:not([data-theme="light"]) h3, html:not([data-theme="light"]) h4 { color: var(--dm-head); }
@@ -597,6 +598,7 @@ html[data-theme="dark"] .ai-map-row span[role="cell"]:first-child { color: var(-
 html[data-theme="dark"] .ai-offer-tag { color: var(--yellow-dark, #e9c386); }
 html[data-theme="dark"] .ai-tools li { background: var(--dm-bg); }
 html[data-theme="dark"] .ai-tools strong { color: var(--dm-head); }
+html[data-theme="dark"] .motto-band { background: var(--dm-band); }
 html[data-theme="dark"] body { background: var(--dm-bg); color: var(--ink); }
 html[data-theme="dark"] .language-toggle img { filter: invert(1); }
 html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4 { color: var(--dm-head); }
