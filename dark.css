@@ -636,9 +636,9 @@ html[data-theme="dark"] .test-band--quiet .test-band-inner { border: 0; backgrou
 @media (max-width: 760px) {
     html[data-theme="dark"] .sticky-cta { background: rgba(20, 24, 31, .96); }
 }
-@media (prefers-color-scheme: dark) and (max-width: 1000px) {
+@media (prefers-color-scheme: dark) and (max-width: 1360px) {
     html:not([data-theme="light"]) .menu-switch .mobile-menu .theme-toggle-row { color: var(--dm-head); }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1360px) {
     html[data-theme="dark"] .menu-switch .mobile-menu .theme-toggle-row { color: var(--dm-head); }
 }
