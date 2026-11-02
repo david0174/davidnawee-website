@@ -804,3 +804,12 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
         grid-template-columns: minmax(0, 1fr);
     }
 }
+
+/* business start package: example businesses */
+.biz-ex {
+    border-top: 4px solid var(--yellow);
+}
+
+.biz-ex h3 {
+    font-size: 1.08rem;
+}
