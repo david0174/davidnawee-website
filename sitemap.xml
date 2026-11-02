@@ -91,16 +91,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://nawee.net/kurse.html</loc>
-    <lastmod>2026-10-26</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nawee.net/courses.html</loc>
-    <lastmod>2026-10-26</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nawee.net/ki-training.html</loc>
     <lastmod>2026-10-28</lastmod>
     <priority>0.8</priority>

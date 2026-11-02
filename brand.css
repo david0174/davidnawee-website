@@ -932,3 +932,43 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
 /* "Who is it for?" cards have two links: one per line */
 .audience-card .text-link { display: block; }
 .audience-card .text-link + .text-link { margin-top: 6px; }
+
+/* header: AI Training as a small dropdown under AI Consulting (David, 2026-11-02) */
+.nav-group { position: relative; }
+.site-header .nav-group > a {
+    font-size: .78rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.nav-group-link::after { content: " ▾"; font-size: .7em; }
+.nav-group-link[aria-current="page"], .nav-group-link.is-current { color: var(--blue); font-weight: 600; }
+.nav-sub {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -14px;
+    z-index: 50;
+    padding-top: 12px;
+}
+.nav-group:hover .nav-sub, .nav-group:focus-within .nav-sub { display: block; }
+.nav-sub a {
+    display: block;
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--white);
+    box-shadow: 0 10px 24px rgba(13, 47, 130, .12);
+    font-size: .78rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.nav-sub a[aria-current="page"] { color: var(--blue); font-weight: 600; }
+@media (max-width: 1360px) { .site-header .nav-group { display: none; } }
+@media (max-width: 1180px) { .site-header .nav-group > a { letter-spacing: .06em; font-size: .8rem; } }
+@media (max-width: 1040px) { .site-header .nav-group > a { letter-spacing: .03em; font-size: .76rem; } }
+
+/* phone menu: AI Training indented under AI Consulting */
+.menu-switch .mobile-menu a.mobile-sub { padding-left: 30px; font-size: .9rem; }
+.menu-switch .mobile-menu a.mobile-sub::before { content: "↳ "; color: var(--muted); }

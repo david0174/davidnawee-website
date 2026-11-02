@@ -9,7 +9,7 @@
     <meta name="theme-color" content="#172b45">
     <link rel="icon" type="image/png" href="assets/favicon-nawee.png">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon-nawee.png">
-    <meta property="og:title" content="David Nawee – KI- & Business-Berater, Kommunikations- & Führungscoach">
+    <meta property="og:title" content="David Nawee – KI- & Business-Berater, Kommunikationscoach">
     <meta property="og:description" content="Consulting & Coaching: KI- & Business-Beratung · Kommunikation & Führung · Persönliche Entwicklung – Hannover & online">
     <meta property="og:image" content="https://nawee.net/assets/david-portrait.jpg">
     <!-- Cloudflare Web Analytics: cookie-free visit statistics (see privacy policy, section 3) --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4dfcab1048a842c7a2b8a92bf5b7c93a"}'></script><!-- End Cloudflare Web Analytics -->
@@ -52,8 +52,8 @@
         <div class="top">
             <img src="assets/david-portrait.jpg" alt="David Nawee">
             <h1>David Nawee</h1>
-            <p class="role">KI- &amp; Business-Berater<br>Kommunikations- &amp; Führungscoach</p>
-            <p class="role-en">AI &amp; Business Consultant<br>Communication &amp; Leadership Coach</p>
+            <p class="role">KI- &amp; Business-Berater<br>Kommunikationscoach</p>
+            <p class="role-en">AI &amp; Business Consultant<br>Communication Coach</p>
             <p class="place">Hannover · Online</p>
         </div>
         <div class="actions">
@@ -79,7 +79,7 @@
     // share the card: the phone's share menu (WhatsApp, Mail, …) or copy the link
     document.querySelector("[data-share]").addEventListener("click", async () => {
         const url = "https://nawee.net/karte.html";
-        const data = { title: "David Nawee – KI- & Business-Berater, Kommunikations- & Führungscoach", url };
+        const data = { title: "David Nawee – KI- & Business-Berater, Kommunikationscoach", url };
         if (navigator.share) { try { await navigator.share(data); } catch { /* closed */ } return; }
         try { await navigator.clipboard.writeText(url); } catch { return; }
         const t = document.querySelector("[data-toast]");
