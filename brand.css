@@ -902,3 +902,13 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
     font-size: .85rem;
     font-weight: 700;
 }
+
+/* five education cards: the last one spans both columns on wide screens */
+@media (min-width: 761px) {
+    .cred-grid > .cred:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        max-width: calc(50% - 7px);
+        justify-self: center;
+        width: 100%;
+    }
+}
