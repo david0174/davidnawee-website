@@ -305,6 +305,7 @@
     html:not([data-theme="light"]) .cred-prog { color: var(--dm-link); }
     html:not([data-theme="light"]) .cred-verify { color: var(--dm-link); }
     html:not([data-theme="light"]) .brand-logo .brand-role { color: var(--dm-link); }
+    html:not([data-theme="light"]) .learn-moved { color: var(--dm-head); }
     html:not([data-theme="light"]) body { background: var(--dm-bg); color: var(--ink); }
     html:not([data-theme="light"]) .language-toggle img { filter: invert(1); }
     html:not([data-theme="light"]) h1, html:not([data-theme="light"]) h2, html:not([data-theme="light"]) h3, html:not([data-theme="light"]) h4 { color: var(--dm-head); }
@@ -620,6 +621,7 @@ html[data-theme="dark"] .cred h3 { color: var(--dm-head); }
 html[data-theme="dark"] .cred-prog { color: var(--dm-link); }
 html[data-theme="dark"] .cred-verify { color: var(--dm-link); }
 html[data-theme="dark"] .brand-logo .brand-role { color: var(--dm-link); }
+html[data-theme="dark"] .learn-moved { color: var(--dm-head); }
 html[data-theme="dark"] body { background: var(--dm-bg); color: var(--ink); }
 html[data-theme="dark"] .language-toggle img { filter: invert(1); }
 html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4 { color: var(--dm-head); }

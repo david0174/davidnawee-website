@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://davidnawee.com/sitemap.xml
+Sitemap: https://nawee.net/sitemap.xml
