@@ -14,5 +14,9 @@ h1, h2, h3, h4 { color: var(--dm-head); }
 .test-band--quiet { background: #121822; border-top-color: #232c3a; }
 .test-band--quiet .test-band-inner { border: 0; background: transparent; box-shadow: none; }
 
-/* header business line under the logo: yellow on dark */
-.brand-logo .brand-role { color: #f5c542; }
+/* motto tiles: same solid colours on hover as in light mode (the generator would darken the gold) */
+.motto-tile--ai:hover, .motto-tile--ai:focus-visible { background: #2d6fcc; color: #ffffff; }
+.motto-tile--biz:hover, .motto-tile--biz:focus-visible { background: #e3b46a; color: #0d1b3a; }
+.motto-tile--ppl:hover, .motto-tile--ppl:focus-visible { background: #2e8b57; color: #ffffff; }
+.motto-tile:hover .motto-icon, .motto-tile:focus-visible .motto-icon,
+.motto-tile:hover > span:last-child, .motto-tile:focus-visible > span:last-child { color: inherit; }
