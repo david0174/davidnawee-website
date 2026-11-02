@@ -14,3 +14,11 @@ h1, h2, h3, h4 { color: var(--dm-head); }
 .test-band--quiet { background: #121822; border-top-color: #232c3a; }
 .test-band--quiet .test-band-inner { border: 0; background: transparent; box-shadow: none; }
 
+
+/* hero pillar tiles: the hero is navy in both modes – keep the light-mode tile colours (the generator would darken the gold) */
+.pillar--biz svg { color: #e3b46a; }
+.pillar--com svg { color: #7cc995; }
+.pillar--ai:hover, .pillar--ai:focus-visible { background: #2d6fcc; color: #ffffff; }
+.pillar--biz:hover, .pillar--biz:focus-visible { background: #e3b46a; color: #0d1b3a; }
+.pillar--com:hover, .pillar--com:focus-visible { background: #2e8b57; color: #ffffff; }
+.pillar:hover svg, .pillar:focus-visible svg, .pillar:hover span, .pillar:focus-visible span { color: inherit; }

@@ -862,13 +862,28 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
 .banner-tagline span { min-width: 0; text-align: center; color: #f5c542; font-size: .95rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
 
 /* three pillars: gold line icon, white title, light text, thin dividers */
-.banner-pillars { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 30px 0 34px; padding: 0; }
-.banner-pillars li { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 6px 24px; }
-.banner-pillars li + li { border-left: 1px solid rgba(201, 214, 236, .25); }
-.banner-pillars svg { width: 52px; height: 52px; margin-bottom: 4px; fill: none; stroke: #f5c542; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.banner-pillars svg text { fill: #f5c542; stroke: none; font: 700 5.6px/1 system-ui, sans-serif; }
-.banner-pillars strong { color: #ffffff; font-size: 1.05rem; letter-spacing: .12em; text-transform: uppercase; }
-.banner-pillars span { color: #c9d6ec; font-size: .98rem; line-height: 1.45; max-width: 26ch; }
+.banner-pillars { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 30px 0 34px; padding: 0; }
+/* the three pillars are tiles in their own colour that fill solid on hover (like the former "My approach" tiles) */
+.pillar {
+    display: flex; flex-direction: column; align-items: center; gap: 8px; height: 100%;
+    padding: 22px 20px; border-radius: 16px; color: #ffffff; text-decoration: none;
+    transition: transform .15s, box-shadow .15s, background-color .2s, color .2s;
+}
+.pillar:hover, .pillar:focus-visible { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0, 0, 0, .3); }
+.pillar svg { width: 52px; height: 52px; margin-bottom: 4px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.pillar svg text { fill: currentColor; stroke: none; font: 700 5.6px/1 system-ui, sans-serif; }
+.pillar strong { color: inherit; font-size: 1.05rem; letter-spacing: .12em; text-transform: uppercase; }
+.pillar span { color: #c9d6ec; font-size: .98rem; line-height: 1.45; max-width: 26ch; }
+.pillar--ai { background: rgba(77, 143, 224, .16); }
+.pillar--ai svg { color: #7fb0f0; }
+.pillar--biz { background: rgba(217, 160, 74, .16); }
+.pillar--biz svg { color: #e3b46a; }
+.pillar--com { background: rgba(80, 170, 110, .16); }
+.pillar--com svg { color: #7cc995; }
+.pillar--ai:hover, .pillar--ai:focus-visible { background: #2d6fcc; color: #ffffff; }
+.pillar--biz:hover, .pillar--biz:focus-visible { background: #e3b46a; color: #0d1b3a; }
+.pillar--com:hover, .pillar--com:focus-visible { background: #2e8b57; color: #ffffff; }
+.pillar:hover svg, .pillar:focus-visible svg, .pillar:hover span, .pillar:focus-visible span { color: inherit; }
 
 .me-hero.me-hero--banner .button.secondary { color: #ffffff; background: transparent; border-color: rgba(255, 255, 255, .55); }
 .me-hero.me-hero--banner .button.secondary:hover { border-color: #f5c542; color: #f5c542; }
@@ -878,8 +893,7 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
 .me-hero.me-hero--banner .hero-person img { border-color: #f5c542; }
 
 @media (max-width: 760px) {
-    .banner-pillars { grid-template-columns: minmax(0, 1fr); gap: 22px; }
-    .banner-pillars li + li { border-left: 0; border-top: 1px solid rgba(201, 214, 236, .2); padding-top: 22px; }
+    .banner-pillars { grid-template-columns: minmax(0, 1fr); gap: 12px; }
     .me-hero.me-hero--banner h1 { font-size: clamp(2rem, 9.5vw, 3rem); }
     .banner-tagline { gap: 10px; }
     .banner-tagline::before, .banner-tagline::after { flex: 0 0 22px; }
