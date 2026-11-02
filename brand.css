@@ -813,3 +813,92 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
 .biz-ex h3 {
     font-size: 1.08rem;
 }
+
+/* education & certificates (homepage, under About me) */
+.cred-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cred {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--yellow);
+    border-radius: 16px;
+    background: var(--white);
+}
+
+.cred-icon {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--blue-soft);
+    color: var(--blue);
+}
+
+.cred-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.cred h3 {
+    margin: 0 0 2px;
+    font-size: 1.08rem;
+    color: var(--blue-dark);
+}
+
+.cred-prog {
+    margin: 0 0 4px;
+    color: var(--yellow-dark, #9a6a1c);
+    font-weight: 700;
+    font-size: .92rem;
+}
+
+.cred-desc {
+    margin: 0;
+    color: var(--muted);
+    font-size: .92rem;
+    line-height: 1.5;
+}
+
+.cred-note {
+    max-width: 760px;
+    margin: 16px auto 0;
+    color: var(--muted);
+    font-size: .8rem;
+    text-align: center;
+}
+
+@media (max-width: 760px) {
+    .cred-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.cred-badge img {
+    display: block;
+    width: 64px;
+    height: 64px;
+}
+
+.cred-verify {
+    display: inline-block;
+    margin-top: 6px;
+    color: var(--blue);
+    font-size: .85rem;
+    font-weight: 700;
+}
