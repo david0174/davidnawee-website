@@ -307,7 +307,10 @@
     html:not([data-theme="light"]) .me-hero.me-hero--banner mark.hl { color: #f1d27e; }
     html:not([data-theme="light"]) .banner-tagline::before, html:not([data-theme="light"]) .banner-tagline::after { background: #5b4b1f; }
     html:not([data-theme="light"]) .banner-tagline span { color: #f1d27e; }
+    html:not([data-theme="light"]) .pillar--ai { border: 1px solid rgba(33, 54, 83, .4); }
+    html:not([data-theme="light"]) .pillar--biz { background: linear-gradient(160deg, rgba(91, 75, 31, .3), rgba(91, 75, 31, .12)); border: 1px solid rgba(91, 75, 31, .4); }
     html:not([data-theme="light"]) .pillar--biz svg { color: #e8c287; }
+    html:not([data-theme="light"]) .pillar--com { border: 1px solid rgba(47, 75, 56, .4); }
     html:not([data-theme="light"]) .pillar--com svg { color: #9ad5ad; }
     html:not([data-theme="light"]) .pillar--biz:hover, html:not([data-theme="light"]) .pillar--biz:focus-visible { background: #544226; color: #d5dae4; }
     html:not([data-theme="light"]) .me-hero.me-hero--banner .button.secondary { border-color: rgba(20, 24, 31, .55); }
@@ -320,6 +323,22 @@
     html:not([data-theme="light"]) .nav-group-link[aria-current="page"], html:not([data-theme="light"]) .nav-group-link.is-current { color: var(--dm-link); }
     html:not([data-theme="light"]) .nav-sub a { background: var(--dm-bg); }
     html:not([data-theme="light"]) .nav-sub a[aria-current="page"] { color: var(--dm-link); }
+    html:not([data-theme="light"]) .nw-chat-btn { border: 3px solid #5b4b1f; }
+    html:not([data-theme="light"]) .nw-chat-badge { border: 2px solid #14181f; }
+    html:not([data-theme="light"]) .nw-chat-panel { background: #14181f; color: #d6d9de; }
+    html:not([data-theme="light"]) .nw-chat-head img { border: 2px solid #5b4b1f; }
+    html:not([data-theme="light"]) .nw-chat-x { background: rgba(20, 24, 31, .12); }
+    html:not([data-theme="light"]) .nw-chat-x:hover { background: rgba(20, 24, 31, .24); }
+    html:not([data-theme="light"]) .nw-chat-body { background: #141a26; }
+    html:not([data-theme="light"]) .nw-msg strong { color: #d0d6e3; }
+    html:not([data-theme="light"]) .nw-msg--david { background: #14181f; border: 1px solid #19202a; color: #d6d9de; }
+    html:not([data-theme="light"]) .nw-chat-form textarea, html:not([data-theme="light"]) .nw-chat-form input { border: 1px solid #202732; background: #14181f; color: #d6d9de; }
+    html:not([data-theme="light"]) .nw-chat-note { color: #ee8981; }
+    html:not([data-theme="light"]) .nw-chat-note a, html:not([data-theme="light"]) .nw-chat-privacy a { color: #7ea9f1; }
+    html:not([data-theme="light"]) .nw-chat-privacy { color: #c9cbce; }
+    html:not([data-theme="light"]) .training-band { background: linear-gradient(180deg, #302711 0%, #352b14 100%); border-bottom: 1px solid #3b331d; }
+    html:not([data-theme="light"]) .training-band .card { background: #14181f; }
+    html:not([data-theme="light"]) .training-tagline { color: var(--dm-link); }
     html:not([data-theme="light"]) body { background: var(--dm-bg); color: var(--ink); }
     html:not([data-theme="light"]) .language-toggle img { filter: invert(1); }
     html:not([data-theme="light"]) h1, html:not([data-theme="light"]) h2, html:not([data-theme="light"]) h3, html:not([data-theme="light"]) h4 { color: var(--dm-head); }
@@ -329,12 +348,27 @@
     html:not([data-theme="light"]) .nl-topics legend { color: #e9eef5; }
     html:not([data-theme="light"]) .test-band--quiet { background: #121822; border-top-color: #232c3a; }
     html:not([data-theme="light"]) .test-band--quiet .test-band-inner { border: 0; background: transparent; box-shadow: none; }
+    html:not([data-theme="light"]) .pillar--ai { background: linear-gradient(160deg, rgba(77, 143, 224, .3), rgba(77, 143, 224, .12)); border: 1px solid rgba(127, 176, 240, .4); }
+    html:not([data-theme="light"]) .pillar--com { background: linear-gradient(160deg, rgba(80, 170, 110, .3), rgba(80, 170, 110, .12)); border: 1px solid rgba(124, 201, 149, .4); }
+    html:not([data-theme="light"]) .pillar--biz { background: linear-gradient(160deg, rgba(245, 197, 66, .3), rgba(245, 197, 66, .12)); border: 1px solid rgba(245, 197, 66, .4); }
     html:not([data-theme="light"]) .pillar--biz svg { color: #e3b46a; }
     html:not([data-theme="light"]) .pillar--com svg { color: #7cc995; }
     html:not([data-theme="light"]) .pillar--ai:hover, html:not([data-theme="light"]) .pillar--ai:focus-visible { background: #2d6fcc; color: #ffffff; }
     html:not([data-theme="light"]) .pillar--biz:hover, html:not([data-theme="light"]) .pillar--biz:focus-visible { background: #e3b46a; color: #0d1b3a; }
     html:not([data-theme="light"]) .pillar--com:hover, html:not([data-theme="light"]) .pillar--com:focus-visible { background: #2e8b57; color: #ffffff; }
     html:not([data-theme="light"]) .pillar:hover svg, html:not([data-theme="light"]) .pillar:focus-visible svg, html:not([data-theme="light"]) .pillar:hover span, html:not([data-theme="light"]) .pillar:focus-visible span { color: inherit; }
+    html:not([data-theme="light"]) .nw-chat-panel { background: #ffffff; color: #1f2a3d; }
+    html:not([data-theme="light"]) .nw-chat-body { background: #f4f7fc; }
+    html:not([data-theme="light"]) .nw-msg--david { background: #ffffff; border-color: #e4ebf5; color: #1f2a3d; }
+    html:not([data-theme="light"]) .nw-msg strong { color: #0d2152; }
+    html:not([data-theme="light"]) .nw-msg--you { background: #1554c0; color: #ffffff; }
+    html:not([data-theme="light"]) .nw-chat-form textarea, html:not([data-theme="light"]) .nw-chat-form input { background: #ffffff; border-color: #cfdaea; color: #1f2a3d; }
+    html:not([data-theme="light"]) .nw-chat-privacy { color: #5b6576; }
+    html:not([data-theme="light"]) .nw-chat-note a, html:not([data-theme="light"]) .nw-chat-privacy a { color: #1554c0; }
+    html:not([data-theme="light"]) .nw-chat-head strong { color: #ffffff; }
+    html:not([data-theme="light"]) .nw-chat-btn { background: #0d2152; }
+    html:not([data-theme="light"]) .training-band { background: linear-gradient(180deg, #221d12 0%, #1b1710 100%); border-bottom-color: #3a3220; }
+    html:not([data-theme="light"]) .training-band .card { background: #151b25; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -642,7 +676,10 @@ html[data-theme="dark"] .me-hero.me-hero--banner .eyebrow { color: #f1d27e; }
 html[data-theme="dark"] .me-hero.me-hero--banner mark.hl { color: #f1d27e; }
 html[data-theme="dark"] .banner-tagline::before, html[data-theme="dark"] .banner-tagline::after { background: #5b4b1f; }
 html[data-theme="dark"] .banner-tagline span { color: #f1d27e; }
+html[data-theme="dark"] .pillar--ai { border: 1px solid rgba(33, 54, 83, .4); }
+html[data-theme="dark"] .pillar--biz { background: linear-gradient(160deg, rgba(91, 75, 31, .3), rgba(91, 75, 31, .12)); border: 1px solid rgba(91, 75, 31, .4); }
 html[data-theme="dark"] .pillar--biz svg { color: #e8c287; }
+html[data-theme="dark"] .pillar--com { border: 1px solid rgba(47, 75, 56, .4); }
 html[data-theme="dark"] .pillar--com svg { color: #9ad5ad; }
 html[data-theme="dark"] .pillar--biz:hover, html[data-theme="dark"] .pillar--biz:focus-visible { background: #544226; color: #d5dae4; }
 html[data-theme="dark"] .me-hero.me-hero--banner .button.secondary { border-color: rgba(20, 24, 31, .55); }
@@ -655,6 +692,22 @@ html[data-theme="dark"] .process-tag { color: var(--dm-link); }
 html[data-theme="dark"] .nav-group-link[aria-current="page"], html[data-theme="dark"] .nav-group-link.is-current { color: var(--dm-link); }
 html[data-theme="dark"] .nav-sub a { background: var(--dm-bg); }
 html[data-theme="dark"] .nav-sub a[aria-current="page"] { color: var(--dm-link); }
+html[data-theme="dark"] .nw-chat-btn { border: 3px solid #5b4b1f; }
+html[data-theme="dark"] .nw-chat-badge { border: 2px solid #14181f; }
+html[data-theme="dark"] .nw-chat-panel { background: #14181f; color: #d6d9de; }
+html[data-theme="dark"] .nw-chat-head img { border: 2px solid #5b4b1f; }
+html[data-theme="dark"] .nw-chat-x { background: rgba(20, 24, 31, .12); }
+html[data-theme="dark"] .nw-chat-x:hover { background: rgba(20, 24, 31, .24); }
+html[data-theme="dark"] .nw-chat-body { background: #141a26; }
+html[data-theme="dark"] .nw-msg strong { color: #d0d6e3; }
+html[data-theme="dark"] .nw-msg--david { background: #14181f; border: 1px solid #19202a; color: #d6d9de; }
+html[data-theme="dark"] .nw-chat-form textarea, html[data-theme="dark"] .nw-chat-form input { border: 1px solid #202732; background: #14181f; color: #d6d9de; }
+html[data-theme="dark"] .nw-chat-note { color: #ee8981; }
+html[data-theme="dark"] .nw-chat-note a, html[data-theme="dark"] .nw-chat-privacy a { color: #7ea9f1; }
+html[data-theme="dark"] .nw-chat-privacy { color: #c9cbce; }
+html[data-theme="dark"] .training-band { background: linear-gradient(180deg, #302711 0%, #352b14 100%); border-bottom: 1px solid #3b331d; }
+html[data-theme="dark"] .training-band .card { background: #14181f; }
+html[data-theme="dark"] .training-tagline { color: var(--dm-link); }
 html[data-theme="dark"] body { background: var(--dm-bg); color: var(--ink); }
 html[data-theme="dark"] .language-toggle img { filter: invert(1); }
 html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4 { color: var(--dm-head); }
@@ -664,12 +717,27 @@ html[data-theme="dark"] .nl-topic input:checked + span { background: #1e2f4a; bo
 html[data-theme="dark"] .nl-topics legend { color: #e9eef5; }
 html[data-theme="dark"] .test-band--quiet { background: #121822; border-top-color: #232c3a; }
 html[data-theme="dark"] .test-band--quiet .test-band-inner { border: 0; background: transparent; box-shadow: none; }
+html[data-theme="dark"] .pillar--ai { background: linear-gradient(160deg, rgba(77, 143, 224, .3), rgba(77, 143, 224, .12)); border: 1px solid rgba(127, 176, 240, .4); }
+html[data-theme="dark"] .pillar--com { background: linear-gradient(160deg, rgba(80, 170, 110, .3), rgba(80, 170, 110, .12)); border: 1px solid rgba(124, 201, 149, .4); }
+html[data-theme="dark"] .pillar--biz { background: linear-gradient(160deg, rgba(245, 197, 66, .3), rgba(245, 197, 66, .12)); border: 1px solid rgba(245, 197, 66, .4); }
 html[data-theme="dark"] .pillar--biz svg { color: #e3b46a; }
 html[data-theme="dark"] .pillar--com svg { color: #7cc995; }
 html[data-theme="dark"] .pillar--ai:hover, html[data-theme="dark"] .pillar--ai:focus-visible { background: #2d6fcc; color: #ffffff; }
 html[data-theme="dark"] .pillar--biz:hover, html[data-theme="dark"] .pillar--biz:focus-visible { background: #e3b46a; color: #0d1b3a; }
 html[data-theme="dark"] .pillar--com:hover, html[data-theme="dark"] .pillar--com:focus-visible { background: #2e8b57; color: #ffffff; }
 html[data-theme="dark"] .pillar:hover svg, html[data-theme="dark"] .pillar:focus-visible svg, html[data-theme="dark"] .pillar:hover span, html[data-theme="dark"] .pillar:focus-visible span { color: inherit; }
+html[data-theme="dark"] .nw-chat-panel { background: #ffffff; color: #1f2a3d; }
+html[data-theme="dark"] .nw-chat-body { background: #f4f7fc; }
+html[data-theme="dark"] .nw-msg--david { background: #ffffff; border-color: #e4ebf5; color: #1f2a3d; }
+html[data-theme="dark"] .nw-msg strong { color: #0d2152; }
+html[data-theme="dark"] .nw-msg--you { background: #1554c0; color: #ffffff; }
+html[data-theme="dark"] .nw-chat-form textarea, html[data-theme="dark"] .nw-chat-form input { background: #ffffff; border-color: #cfdaea; color: #1f2a3d; }
+html[data-theme="dark"] .nw-chat-privacy { color: #5b6576; }
+html[data-theme="dark"] .nw-chat-note a, html[data-theme="dark"] .nw-chat-privacy a { color: #1554c0; }
+html[data-theme="dark"] .nw-chat-head strong { color: #ffffff; }
+html[data-theme="dark"] .nw-chat-btn { background: #0d2152; }
+html[data-theme="dark"] .training-band { background: linear-gradient(180deg, #221d12 0%, #1b1710 100%); border-bottom-color: #3a3220; }
+html[data-theme="dark"] .training-band .card { background: #151b25; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }

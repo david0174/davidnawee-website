@@ -16,9 +16,28 @@ h1, h2, h3, h4 { color: var(--dm-head); }
 
 
 /* hero pillar tiles: the hero is navy in both modes – keep the light-mode tile colours (the generator would darken the gold) */
+.pillar--ai { background: linear-gradient(160deg, rgba(77, 143, 224, .3), rgba(77, 143, 224, .12)); border: 1px solid rgba(127, 176, 240, .4); }
+.pillar--com { background: linear-gradient(160deg, rgba(80, 170, 110, .3), rgba(80, 170, 110, .12)); border: 1px solid rgba(124, 201, 149, .4); }
+.pillar--biz { background: linear-gradient(160deg, rgba(245, 197, 66, .3), rgba(245, 197, 66, .12)); border: 1px solid rgba(245, 197, 66, .4); }
 .pillar--biz svg { color: #e3b46a; }
 .pillar--com svg { color: #7cc995; }
 .pillar--ai:hover, .pillar--ai:focus-visible { background: #2d6fcc; color: #ffffff; }
 .pillar--biz:hover, .pillar--biz:focus-visible { background: #e3b46a; color: #0d1b3a; }
 .pillar--com:hover, .pillar--com:focus-visible { background: #2e8b57; color: #ffffff; }
 .pillar:hover svg, .pillar:focus-visible svg, .pillar:hover span, .pillar:focus-visible span { color: inherit; }
+
+/* chat widget: keeps its own light panel in dark mode (generated rules would mix light text into it) */
+.nw-chat-panel { background: #ffffff; color: #1f2a3d; }
+.nw-chat-body { background: #f4f7fc; }
+.nw-msg--david { background: #ffffff; border-color: #e4ebf5; color: #1f2a3d; }
+.nw-msg strong { color: #0d2152; }
+.nw-msg--you { background: #1554c0; color: #ffffff; }
+.nw-chat-form textarea, .nw-chat-form input { background: #ffffff; border-color: #cfdaea; color: #1f2a3d; }
+.nw-chat-privacy { color: #5b6576; }
+.nw-chat-note a, .nw-chat-privacy a { color: #1554c0; }
+.nw-chat-head strong { color: #ffffff; }
+.nw-chat-btn { background: #0d2152; }
+
+/* AI training band on the AI consulting page: warm dark tone */
+.training-band { background: linear-gradient(180deg, #221d12 0%, #1b1710 100%); border-bottom-color: #3a3220; }
+.training-band .card { background: #151b25; }

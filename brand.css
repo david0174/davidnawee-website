@@ -874,11 +874,11 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
 .pillar svg text { fill: currentColor; stroke: none; font: 700 5.6px/1 system-ui, sans-serif; }
 .pillar strong { color: inherit; font-size: 1.05rem; letter-spacing: .12em; text-transform: uppercase; }
 .pillar span { color: #c9d6ec; font-size: .98rem; line-height: 1.45; max-width: 26ch; }
-.pillar--ai { background: rgba(77, 143, 224, .16); }
+.pillar--ai { background: linear-gradient(160deg, rgba(77, 143, 224, .3), rgba(77, 143, 224, .12)); border: 1px solid rgba(127, 176, 240, .4); }
 .pillar--ai svg { color: #7fb0f0; }
-.pillar--biz { background: rgba(217, 160, 74, .16); }
+.pillar--biz { background: linear-gradient(160deg, rgba(245, 197, 66, .3), rgba(245, 197, 66, .12)); border: 1px solid rgba(245, 197, 66, .4); }
 .pillar--biz svg { color: #e3b46a; }
-.pillar--com { background: rgba(80, 170, 110, .16); }
+.pillar--com { background: linear-gradient(160deg, rgba(80, 170, 110, .3), rgba(80, 170, 110, .12)); border: 1px solid rgba(124, 201, 149, .4); }
 .pillar--com svg { color: #7cc995; }
 .pillar--ai:hover, .pillar--ai:focus-visible { background: #2d6fcc; color: #ffffff; }
 .pillar--biz:hover, .pillar--biz:focus-visible { background: #e3b46a; color: #0d1b3a; }
@@ -986,3 +986,87 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
 /* phone menu: AI Training indented under AI Consulting */
 .menu-switch .mobile-menu a.mobile-sub { padding-left: 30px; font-size: .9rem; }
 .menu-switch .mobile-menu a.mobile-sub::before { content: "↳ "; color: var(--muted); }
+
+/* header on wide screens: menu items aligned right, next to "Book a free call" (David, 2026-11-02) */
+@media (min-width: 1361px) {
+    .site-header nav { flex: 1; justify-content: flex-end; }
+}
+
+/* "Message David" chat widget (chat-widget.js) – navy look in light and dark mode */
+.nw-chat-btn {
+    position: fixed; right: 24px; bottom: 24px; z-index: 60;
+    width: 62px; height: 62px; padding: 0; border: 3px solid #f5c542; border-radius: 50%;
+    background: #0d2152; cursor: pointer; box-shadow: 0 12px 28px rgba(8, 21, 55, .35);
+    transition: transform .15s, box-shadow .15s;
+}
+.nw-chat-btn:hover, .nw-chat-btn:focus-visible { transform: translateY(-2px) scale(1.04); box-shadow: 0 16px 32px rgba(8, 21, 55, .45); }
+.nw-chat-btn img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.nw-chat-badge {
+    position: absolute; right: -4px; bottom: -4px; display: grid; place-items: center;
+    width: 26px; height: 26px; border-radius: 50%; background: #1554c0; border: 2px solid #ffffff;
+}
+.nw-chat-badge svg { width: 14px; height: 14px; fill: #ffffff; }
+.nw-chat.is-open .nw-chat-badge { display: none; }
+
+.nw-chat-panel {
+    position: fixed; right: 24px; bottom: 100px; z-index: 61;
+    display: flex; flex-direction: column; width: min(370px, calc(100vw - 32px)); max-height: min(600px, calc(100vh - 130px));
+    overflow: hidden; border-radius: 20px; background: #ffffff; color: #1f2a3d;
+    box-shadow: 0 24px 60px rgba(8, 21, 55, .35); animation: nw-chat-in .2s ease;
+}
+.nw-chat-panel[hidden] { display: none; }
+@keyframes nw-chat-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.nw-chat-head {
+    display: flex; align-items: center; gap: 12px; padding: 14px 14px 14px 18px; color: #ffffff;
+    background: linear-gradient(120deg, #0d2152 0%, #1554c0 70%, #c9a24a 130%);
+}
+.nw-chat-head img { width: 40px; height: 40px; border-radius: 50%; border: 2px solid #f5c542; object-fit: cover; }
+.nw-chat-head div { display: grid; flex: 1; line-height: 1.25; }
+.nw-chat-head strong { color: #ffffff; font-size: 1rem; }
+.nw-chat-head span { color: #dbe5f5; font-size: .8rem; }
+.nw-chat-x { width: 34px; height: 34px; border: 0; border-radius: 50%; background: rgba(255, 255, 255, .12); color: #ffffff; font-size: 1.4rem; line-height: 1; cursor: pointer; }
+.nw-chat-x:hover { background: rgba(255, 255, 255, .24); }
+.nw-chat-body { display: grid; gap: 12px; padding: 18px; overflow-y: auto; background: #f4f7fc; }
+.nw-msg { max-width: 88%; padding: 11px 14px; font-size: .93rem; line-height: 1.5; }
+.nw-msg strong { display: block; color: #0d2152; }
+.nw-msg--david { justify-self: start; border-radius: 16px 16px 16px 4px; background: #ffffff; border: 1px solid #e4ebf5; color: #1f2a3d; }
+.nw-msg--you { justify-self: end; border-radius: 16px 16px 4px 16px; background: #1554c0; color: #ffffff; }
+.nw-chat-form { display: grid; gap: 8px; }
+.nw-chat-form textarea, .nw-chat-form input {
+    width: 100%; padding: 10px 12px; border: 1px solid #cfdaea; border-radius: 12px; background: #ffffff;
+    color: #1f2a3d; font: inherit; font-size: .93rem; resize: vertical;
+}
+.nw-chat-form textarea:focus, .nw-chat-form input:focus { outline: 2px solid #1554c0; outline-offset: 0; border-color: #1554c0; }
+.nw-chat-send { justify-self: end; }
+.nw-chat-note { margin: 0; color: #b42318; font-size: .85rem; }
+.nw-chat-note:empty { display: none; }
+.nw-chat-note a, .nw-chat-privacy a { color: #1554c0; }
+.nw-chat-privacy { margin: 2px 0 0; color: #5b6576; font-size: .76rem; line-height: 1.4; }
+.nw-sr, .nw-hp { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* back-to-top moves up so it doesn't sit on the chat button */
+body.has-nw-chat .back-to-top { bottom: 100px; }
+@media (max-width: 760px) {
+    .nw-chat-btn { right: 16px; bottom: 16px; width: 56px; height: 56px; }
+    .nw-chat-panel { right: 16px; bottom: 84px; max-height: calc(100vh - 110px); }
+    body.has-nw-chat .back-to-top { bottom: 84px; }
+    /* above the sticky booking bar */
+    body:has(.sticky-cta) .nw-chat-btn { bottom: calc(84px + env(safe-area-inset-bottom)); }
+    body:has(.sticky-cta) .nw-chat-panel { bottom: calc(150px + env(safe-area-inset-bottom)); max-height: calc(100vh - 180px); }
+    body.has-nw-chat:has(.sticky-cta) .back-to-top { bottom: calc(150px + env(safe-area-inset-bottom)); }
+}
+@media (prefers-reduced-motion: reduce) { .nw-chat-panel { animation: none; } }
+
+/* AI consulting page: the AI training part sits in its own warm band so it reads as a separate offer */
+.training-band {
+    margin: 24px 0 8px;
+    padding: 12px 0 28px;
+    background: linear-gradient(180deg, #fdf6e3 0%, #fbf0d4 100%);
+    border-top: 4px solid var(--yellow);
+    border-bottom: 1px solid #f0e2bc;
+    scroll-margin-top: 80px;
+}
+.training-band .section { background: transparent; }
+.training-band .card { background: #ffffff; }
+.training-tagline { color: var(--blue); font-weight: 600; font-size: 1.15rem; }
+.training-actions { justify-content: center; }
