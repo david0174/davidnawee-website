@@ -338,6 +338,10 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
         document.querySelectorAll("img.logo").forEach((img) => {
             img.src = img.src.replace(/logo_notext(-dark)?\.png/, dark ? "logo_notext-dark.png" : "logo_notext.png");
         });
+        // tab icon: grey-to-black N in dark mode
+        document.querySelectorAll('link[rel="icon"]').forEach((link) => {
+            link.href = link.href.replace(/favicon-nawee(-dark)?\.png/, dark ? "favicon-nawee-dark.png" : "favicon-nawee.png");
+        });
     }
 
     const toggleTheme = () => {
