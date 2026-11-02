@@ -13,3 +13,6 @@ h1, h2, h3, h4 { color: var(--dm-head); }
 /* nawee.net hint at the end of the homepage: plain, calm strip */
 .test-band--quiet { background: #121822; border-top-color: #232c3a; }
 .test-band--quiet .test-band-inner { border: 0; background: transparent; box-shadow: none; }
+
+/* header business line under the logo: yellow on dark */
+.brand-logo .brand-role { color: #f5c542; }

@@ -1,12 +1,6 @@
 /* davidnawee.com: personal look on top of the shared style.css (same building blocks as nawee.net) */
 :root {
-    --blue: #2b5c9e;        /* links, buttons */
-    --blue-dark: #172b45;   /* headlines, dark bands */
-    --blue-soft: #eef2f7;
-    --yellow: #d9a04a;      /* warm amber accent (underline, eyebrows on dark bands) */
-    --ink: #1c2633;
-    --line: #e7e2da;
-    --soft: #f8f6f2;        /* warm off-white sections */
+    /* company site (nawee.net): same colours as the Nawee learning platform – nothing to override */
 }
 
 /* header: name as wordmark instead of a logo image */
@@ -370,13 +364,13 @@
 /* homepage: outcome cards (communicate · AI · grow) */
 .outcome-card { display: flex; flex-direction: column; }
 .outcome-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-.outcome-icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: var(--soft, #f8f6f2); font-size: 1.6rem; }
+.outcome-icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: var(--soft, #f7faff); font-size: 1.6rem; }
 .outcome-badge { padding: 4px 12px; border-radius: 99px; background: var(--blue, #2457a6); color: #fff; font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .outcome-card .text-link { margin-top: 6px; }
 .outcome-card .text-link:first-of-type { margin-top: auto; padding-top: 12px; }
 
 /* AI training page */
-.ai-act { max-width: 1000px; margin: 28px auto 0; padding: 22px 26px; border-left: 5px solid var(--blue, #2457a6); border-radius: 14px; background: var(--soft, #f8f6f2); }
+.ai-act { max-width: 1000px; margin: 28px auto 0; padding: 22px 26px; border-left: 5px solid var(--blue, #2457a6); border-radius: 14px; background: var(--soft, #f7faff); }
 .ai-act h3 { margin: 0 0 8px; }
 .ai-act p { margin: 0 0 8px; }
 .ai-act-note { color: var(--muted); font-size: .9rem; }
@@ -394,7 +388,7 @@
 
 /* projects page */
 .proj { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 40px; align-items: start; max-width: 1180px; margin: 0 auto; }
-.proj-alt { background: var(--soft, #f8f6f2); max-width: none; padding-left: max(5vw, calc((100vw - 1180px) / 2)); padding-right: max(5vw, calc((100vw - 1180px) / 2)); }
+.proj-alt { background: var(--soft, #f7faff); max-width: none; padding-left: max(5vw, calc((100vw - 1180px) / 2)); padding-right: max(5vw, calc((100vw - 1180px) / 2)); }
 .proj-text h2 { margin-top: 0; }
 .proj-label { margin: 18px 0 4px; color: var(--blue, #2457a6); font-size: .8rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .proj-text p { margin-top: 0; }
@@ -406,19 +400,19 @@
 @media (max-width: 900px) { .proj { grid-template-columns: 1fr; gap: 20px; } }
 
 /* KI-Schulung Hannover: pilot offer + FAQ */
-.pilot-card { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; padding: 32px 36px; border-radius: 20px; background: var(--blue-dark, #172b45); color: #f8f6f2; }
-.pilot-card .eyebrow { color: var(--yellow, #d9a04a); }
+.pilot-card { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; padding: 32px 36px; border-radius: 20px; background: var(--blue-dark, #0d2f82); color: #f8f6f2; }
+.pilot-card .eyebrow { color: var(--yellow, #f5c542); }
 .pilot-card h2 { margin: 6px 0 6px; color: #fff; font-size: clamp(2rem, 4vw, 2.8rem); }
 .pilot-card ul { margin: 14px 0; padding-left: 20px; display: grid; gap: 6px; }
 .pilot-sub { color: #c9d6e8; font-size: .95rem; margin: 0; }
 .faq { max-width: 860px; margin: 0 auto; display: grid; gap: 10px; }
-.faq-item { border: 1px solid var(--line, #e7e2da); border-radius: 14px; background: #fff; padding: 14px 18px; }
-.faq-item summary { cursor: pointer; font-weight: 700; color: var(--blue-dark, #172b45); }
+.faq-item { border: 1px solid var(--line, #e4ebf5); border-radius: 14px; background: #fff; padding: 14px 18px; }
+.faq-item summary { cursor: pointer; font-weight: 700; color: var(--blue-dark, #0d2f82); }
 .faq-item p { margin: 10px 0 0; }
 @media (max-width: 760px) { .pilot-card { grid-template-columns: 1fr; padding: 24px; } }
 
 /* free guide download box */
-.guide-card { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; padding: 28px 32px; border-radius: 20px; border: 2px solid var(--yellow, #d9a04a); background: var(--soft, #f8f6f2); }
+.guide-card { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; padding: 28px 32px; border-radius: 20px; border: 2px solid var(--yellow, #f5c542); background: var(--soft, #f7faff); }
 .guide-card h3 { margin: 4px 0 8px; }
 .guide-card p { margin: 0; }
 .guide-actions { display: grid; gap: 10px; justify-items: center; }
@@ -426,19 +420,19 @@
 
 /* testimonials (testimonials.js) – hidden until a real one exists */
 .testimonial-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.testimonial { position: relative; margin: 0; padding: 28px 26px 22px; border-radius: 18px; background: #fff; border: 1px solid var(--line, #e7e2da); display: flex; flex-direction: column; justify-content: space-between; gap: 18px; }
-.testimonial blockquote { margin: 0; font-size: 1.05rem; line-height: 1.55; color: var(--ink, #1c2633); }
+.testimonial { position: relative; margin: 0; padding: 28px 26px 22px; border-radius: 18px; background: #fff; border: 1px solid var(--line, #e4ebf5); display: flex; flex-direction: column; justify-content: space-between; gap: 18px; }
+.testimonial blockquote { margin: 0; font-size: 1.05rem; line-height: 1.55; color: var(--ink, #14213d); }
 .testimonial figcaption { display: flex; gap: 12px; align-items: center; font-size: .92rem; color: var(--muted, #5b6675); }
-.testimonial-avatar { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: var(--blue-soft, #eef2f7); color: var(--blue, #2b5c9e); font-weight: 700; flex: none; }
+.testimonial-avatar { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: var(--blue-soft, #eaf3ff); color: var(--blue, #1554c0); font-weight: 700; flex: none; }
 .testimonial-sample { position: absolute; top: -11px; left: 18px; background: #b42318; color: #fff; font-size: .7rem; font-weight: 800; letter-spacing: .06em; padding: 3px 10px; border-radius: 99px; }
 .testimonial-note { text-align: center; color: var(--muted, #5b6675); font-size: .85rem; margin-top: 16px; }
 
 /* hero: three strong points instead of a paragraph */
 .hero-points { list-style: none; margin: 22px 0 26px; padding: 0; display: grid; gap: 10px; }
 .hero-points li { position: relative; padding-left: 34px; font-size: 1.08rem; line-height: 1.45; color: var(--muted, #3b4555); }
-.hero-points li strong { color: var(--blue-dark, #172b45); }
-.hero-points li::before { content: ""; position: absolute; left: 0; top: 2px; width: 22px; height: 22px; border-radius: 50%; background: var(--yellow, #d9a04a) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center / 14px no-repeat; }
-.hero-claim { margin: 14px 0 0; font-size: 1.15rem; font-weight: 600; color: var(--yellow-dark, #9a6a1c); font-style: italic; }
+.hero-points li strong { color: var(--blue-dark, #0d2f82); }
+.hero-points li::before { content: ""; position: absolute; left: 0; top: 2px; width: 22px; height: 22px; border-radius: 50%; background: var(--yellow, #f5c542) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center / 14px no-repeat; }
+.hero-claim { margin: 14px 0 0; font-size: 1.15rem; font-weight: 600; color: var(--blue); font-style: italic; }
 
 /* footer navigation: two evenly balanced columns for any number of links (replaces the fixed-row grid) */
 footer .footer-links { display: block; columns: 2; column-gap: 36px; }
@@ -626,7 +620,7 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
 
 .ai-offer-tag {
     margin: 0 0 6px;
-    color: var(--yellow-dark, #9a6a1c);
+    color: var(--blue);
     font-size: .78rem;
     font-weight: 800;
     letter-spacing: .1em;
@@ -863,7 +857,7 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
 
 .cred-prog {
     margin: 0 0 4px;
-    color: var(--yellow-dark, #9a6a1c);
+    color: var(--blue);
     font-weight: 700;
     font-size: .92rem;
 }
@@ -917,4 +911,26 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
 .page-hero h1 {
     letter-spacing: -.02em;
     word-spacing: .06em;
+}
+
+/* company site (nawee.net): Nawee arch logo in the header with the business line below */
+.brand-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    flex: none;
+    text-decoration: none;
+}
+
+.brand-logo .logo {
+    display: block;
+    width: auto;
+    height: 52px;
+}
+
+.brand-logo .brand-role {
+    margin-top: -2px;
+    color: var(--blue);
+    font-size: .56rem;
 }

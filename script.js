@@ -334,6 +334,10 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
         button.setAttribute("aria-label", dark ? toLight : toDark);
         button.title = dark ? toLight : toDark;
         menuButton.innerHTML = `${dark ? SUN : MOON}<span>${dark ? toLight : toDark}</span>`;
+        // Nawee logo: white lettering in dark mode (same files as nawee.net)
+        document.querySelectorAll("img.logo").forEach((img) => {
+            img.src = img.src.replace(/logo_notext(-dark)?\.png/, dark ? "logo_notext-dark.png" : "logo_notext.png");
+        });
     }
 
     const toggleTheme = () => {
