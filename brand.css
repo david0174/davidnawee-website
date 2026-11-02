@@ -912,3 +912,9 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
         width: 100%;
     }
 }
+
+/* subpage headings: a bit looser, so colons and words don't collide ("AI consulting: where …") */
+.page-hero h1 {
+    letter-spacing: -.02em;
+    word-spacing: .06em;
+}
