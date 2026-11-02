@@ -294,12 +294,6 @@
     html:not([data-theme="light"]) .ai-offer-tag { color: var(--dm-link); }
     html:not([data-theme="light"]) .ai-tools li { background: var(--dm-bg); }
     html:not([data-theme="light"]) .ai-tools strong { color: var(--dm-head); }
-    html:not([data-theme="light"]) .motto-band { background: var(--dm-band); }
-    html:not([data-theme="light"]) .motto-card { border: 1px solid rgba(35, 32, 25, .14); }
-    html:not([data-theme="light"]) .motto-tile--biz .motto-icon { color: #e8c287; }
-    html:not([data-theme="light"]) .motto-tile--ppl .motto-icon { color: #9ad5ad; }
-    html:not([data-theme="light"]) .motto-tile--biz:hover, html:not([data-theme="light"]) .motto-tile--biz:focus-visible { background: #544226; color: #d5dae4; }
-    html:not([data-theme="light"]) .motto-hr { border-top: 1px solid rgba(35, 32, 25, .14); }
     html:not([data-theme="light"]) .cred { background: var(--dm-bg); }
     html:not([data-theme="light"]) .cred-icon { color: var(--dm-link); }
     html:not([data-theme="light"]) .cred h3 { color: var(--dm-head); }
@@ -332,10 +326,6 @@
     html:not([data-theme="light"]) .nl-topics legend { color: #e9eef5; }
     html:not([data-theme="light"]) .test-band--quiet { background: #121822; border-top-color: #232c3a; }
     html:not([data-theme="light"]) .test-band--quiet .test-band-inner { border: 0; background: transparent; box-shadow: none; }
-    html:not([data-theme="light"]) .motto-tile--ai:hover, html:not([data-theme="light"]) .motto-tile--ai:focus-visible { background: #2d6fcc; color: #ffffff; }
-    html:not([data-theme="light"]) .motto-tile--biz:hover, html:not([data-theme="light"]) .motto-tile--biz:focus-visible { background: #e3b46a; color: #0d1b3a; }
-    html:not([data-theme="light"]) .motto-tile--ppl:hover, html:not([data-theme="light"]) .motto-tile--ppl:focus-visible { background: #2e8b57; color: #ffffff; }
-    html:not([data-theme="light"]) .motto-tile:hover .motto-icon, html:not([data-theme="light"]) .motto-tile:focus-visible .motto-icon, html:not([data-theme="light"]) .motto-tile:hover > span:last-child, html:not([data-theme="light"]) .motto-tile:focus-visible > span:last-child { color: inherit; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -630,12 +620,6 @@ html[data-theme="dark"] .ai-map-row span[role="cell"]:first-child { color: var(-
 html[data-theme="dark"] .ai-offer-tag { color: var(--dm-link); }
 html[data-theme="dark"] .ai-tools li { background: var(--dm-bg); }
 html[data-theme="dark"] .ai-tools strong { color: var(--dm-head); }
-html[data-theme="dark"] .motto-band { background: var(--dm-band); }
-html[data-theme="dark"] .motto-card { border: 1px solid rgba(35, 32, 25, .14); }
-html[data-theme="dark"] .motto-tile--biz .motto-icon { color: #e8c287; }
-html[data-theme="dark"] .motto-tile--ppl .motto-icon { color: #9ad5ad; }
-html[data-theme="dark"] .motto-tile--biz:hover, html[data-theme="dark"] .motto-tile--biz:focus-visible { background: #544226; color: #d5dae4; }
-html[data-theme="dark"] .motto-hr { border-top: 1px solid rgba(35, 32, 25, .14); }
 html[data-theme="dark"] .cred { background: var(--dm-bg); }
 html[data-theme="dark"] .cred-icon { color: var(--dm-link); }
 html[data-theme="dark"] .cred h3 { color: var(--dm-head); }
@@ -668,10 +652,6 @@ html[data-theme="dark"] .nl-topic input:checked + span { background: #1e2f4a; bo
 html[data-theme="dark"] .nl-topics legend { color: #e9eef5; }
 html[data-theme="dark"] .test-band--quiet { background: #121822; border-top-color: #232c3a; }
 html[data-theme="dark"] .test-band--quiet .test-band-inner { border: 0; background: transparent; box-shadow: none; }
-html[data-theme="dark"] .motto-tile--ai:hover, html[data-theme="dark"] .motto-tile--ai:focus-visible { background: #2d6fcc; color: #ffffff; }
-html[data-theme="dark"] .motto-tile--biz:hover, html[data-theme="dark"] .motto-tile--biz:focus-visible { background: #e3b46a; color: #0d1b3a; }
-html[data-theme="dark"] .motto-tile--ppl:hover, html[data-theme="dark"] .motto-tile--ppl:focus-visible { background: #2e8b57; color: #ffffff; }
-html[data-theme="dark"] .motto-tile:hover .motto-icon, html[data-theme="dark"] .motto-tile:focus-visible .motto-icon, html[data-theme="dark"] .motto-tile:hover > span:last-child, html[data-theme="dark"] .motto-tile:focus-visible > span:last-child { color: inherit; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }
