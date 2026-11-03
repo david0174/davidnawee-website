@@ -1188,3 +1188,15 @@ body { overflow-x: clip; }
     .brand-logo .logo { height: 46px; }
     .site-header .nav-cta { padding: 8px 12px; font-size: .82rem; }
 }
+
+/* newsletter on its own page (newsletter.html / newsletter-en.html), no longer on the homepage */
+.nl-page-back { margin: 0; padding: 28px 16px 0; text-align: center; }
+@media (max-width: 420px) {
+    .newsletter.section { padding-left: 16px; padding-right: 16px; }
+    .newsletter-form { padding: 22px 16px; }
+    .nl-preview-phrase { font-size: 1.2rem; }
+}
+/* text and form stack on phones and tablets (a later duplicate in style.css kept two columns) */
+@media (max-width: 900px) {
+    .newsletter-inner { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+}
