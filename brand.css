@@ -1175,3 +1175,16 @@ body.has-nw-chat .back-to-top { bottom: 100px; }
     .js-steps .process-step:not(:last-child)::before { background-size: 100% 0%; }
     .js-steps.is-in .process-step:not(:last-child)::before { background-size: 100% 100%; }
 }
+
+/* iPhone: nothing may be wider than the screen (David, 2026-11-03: page didn't reach the right edge).
+   iOS Safari ignores overflow-x on <html>, so the causes are fixed at the source + clip on body as a safety net. */
+body { overflow-x: clip; }
+.newsletter-inner > * { min-width: 0; }
+.nl-topic-row { flex-wrap: wrap; }
+.nl-preview-phrase { overflow-wrap: anywhere; }
+@media (max-width: 420px) {
+    .site-header { gap: 10px; padding-left: 16px; padding-right: 16px; }
+    .site-header nav { gap: 8px; }
+    .brand-logo .logo { height: 46px; }
+    .site-header .nav-cta { padding: 8px 12px; font-size: .82rem; }
+}
