@@ -83,7 +83,7 @@ h1, h2, h3, h4 { color: var(--dm-head); }
 .nw-chat-privacy { color: #5b6576; }
 .nw-chat-note a, .nw-chat-privacy a { color: #1554c0; }
 .nw-chat-head strong { color: #ffffff; }
-.nw-chat-btn { background: #0d2152; }
+.nw-chat-btn { background: #0d2152; border: 3px solid #f5c542; }
 
 /* AI training band on the AI consulting page: warm dark tone */
 .training-band { background: linear-gradient(180deg, #221d12 0%, #1b1710 100%); border-bottom-color: #3a3220; }

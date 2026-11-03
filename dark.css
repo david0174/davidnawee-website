@@ -416,7 +416,7 @@
     html:not([data-theme="light"]) .nw-chat-privacy { color: #5b6576; }
     html:not([data-theme="light"]) .nw-chat-note a, html:not([data-theme="light"]) .nw-chat-privacy a { color: #1554c0; }
     html:not([data-theme="light"]) .nw-chat-head strong { color: #ffffff; }
-    html:not([data-theme="light"]) .nw-chat-btn { background: #0d2152; }
+    html:not([data-theme="light"]) .nw-chat-btn { background: #0d2152; border: 3px solid #f5c542; }
     html:not([data-theme="light"]) .training-band { background: linear-gradient(180deg, #221d12 0%, #1b1710 100%); border-bottom-color: #3a3220; }
     html:not([data-theme="light"]) .training-band .card { background: #151b25; }
     html:not([data-theme="light"]) .process-num { background: #1d3263; border: 1px solid rgba(245, 197, 66, .55); color: #f5c542; }
@@ -842,7 +842,7 @@ html[data-theme="dark"] .nw-chat-form textarea, html[data-theme="dark"] .nw-chat
 html[data-theme="dark"] .nw-chat-privacy { color: #5b6576; }
 html[data-theme="dark"] .nw-chat-note a, html[data-theme="dark"] .nw-chat-privacy a { color: #1554c0; }
 html[data-theme="dark"] .nw-chat-head strong { color: #ffffff; }
-html[data-theme="dark"] .nw-chat-btn { background: #0d2152; }
+html[data-theme="dark"] .nw-chat-btn { background: #0d2152; border: 3px solid #f5c542; }
 html[data-theme="dark"] .training-band { background: linear-gradient(180deg, #221d12 0%, #1b1710 100%); border-bottom-color: #3a3220; }
 html[data-theme="dark"] .training-band .card { background: #151b25; }
 html[data-theme="dark"] .process-num { background: #1d3263; border: 1px solid rgba(245, 197, 66, .55); color: #f5c542; }
