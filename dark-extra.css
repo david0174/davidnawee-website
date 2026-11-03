@@ -41,3 +41,6 @@ h1, h2, h3, h4 { color: var(--dm-head); }
 /* AI training band on the AI consulting page: warm dark tone */
 .training-band { background: linear-gradient(180deg, #221d12 0%, #1b1710 100%); border-bottom-color: #3a3220; }
 .training-band .card { background: #151b25; }
+
+/* numbered steps (founder path + "How we work together"): visible circles in dark mode */
+.process-num { background: #1d3263; border: 1px solid rgba(245, 197, 66, .55); color: #f5c542; }
