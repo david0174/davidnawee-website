@@ -925,7 +925,7 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
     margin-bottom: 14px;
     border-radius: 50%;
     background: var(--blue-dark);
-    color: var(--yellow);
+    color: #ffffff;
     font-family: var(--display);
     font-size: 1.25rem;
     font-weight: 700;
