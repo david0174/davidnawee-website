@@ -1072,10 +1072,7 @@ body.has-nw-chat .back-to-top { bottom: 100px; }
 .training-actions { justify-content: center; }
 
 /* homepage founder path under the hero: six short steps in three columns */
-.process-steps.process-steps--six { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 1080px; }
 .founder-actions { justify-content: center; margin-top: 28px; }
-@media (max-width: 1000px) { .process-steps.process-steps--six { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 600px) { .process-steps.process-steps--six { grid-template-columns: minmax(0, 1fr); } }
 
 /* business check (journey-check.html / gruendungs-check.html, journey-check.js) */
 .jc-section { max-width: 760px; margin: 0 auto; }
@@ -1133,48 +1130,48 @@ body.has-nw-chat .back-to-top { bottom: 100px; }
 .me-hero.me-hero--banner .button.secondary { color: var(--blue); background: #ffffff; border-color: var(--line); }
 .me-hero.me-hero--banner .button.secondary:hover { border-color: var(--blue); color: var(--blue-dark); }
 
-/* numbered steps show their ORDER: arrows between the cards + cards appearing one after another (David, 2026-11-03).
-   4 steps: left to right · 6 steps: a snake 1→2→3 ↓ 4←5←6 · narrow screens: one column, arrows down.
-   script.js adds .is-in when the list scrolls into view; without JS everything is simply visible. */
-.process-steps { gap: 32px; }
-.process-step { position: relative; }
-.process-step::after {
-    position: absolute; z-index: 2; display: grid; place-items: center;
-    width: 30px; height: 30px; border-radius: 50%;
-    background: var(--blue); color: #ffffff; font-size: 16px; font-weight: 700; line-height: 1;
-    box-shadow: 0 4px 12px rgba(21, 84, 192, .3);
+/* numbered steps as a STEPPER (David, 2026-11-03): all steps in one row, the number circles joined by a thin line
+   that fills left to right when the list scrolls into view (.is-in from script.js). Narrow screens: a vertical line.
+   Without JS the line is simply filled. */
+.process-steps, .process-steps.process-steps--six { gap: 24px; }
+.process-steps.process-steps--six { grid-template-columns: repeat(6, minmax(0, 1fr)); max-width: 1180px; }
+.process-steps .process-step {
+    position: relative; padding: 0 6px; border: 0; background: transparent; box-shadow: none; text-align: center;
 }
-@media (min-width: 1001px) {
-    .process-steps:not(.process-steps--six) .process-step:not(:last-child)::after { content: "→"; top: 50%; right: -31px; transform: translateY(-50%); --nudge: translate(4px, -50%); --rest: translateY(-50%); }
-    .process-steps--six .process-step:nth-child(4) { grid-row: 2; grid-column: 3; }
-    .process-steps--six .process-step:nth-child(5) { grid-row: 2; grid-column: 2; }
-    .process-steps--six .process-step:nth-child(6) { grid-row: 2; grid-column: 1; }
-    .process-steps--six .process-step:nth-child(1)::after,
-    .process-steps--six .process-step:nth-child(2)::after { content: "→"; top: 50%; right: -31px; transform: translateY(-50%); --nudge: translate(4px, -50%); --rest: translateY(-50%); }
-    .process-steps--six .process-step:nth-child(3)::after { content: "↓"; left: 50%; bottom: -31px; transform: translateX(-50%); --nudge: translate(-50%, 4px); --rest: translateX(-50%); }
-    .process-steps--six .process-step:nth-child(4)::after,
-    .process-steps--six .process-step:nth-child(5)::after { content: "←"; top: 50%; left: -31px; transform: translateY(-50%); --nudge: translate(-4px, -50%); --rest: translateY(-50%); }
+.process-steps .process-num { position: relative; z-index: 1; margin: 0 auto 14px; box-shadow: 0 0 0 6px var(--white); }
+.process-steps .process-step h3 { font-size: 1.08rem; }
+.process-steps .process-step p { font-size: .95rem; }
+/* the connector from this circle to the next one */
+.process-steps .process-step:not(:last-child)::before {
+    content: ""; position: absolute; z-index: 0; top: 20px; left: calc(50% + 21px); width: calc(100% + 24px - 42px); height: 2px;
+    background: var(--line) linear-gradient(var(--blue), var(--blue)) no-repeat left center / 100% 100%;
 }
 @media (max-width: 1000px) {
-    .process-steps, .process-steps.process-steps--six { grid-template-columns: minmax(0, 1fr); max-width: 560px; }
-    .process-step:not(:last-child)::after { content: "↓"; left: 50%; bottom: -31px; transform: translateX(-50%); --nudge: translate(-50%, 4px); --rest: translateX(-50%); }
+    .process-steps, .process-steps.process-steps--six { grid-template-columns: minmax(0, 1fr); max-width: 560px; gap: 26px; }
+    .process-steps .process-step { padding: 0 0 0 62px; text-align: left; }
+    .process-steps .process-num { position: absolute; left: 0; top: 0; margin: 0; }
+    .process-steps .process-step:not(:last-child)::before {
+        top: 42px; left: 20px; width: 2px; height: calc(100% - 42px + 26px);
+        background-size: 100% 100%; background-position: top center;
+    }
 }
-
-/* movement: cards rise in one after another, then the arrows appear and keep a gentle nudge in their direction */
 @media (prefers-reduced-motion: no-preference) {
-    .js-steps .process-step { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
-    .js-steps .process-step::after { opacity: 0; transition: opacity .3s ease; }
+    .js-steps .process-step { opacity: 0; transform: translateY(12px); transition: opacity .45s ease, transform .45s ease; }
+    .js-steps .process-step:not(:last-child)::before { background-size: 0% 100%; transition: background-size .45s ease; }
     .js-steps.is-in .process-step { opacity: 1; transform: none; }
-    .js-steps.is-in .process-step::after { opacity: 1; animation: step-nudge 2.4s ease-in-out infinite; }
-    .js-steps.is-in .process-step:nth-child(2) { transition-delay: .15s; }
-    .js-steps.is-in .process-step:nth-child(3) { transition-delay: .3s; }
-    .js-steps.is-in .process-step:nth-child(4) { transition-delay: .45s; }
-    .js-steps.is-in .process-step:nth-child(5) { transition-delay: .6s; }
-    .js-steps.is-in .process-step:nth-child(6) { transition-delay: .75s; }
-    .js-steps.is-in .process-step:nth-child(1)::after { transition-delay: .35s; animation-delay: 1.2s; }
-    .js-steps.is-in .process-step:nth-child(2)::after { transition-delay: .5s; animation-delay: 1.4s; }
-    .js-steps.is-in .process-step:nth-child(3)::after { transition-delay: .65s; animation-delay: 1.6s; }
-    .js-steps.is-in .process-step:nth-child(4)::after { transition-delay: .8s; animation-delay: 1.8s; }
-    .js-steps.is-in .process-step:nth-child(5)::after { transition-delay: .95s; animation-delay: 2s; }
+    .js-steps.is-in .process-step:not(:last-child)::before { background-size: 100% 100%; }
+    .js-steps.is-in .process-step:nth-child(2) { transition-delay: .35s; }
+    .js-steps.is-in .process-step:nth-child(3) { transition-delay: .7s; }
+    .js-steps.is-in .process-step:nth-child(4) { transition-delay: 1.05s; }
+    .js-steps.is-in .process-step:nth-child(5) { transition-delay: 1.4s; }
+    .js-steps.is-in .process-step:nth-child(6) { transition-delay: 1.75s; }
+    .js-steps.is-in .process-step:nth-child(1)::before { transition-delay: .2s; }
+    .js-steps.is-in .process-step:nth-child(2)::before { transition-delay: .55s; }
+    .js-steps.is-in .process-step:nth-child(3)::before { transition-delay: .9s; }
+    .js-steps.is-in .process-step:nth-child(4)::before { transition-delay: 1.25s; }
+    .js-steps.is-in .process-step:nth-child(5)::before { transition-delay: 1.6s; }
 }
-@keyframes step-nudge { 0%, 70%, 100% { transform: var(--rest); } 35% { transform: var(--nudge); } }
+@media (max-width: 1000px) and (prefers-reduced-motion: no-preference) {
+    .js-steps .process-step:not(:last-child)::before { background-size: 100% 0%; }
+    .js-steps.is-in .process-step:not(:last-child)::before { background-size: 100% 100%; }
+}

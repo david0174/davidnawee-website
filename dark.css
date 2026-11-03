@@ -418,6 +418,9 @@
     html:not([data-theme="light"]) .training-band { background: linear-gradient(180deg, #221d12 0%, #1b1710 100%); border-bottom-color: #3a3220; }
     html:not([data-theme="light"]) .training-band .card { background: #151b25; }
     html:not([data-theme="light"]) .process-num { background: #1d3263; border: 1px solid rgba(245, 197, 66, .55); color: #f5c542; }
+    html:not([data-theme="light"]) .process-steps .process-step { background: transparent; border: 0; }
+    html:not([data-theme="light"]) .process-steps .process-num { box-shadow: 0 0 0 6px var(--dm-bg); }
+    html:not([data-theme="light"]) .process-steps .process-step:not(:last-child)::before { background-color: #2b3a4f; background-image: linear-gradient(#7fa6dd, #7fa6dd); }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -836,6 +839,9 @@ html[data-theme="dark"] .nw-chat-btn { background: #0d2152; }
 html[data-theme="dark"] .training-band { background: linear-gradient(180deg, #221d12 0%, #1b1710 100%); border-bottom-color: #3a3220; }
 html[data-theme="dark"] .training-band .card { background: #151b25; }
 html[data-theme="dark"] .process-num { background: #1d3263; border: 1px solid rgba(245, 197, 66, .55); color: #f5c542; }
+html[data-theme="dark"] .process-steps .process-step { background: transparent; border: 0; }
+html[data-theme="dark"] .process-steps .process-num { box-shadow: 0 0 0 6px var(--dm-bg); }
+html[data-theme="dark"] .process-steps .process-step:not(:last-child)::before { background-color: #2b3a4f; background-image: linear-gradient(#7fa6dd, #7fa6dd); }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }
