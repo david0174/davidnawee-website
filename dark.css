@@ -361,6 +361,7 @@
     html:not([data-theme="light"]) .pillar--com svg { color: #94dbb3; }
     html:not([data-theme="light"]) .me-hero.me-hero--banner .button.secondary { color: var(--dm-link); background: #14181f; }
     html:not([data-theme="light"]) .me-hero.me-hero--banner .button.secondary:hover { color: var(--dm-head); }
+    html:not([data-theme="light"]) .about-highlights a { color: var(--dm-link); }
     html:not([data-theme="light"]) body { background: var(--dm-bg); color: var(--ink); }
     html:not([data-theme="light"]) .language-toggle img { filter: invert(1); }
     html:not([data-theme="light"]) h1, html:not([data-theme="light"]) h2, html:not([data-theme="light"]) h3, html:not([data-theme="light"]) h4 { color: var(--dm-head); }
@@ -782,6 +783,7 @@ html[data-theme="dark"] .pillar--biz svg { color: #f1cf7e; }
 html[data-theme="dark"] .pillar--com svg { color: #94dbb3; }
 html[data-theme="dark"] .me-hero.me-hero--banner .button.secondary { color: var(--dm-link); background: #14181f; }
 html[data-theme="dark"] .me-hero.me-hero--banner .button.secondary:hover { color: var(--dm-head); }
+html[data-theme="dark"] .about-highlights a { color: var(--dm-link); }
 html[data-theme="dark"] body { background: var(--dm-bg); color: var(--ink); }
 html[data-theme="dark"] .language-toggle img { filter: invert(1); }
 html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4 { color: var(--dm-head); }

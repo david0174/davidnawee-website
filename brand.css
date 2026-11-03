@@ -1200,3 +1200,7 @@ body { overflow-x: clip; }
 @media (max-width: 900px) {
     .newsletter-inner { grid-template-columns: minmax(0, 1fr); gap: 32px; }
 }
+
+/* credentials back inside "About me" as a compact list (David, 2026-11-03: less scrolling) */
+.about-highlights a { color: var(--blue); font-weight: 600; }
+.about-copy p.about-cred-note { margin: 10px 0 0; color: var(--muted); font-size: .76rem; line-height: 1.4; }
