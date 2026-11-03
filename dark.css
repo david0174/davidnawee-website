@@ -868,9 +868,19 @@ html[data-theme="dark"] .process-steps .process-step:not(:last-child)::before { 
 }
 @media (prefers-color-scheme: dark) and (max-width: 760px) {
     html:not([data-theme="light"]) .sticky-cta { background: rgba(20, 24, 31, .96); }
+    html:not([data-theme="light"]) .banner-pillars { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+    html:not([data-theme="light"]) .me-hero.me-hero--banner h1 { font-size: clamp(2rem, 9.5vw, 3rem); }
+    html:not([data-theme="light"]) .banner-tagline { gap: 10px; }
+    html:not([data-theme="light"]) .banner-tagline::before, html:not([data-theme="light"]) .banner-tagline::after { flex: 0 0 22px; }
+    html:not([data-theme="light"]) .banner-tagline span { font-size: .74rem; letter-spacing: .12em; line-height: 1.6; }
 }
 @media (max-width: 760px) {
     html[data-theme="dark"] .sticky-cta { background: rgba(20, 24, 31, .96); }
+    html[data-theme="dark"] .banner-pillars { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+    html[data-theme="dark"] .me-hero.me-hero--banner h1 { font-size: clamp(2rem, 9.5vw, 3rem); }
+    html[data-theme="dark"] .banner-tagline { gap: 10px; }
+    html[data-theme="dark"] .banner-tagline::before, html[data-theme="dark"] .banner-tagline::after { flex: 0 0 22px; }
+    html[data-theme="dark"] .banner-tagline span { font-size: .74rem; letter-spacing: .12em; line-height: 1.6; }
 }
 @media (prefers-color-scheme: dark) and (max-width: 1360px) {
     html:not([data-theme="light"]) .menu-switch .mobile-menu .theme-toggle-row { color: var(--dm-head); }
