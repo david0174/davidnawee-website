@@ -42,7 +42,7 @@ h1, h2, h3, h4 { color: var(--dm-head); }
 .banner-tagline span { min-width: 0; text-align: center; color: #f5c542; font-size: .95rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
 
 /* three pillars: gold line icon, white title, light text, thin dividers */
-.banner-pillars { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 30px 0 34px; padding: 0; }
+.banner-pillars { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 30px 0 34px; padding: 0; }
 /* the three pillars are tiles in their own colour that fill solid on hover (like the former "My approach" tiles) */
 .pillar {
     display: flex; flex-direction: column; align-items: center; gap: 8px; height: 100%;
@@ -104,4 +104,12 @@ h1, h2, h3, h4 { color: var(--dm-head); }
     .banner-tagline { gap: 10px; }
     .banner-tagline::before, .banner-tagline::after { flex: 0 0 22px; }
     .banner-tagline span { font-size: .74rem; letter-spacing: .12em; line-height: 1.6; }
+}
+
+/* fourth hero tile: professional development (violet) */
+.pillar--dev { background: linear-gradient(160deg, rgba(155, 126, 222, .3), rgba(155, 126, 222, .12)); border: 1px solid rgba(178, 156, 235, .45); }
+.pillar--dev svg { color: #b49cf0; }
+.pillar--dev:hover, .pillar--dev:focus-visible { background: #7b5cc4; color: #ffffff; }
+@media (max-width: 1000px) and (min-width: 761px) {
+    .banner-pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
