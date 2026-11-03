@@ -1070,3 +1070,9 @@ body.has-nw-chat .back-to-top { bottom: 100px; }
 .training-band .card { background: #ffffff; }
 .training-tagline { color: var(--blue); font-weight: 600; font-size: 1.15rem; }
 .training-actions { justify-content: center; }
+
+/* homepage founder path under the hero: six short steps in three columns */
+.process-steps.process-steps--six { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 1080px; }
+.founder-actions { justify-content: center; margin-top: 28px; }
+@media (max-width: 1000px) { .process-steps.process-steps--six { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .process-steps.process-steps--six { grid-template-columns: minmax(0, 1fr); } }
