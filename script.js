@@ -427,3 +427,18 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
         });
     });
 })();
+
+// Numbered steps (founder path, "How we work together"): cards appear one after another when the list scrolls into view,
+// then the arrows between them show the order (styles in brand.css). Without IntersectionObserver everything stays visible.
+(function () {
+    const lists = document.querySelectorAll(".process-steps");
+    if (!lists.length || !("IntersectionObserver" in window)) return;
+    const seen = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-in");
+            seen.unobserve(entry.target);
+        });
+    }, { threshold: 0.2 });
+    lists.forEach((list) => { list.classList.add("js-steps"); seen.observe(list); });
+})();

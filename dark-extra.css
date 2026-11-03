@@ -15,16 +15,63 @@ h1, h2, h3, h4 { color: var(--dm-head); }
 .test-band--quiet .test-band-inner { border: 0; background: transparent; box-shadow: none; }
 
 
-/* hero pillar tiles: the hero is navy in both modes – keep the light-mode tile colours (the generator would darken the gold) */
+/* hero in DARK mode: the navy banner (same rules as brand.css before the light-mode overrides) */
+.me-hero.me-hero--banner {
+    position: relative;
+    max-width: none;
+    overflow: hidden;
+    padding-left: max(6vw, calc((100vw - 1080px) / 2));
+    padding-right: max(6vw, calc((100vw - 1080px) / 2));
+    padding-bottom: clamp(120px, 12vw, 170px);
+    color: #dbe5f5;
+    background:
+        radial-gradient(ellipse 45% 70% at 100% 0%, rgba(47, 123, 255, .38), transparent 70%),
+        radial-gradient(ellipse 40% 60% at 0% 100%, rgba(245, 197, 66, .12), transparent 70%),
+        linear-gradient(160deg, #0d2152 0%, #081537 60%, #060f29 100%);
+}
+.me-hero.me-hero--banner .me-hero-copy { position: relative; z-index: 1; }
+.banner-arc { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 150px; pointer-events: none; }
+.me-hero.me-hero--banner .eyebrow { color: #f5c542; }
+.me-hero.me-hero--banner h1 { color: #ffffff; margin-bottom: 14px; }
+.me-hero.me-hero--banner mark.hl { background: none; color: #f5c542; }
+.banner-sub { margin: 0 auto; max-width: 40ch; color: #c9d6ec; font-size: clamp(1.1rem, 1.8vw, 1.35rem); line-height: 1.45; }
+
+/* gold tagline between two thin lines */
+.banner-tagline { display: flex; align-items: center; gap: 18px; margin: 30px auto 6px; max-width: 760px; }
+.banner-tagline::before, .banner-tagline::after { content: ""; flex: 1; height: 2px; background: #f5c542; opacity: .8; }
+.banner-tagline span { min-width: 0; text-align: center; color: #f5c542; font-size: .95rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
+
+/* three pillars: gold line icon, white title, light text, thin dividers */
+.banner-pillars { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 30px 0 34px; padding: 0; }
+/* the three pillars are tiles in their own colour that fill solid on hover (like the former "My approach" tiles) */
+.pillar {
+    display: flex; flex-direction: column; align-items: center; gap: 8px; height: 100%;
+    padding: 22px 20px; border-radius: 16px; color: #ffffff; text-decoration: none;
+    transition: transform .15s, box-shadow .15s, background-color .2s, color .2s;
+}
+.pillar:hover, .pillar:focus-visible { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0, 0, 0, .3); }
+.pillar svg { width: 52px; height: 52px; margin-bottom: 4px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.pillar svg text { fill: currentColor; stroke: none; font: 700 5.6px/1 system-ui, sans-serif; }
+.pillar strong { color: inherit; font-size: 1.05rem; letter-spacing: .12em; text-transform: uppercase; }
+.pillar span { color: #c9d6ec; font-size: .98rem; line-height: 1.45; max-width: 26ch; }
 .pillar--ai { background: linear-gradient(160deg, rgba(77, 143, 224, .3), rgba(77, 143, 224, .12)); border: 1px solid rgba(127, 176, 240, .4); }
-.pillar--com { background: linear-gradient(160deg, rgba(80, 170, 110, .3), rgba(80, 170, 110, .12)); border: 1px solid rgba(124, 201, 149, .4); }
+.pillar--ai svg { color: #7fb0f0; }
 .pillar--biz { background: linear-gradient(160deg, rgba(245, 197, 66, .3), rgba(245, 197, 66, .12)); border: 1px solid rgba(245, 197, 66, .4); }
 .pillar--biz svg { color: #e3b46a; }
+.pillar--com { background: linear-gradient(160deg, rgba(80, 170, 110, .3), rgba(80, 170, 110, .12)); border: 1px solid rgba(124, 201, 149, .4); }
 .pillar--com svg { color: #7cc995; }
 .pillar--ai:hover, .pillar--ai:focus-visible { background: #2d6fcc; color: #ffffff; }
 .pillar--biz:hover, .pillar--biz:focus-visible { background: #e3b46a; color: #0d1b3a; }
 .pillar--com:hover, .pillar--com:focus-visible { background: #2e8b57; color: #ffffff; }
 .pillar:hover svg, .pillar:focus-visible svg, .pillar:hover span, .pillar:focus-visible span { color: inherit; }
+
+.me-hero.me-hero--banner .button.secondary { color: #ffffff; background: transparent; border-color: rgba(255, 255, 255, .55); }
+.me-hero.me-hero--banner .button.secondary:hover { border-color: #f5c542; color: #f5c542; }
+.me-hero.me-hero--banner .hero-person { color: #c9d6ec; }
+.me-hero.me-hero--banner .hero-person strong { color: #ffffff; }
+.me-hero.me-hero--banner .hero-person em { color: #f5c542; }
+.me-hero.me-hero--banner .hero-person img { border-color: #f5c542; }
+
 
 /* chat widget: keeps its own light panel in dark mode (generated rules would mix light text into it) */
 .nw-chat-panel { background: #ffffff; color: #1f2a3d; }
