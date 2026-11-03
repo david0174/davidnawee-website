@@ -308,15 +308,13 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
 
 
 // DARK ONLY (David, 2026-11-03): nawee.net always uses the dark look – no light/dark switch any more.
-// <html data-theme="dark"> is set in every page; this only swaps logo + tab icon to their dark versions.
+// <html data-theme="dark"> is set in every page; this only swaps the logo to its white-lettering version.
 (function () {
     document.documentElement.dataset.theme = "dark";
     document.querySelectorAll("img.logo").forEach((img) => {
         img.src = img.src.replace(/logo_notext(-dark)?\.png/, "logo_notext-dark.png");
     });
-    document.querySelectorAll('link[rel="icon"]').forEach((link) => {
-        link.href = link.href.replace(/favicon-nawee(-dark)?\.png/, "favicon-nawee-dark.png");
-    });
+    // tab icon: the blue 'N' tile (David, 2026-11-03) – no dark variant any more
 })();
 
 // Newsletter "Smart Tools, Strong Voice": send the form to Brevo in the background and show the result in place
