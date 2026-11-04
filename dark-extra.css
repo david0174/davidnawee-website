@@ -184,3 +184,14 @@ button.button.secondary:hover { background: #f5c542; border-color: #f5c542; colo
 .who-tile:nth-child(1) .who-tags li:hover { background: #2d6fcc; border-color: #2d6fcc; color: #ffffff; }
 .who-tile:nth-child(2) .who-tags li:hover { background: #f5c542; border-color: #f5c542; color: #0d1b3a; }
 .who-tile:nth-child(3) .who-tags li:hover { background: #2e8b57; border-color: #2e8b57; color: #ffffff; }
+
+/* About me: text pops on the dark background (David, 2026-11-04) */
+.about-copy p { color: #e4ebf5; font-size: 1.12rem; line-height: 1.7; }
+.about-copy p strong { color: #ffffff; font-weight: 700; }
+.about-copy p:first-of-type:not(.eyebrow) { font-size: 1.25rem; color: #ffffff; }
+.about-copy .eyebrow { color: #f5c542; }
+.about-heading span { color: #f5c542; }
+.about-copy a { color: #9cbcf0; font-weight: 700; }
+.about-highlights li { padding: 12px 14px; border: 1px solid #34496a; border-radius: 14px; background: #1b2840; }
+.about-highlights strong { color: #ffffff; }
+.about-highlights svg { color: #f5c542; }
