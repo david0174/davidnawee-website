@@ -108,7 +108,7 @@
     .me-hero-photo { animation: hero-fade .9s .2s ease backwards; }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) {
     .me-hero {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -241,7 +241,7 @@
 }
 
 /* below 1000px the burger menu takes over (four menu items no longer fit next to the button) */
-@media (max-width: 1360px) {
+@media (max-width: 900px) {
     .site-header nav > a:not(.nav-cta) {
         display: none;
     }
@@ -495,7 +495,7 @@ footer nav.footer-links > a:not(.nav-cta) { display: block; margin: 0 0 10px; br
 .me-hero--solo .hero-points li strong { display: block; margin-bottom: 2px; }
 .me-hero--solo .hero-actions { justify-content: center; }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) {
     .me-hero--solo .hero-points { grid-template-columns: minmax(0, 1fr); gap: 10px; }
 }
 .me-hero--solo .hero-person { text-align: left; }
@@ -510,7 +510,7 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
     display: none;
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 900px) {
     .site-header .language-switch {
         display: block;
     }
@@ -979,7 +979,7 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
     white-space: nowrap;
 }
 .nav-sub a[aria-current="page"] { color: var(--blue); font-weight: 600; }
-@media (max-width: 1360px) { .site-header .nav-group { display: none; } }
+@media (max-width: 900px) { .site-header .nav-group { display: none; } }
 @media (max-width: 1180px) { .site-header .nav-group > a { letter-spacing: .06em; font-size: .8rem; } }
 @media (max-width: 1040px) { .site-header .nav-group > a { letter-spacing: .03em; font-size: .76rem; } }
 
@@ -988,7 +988,7 @@ h1 span { letter-spacing: -.012em; word-spacing: .04em; }
 .menu-switch .mobile-menu a.mobile-sub::before { content: "↳ "; color: var(--muted); }
 
 /* header on wide screens: menu items aligned right, next to "Book a free call" (David, 2026-11-02) */
-@media (min-width: 1361px) {
+@media (min-width: 901px) {
     .site-header nav { flex: 1; justify-content: flex-end; }
 }
 
