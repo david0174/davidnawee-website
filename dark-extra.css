@@ -142,3 +142,8 @@ button.button.secondary:hover { background: #f5c542; border-color: #f5c542; colo
 
 /* tagline row stays centred at every width */
 .banner-tagline { justify-content: center; }
+
+/* chat speech bubble: white with navy text and a gold rim, also in the dark design */
+.nw-chat-nudge { background: #ffffff; border-color: #f5c542; }
+.nw-chat-nudge-text { color: #0d1b3a; }
+.nw-chat-nudge-x { color: #5b6576; }

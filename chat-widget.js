@@ -10,6 +10,7 @@
     const T = {
         de: {
             open: "Nachricht an David schreiben", close: "Chat schließen",
+            nudge: "Fragen? Schreiben Sie mir direkt 👋", nudgeClose: "Hinweis schließen",
             name: "David Nawee", status: "Antwortet meist innerhalb von 24 Stunden",
             hello: "Hallo, ich bin David 👋",
             intro: "Fragen zum Englischunterricht oder zu den Preisen? Schreiben Sie mir – ich antworte per E-Mail.",
@@ -22,6 +23,7 @@
         },
         en: {
             open: "Send David a message", close: "Close chat",
+            nudge: "Questions? Write me directly 👋", nudgeClose: "Close hint",
             name: "David Nawee", status: "Usually replies within 24 hours",
             hello: "Hi, I’m David 👋",
             intro: "Questions about English lessons or prices? Write me – I’ll reply by email.",
@@ -62,6 +64,10 @@
                 </form>
             </div>
         </section>
+        <div class="nw-chat-nudge" hidden>
+            <button type="button" class="nw-chat-nudge-text">${T.nudge}</button>
+            <button type="button" class="nw-chat-nudge-x" aria-label="${T.nudgeClose}">×</button>
+        </div>
         <button type="button" class="nw-chat-btn" aria-expanded="false" aria-controls="nw-chat-panel" aria-label="${T.open}">
             <img src="${AVATAR}" alt="" width="60" height="60">
             <span class="nw-chat-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span>
@@ -76,13 +82,28 @@
     const note = root.querySelector(".nw-chat-note");
     const field = (n) => form.elements.namedItem(n); // not form.name: that is the form's own name attribute
 
+    // small speech bubble next to the photo: explains what the button does (David, 2026-11-04).
+    // Shows after a few seconds, closes with ×, stays closed for this visit, hides while the chat is open.
+    const nudge = root.querySelector(".nw-chat-nudge");
+    const NUDGE_KEY = "nw-chat-nudge-closed";
+    let nudgeClosed = false;
+    try { nudgeClosed = sessionStorage.getItem(NUDGE_KEY) === "1"; } catch (e) { /* private mode */ }
+    const hideNudge = (forGood) => {
+        nudge.hidden = true;
+        if (forGood) { try { sessionStorage.setItem(NUDGE_KEY, "1"); } catch (e) { /* private mode */ } }
+    };
+    if (!nudgeClosed) setTimeout(() => { if (panel.hidden) nudge.hidden = false; }, 3000);
+    nudge.querySelector(".nw-chat-nudge-x").addEventListener("click", () => hideNudge(true));
+
     const setOpen = (open) => {
+        if (open) hideNudge(true);
         panel.hidden = !open;
         button.setAttribute("aria-expanded", String(open));
         root.classList.toggle("is-open", open);
         if (open && form.isConnected) setTimeout(() => field("message").focus(), 50);
     };
     button.addEventListener("click", () => setOpen(panel.hidden));
+    nudge.querySelector(".nw-chat-nudge-text").addEventListener("click", () => setOpen(true));
     root.querySelector(".nw-chat-x").addEventListener("click", () => { setOpen(false); button.focus(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !panel.hidden) { setOpen(false); button.focus(); } });
 
