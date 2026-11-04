@@ -522,6 +522,20 @@
     html:not([data-theme="light"]) .price-card, html:not([data-theme="light"]) .price-card--featured { border: 2px solid #34496a; box-shadow: none; transition: border-color .2s, box-shadow .2s, transform .2s; }
     html:not([data-theme="light"]) .price-card:hover, html:not([data-theme="light"]) .price-card:focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .2), 0 0 36px rgba(245, 197, 66, .28); transform: translateY(-4px); }
     html:not([data-theme="light"]) mark.hl, html:not([data-theme="light"]) .practice-copy mark.hl, html:not([data-theme="light"]) .me-hero.me-hero--banner mark.hl { color: #f5c542; background: none; }
+    html:not([data-theme="light"]) .tier-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 2px 0 8px; }
+    html:not([data-theme="light"]) .tier { display: grid; gap: 2px; padding: 8px 4px; border: 1px solid #34496a; border-radius: 12px; text-align: center; }
+    html:not([data-theme="light"]) .tier span { font-size: .72rem; font-weight: 700; letter-spacing: .04em; color: #b7c3d3; }
+    html:not([data-theme="light"]) .tier b { font-family: var(--display); font-size: 1.2rem; color: #ffffff; }
+    html:not([data-theme="light"]) .tier--std { border-color: #f5c542; background: rgba(245, 197, 66, .1); }
+    html:not([data-theme="light"]) .tier--std span { color: #f5c542; }
+    html:not([data-theme="light"]) .plus-strip { display: grid; grid-template-columns: auto 1fr; gap: 6px 22px; align-items: center; max-width: 860px; margin: 22px auto 0; padding: 16px 24px; border: 2px solid #34496a; border-radius: 18px; background: #1b2840; transition: border-color .2s, box-shadow .2s; }
+    html:not([data-theme="light"]) .plus-strip:hover { border-color: #f5c542; box-shadow: 0 0 36px rgba(245, 197, 66, .28); }
+    html:not([data-theme="light"]) .plus-strip h3 { margin: 0 0 4px; color: #ffffff; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
+    html:not([data-theme="light"]) .plus-strip p { margin: 0; color: #c9d3e0; }
+    html:not([data-theme="light"]) .plus-strip .price-tag { color: #f5c542; }
+    html:not([data-theme="light"]) .plus-price { color: #b7c3d3; font-weight: 400; font-size: 1rem; }
+    html:not([data-theme="light"]) .plus-price strong { font-family: var(--display); font-size: 1.6rem; color: #ffffff; }
+    html:not([data-theme="light"]) .price-afford a { color: #f5c542; text-decoration: underline; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -1044,6 +1058,20 @@ html[data-theme="dark"] a[href^="https://learn.nawee.net"]:not(.button):not(.pra
 html[data-theme="dark"] .price-card, html[data-theme="dark"] .price-card--featured { border: 2px solid #34496a; box-shadow: none; transition: border-color .2s, box-shadow .2s, transform .2s; }
 html[data-theme="dark"] .price-card:hover, html[data-theme="dark"] .price-card:focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .2), 0 0 36px rgba(245, 197, 66, .28); transform: translateY(-4px); }
 html[data-theme="dark"] mark.hl, html[data-theme="dark"] .practice-copy mark.hl, html[data-theme="dark"] .me-hero.me-hero--banner mark.hl { color: #f5c542; background: none; }
+html[data-theme="dark"] .tier-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 2px 0 8px; }
+html[data-theme="dark"] .tier { display: grid; gap: 2px; padding: 8px 4px; border: 1px solid #34496a; border-radius: 12px; text-align: center; }
+html[data-theme="dark"] .tier span { font-size: .72rem; font-weight: 700; letter-spacing: .04em; color: #b7c3d3; }
+html[data-theme="dark"] .tier b { font-family: var(--display); font-size: 1.2rem; color: #ffffff; }
+html[data-theme="dark"] .tier--std { border-color: #f5c542; background: rgba(245, 197, 66, .1); }
+html[data-theme="dark"] .tier--std span { color: #f5c542; }
+html[data-theme="dark"] .plus-strip { display: grid; grid-template-columns: auto 1fr; gap: 6px 22px; align-items: center; max-width: 860px; margin: 22px auto 0; padding: 16px 24px; border: 2px solid #34496a; border-radius: 18px; background: #1b2840; transition: border-color .2s, box-shadow .2s; }
+html[data-theme="dark"] .plus-strip:hover { border-color: #f5c542; box-shadow: 0 0 36px rgba(245, 197, 66, .28); }
+html[data-theme="dark"] .plus-strip h3 { margin: 0 0 4px; color: #ffffff; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
+html[data-theme="dark"] .plus-strip p { margin: 0; color: #c9d3e0; }
+html[data-theme="dark"] .plus-strip .price-tag { color: #f5c542; }
+html[data-theme="dark"] .plus-price { color: #b7c3d3; font-weight: 400; font-size: 1rem; }
+html[data-theme="dark"] .plus-price strong { font-family: var(--display); font-size: 1.6rem; color: #ffffff; }
+html[data-theme="dark"] .price-afford a { color: #f5c542; text-decoration: underline; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }
@@ -1085,4 +1113,12 @@ html[data-theme="dark"] mark.hl, html[data-theme="dark"] .practice-copy mark.hl,
     html[data-theme="dark"] .banner-tagline { gap: 10px; }
     html[data-theme="dark"] .banner-tagline::before, html[data-theme="dark"] .banner-tagline::after { flex: 0 0 22px; }
     html[data-theme="dark"] .banner-tagline span { font-size: .74rem; letter-spacing: .12em; line-height: 1.6; }
+}
+@media (prefers-color-scheme: dark) and (max-width: 640px) {
+    html:not([data-theme="light"]) .plus-strip { grid-template-columns: 1fr; padding: 14px 16px; }
+    html:not([data-theme="light"]) .price-afford { border-radius: 18px; }
+}
+@media (max-width: 640px) {
+    html[data-theme="dark"] .plus-strip { grid-template-columns: 1fr; padding: 14px 16px; }
+    html[data-theme="dark"] .price-afford { border-radius: 18px; }
 }

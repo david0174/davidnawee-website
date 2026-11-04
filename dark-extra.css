@@ -207,3 +207,20 @@ a[href^="https://learn.nawee.net"]:not(.button):not(.practice-shot):hover, a[hre
 .price-card:hover, .price-card:focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .2), 0 0 36px rgba(245, 197, 66, .28); transform: translateY(-4px); }
 /* all highlighted words use the same gold as the rest of the site (the generator had lightened it) */
 mark.hl, .practice-copy mark.hl, .me-hero.me-hero--banner mark.hl { color: #f5c542; background: none; }
+
+/* 1:1 lesson: sliding scale (Reduced / Standard / Supporter) + 1:1 Plus strip (2026-11-04) */
+.tier-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 2px 0 8px; }
+.tier { display: grid; gap: 2px; padding: 8px 4px; border: 1px solid #34496a; border-radius: 12px; text-align: center; }
+.tier span { font-size: .72rem; font-weight: 700; letter-spacing: .04em; color: #b7c3d3; }
+.tier b { font-family: var(--display); font-size: 1.2rem; color: #ffffff; }
+.tier--std { border-color: #f5c542; background: rgba(245, 197, 66, .1); }
+.tier--std span { color: #f5c542; }
+.plus-strip { display: grid; grid-template-columns: auto 1fr; gap: 6px 22px; align-items: center; max-width: 860px; margin: 22px auto 0; padding: 16px 24px; border: 2px solid #34496a; border-radius: 18px; background: #1b2840; transition: border-color .2s, box-shadow .2s; }
+.plus-strip:hover { border-color: #f5c542; box-shadow: 0 0 36px rgba(245, 197, 66, .28); }
+.plus-strip h3 { margin: 0 0 4px; color: #ffffff; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
+.plus-strip p { margin: 0; color: #c9d3e0; }
+.plus-strip .price-tag { color: #f5c542; }
+.plus-price { color: #b7c3d3; font-weight: 400; font-size: 1rem; }
+.plus-price strong { font-family: var(--display); font-size: 1.6rem; color: #ffffff; }
+.price-afford a { color: #f5c542; text-decoration: underline; }
+@media (max-width: 640px) { .plus-strip { grid-template-columns: 1fr; padding: 14px 16px; } .price-afford { border-radius: 18px; } }
