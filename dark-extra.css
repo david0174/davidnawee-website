@@ -410,3 +410,4 @@ footer.ft { padding-top: 28px; }
 .contact-band .hero-actions { justify-content: center; }
 .contact-band-note { margin: 18px 0 0; color: #8fa0b8; font-size: .92rem; }
 .contact-band h2 { margin: 8px 0 18px; line-height: 1.15; }
+.nw-sent { display: grid; gap: 12px; } .nw-another { justify-self: start; } .nw-chat-form[hidden] { display: none !important; }

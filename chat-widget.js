@@ -19,6 +19,7 @@
             send: "Senden", sending: "Wird gesendet …",
             privacy: 'Ich speichere Ihre Angaben, um Ihnen zu antworten. Mehr in der <a href="datenschutz.html#chat">Datenschutzerklärung</a>.',
             thanks: (mail) => `Danke! Ihre Nachricht ist angekommen. Ich antworte Ihnen so bald wie möglich an ${mail}.`,
+            another: "Weitere Nachricht schreiben",
             error: 'Das hat leider nicht geklappt. Schreiben Sie mir gern direkt an <a href="mailto:david@nawee.net">david@nawee.net</a>.',
             invalid: "Bitte schreiben Sie eine Nachricht und geben Sie eine gültige E-Mail-Adresse an.",
         },
@@ -33,6 +34,7 @@
             send: "Send", sending: "Sending …",
             privacy: 'I store your details to reply to you. More in the <a href="privacy-policy.html#chat">privacy policy</a>.',
             thanks: (mail) => `Thanks! Your message has arrived. I’ll get back to you at ${mail} as soon as I can.`,
+            another: "Write another message",
             error: 'Sorry, that didn’t work. Feel free to email me directly at <a href="mailto:david@nawee.net">david@nawee.net</a>.',
             invalid: "Please write a message and enter a valid email address.",
         },
@@ -128,7 +130,7 @@
         panel.hidden = !open;
         button.setAttribute("aria-expanded", String(open));
         root.classList.toggle("is-open", open);
-        if (open && form.isConnected) setTimeout(() => field("message").focus(), 50);
+        if (open && !form.hidden) setTimeout(() => field("message").focus(), 50);
     };
     button.addEventListener("click", () => setOpen(panel.hidden));
     nudge.querySelector(".nw-chat-nudge-text").addEventListener("click", () => setOpen(true));
@@ -140,6 +142,17 @@
         chosen[group] = value;
         req.querySelectorAll(`[data-group="${group}"] .nw-pill`).forEach((p) => p.setAttribute("aria-pressed", String(p.dataset.v === value)));
         if (group === "type") tierWrap.hidden = !TIERED.includes(value);
+    };
+    // after a message was sent: clear the thank-you and show a fresh form again (email + name are kept)
+    const reopenForm = () => {
+        body.querySelectorAll(".nw-sent").forEach((el) => el.remove());
+        if (!form.hidden) return;
+        field("message").value = "";
+        const send = form.querySelector(".nw-chat-send");
+        send.disabled = false;
+        send.innerHTML = `${T.send} <span aria-hidden="true">→</span>`;
+        note.textContent = "";
+        form.hidden = false;
     };
     const quickCall = root.querySelector(".nw-quick-call"), quickReq = root.querySelector("[data-quick-request]");
     const markQuick = (btn) => [quickCall, quickReq].forEach((b) => { b.classList.toggle("is-on", b === btn); b.setAttribute("aria-pressed", String(b === btn)); });
@@ -154,20 +167,22 @@
     req.addEventListener("click", (e) => { const p = e.target.closest(".nw-pill"); if (p) pick(p.closest("[data-group]").dataset.group, p.dataset.v); });
     document.addEventListener("click", (e) => {
         const b = e.target.closest("[data-lesson-request]");
-        if (!b || !form.isConnected) return;
+        if (!b) return;
         e.preventDefault();
+        reopenForm();
         setRequestMode(true, b.dataset.lessonRequest, b.dataset.tier);
         setOpen(true);
     });
     button.addEventListener("click", () => setRequestMode(false));
     // "Write me" buttons on the page (data-open-chat): open the normal chat (fallback without JS: their own link)
     document.addEventListener("click", (e) => {
-        if (!e.target.closest("[data-open-chat]") || !form.isConnected) return;
+        if (!e.target.closest("[data-open-chat]")) return;
         e.preventDefault();
+        reopenForm();
         setRequestMode(false);
         setOpen(true);
     });
-    root.querySelector("[data-quick-request]").addEventListener("click", () => { setRequestMode(true); field("message").focus(); });
+    root.querySelector("[data-quick-request]").addEventListener("click", () => { reopenForm(); setRequestMode(true); field("message").focus(); });
     nudge.querySelector(".nw-chat-nudge-text").addEventListener("click", () => setRequestMode(false));
     root.querySelector(".nw-chat-x").addEventListener("click", () => { setOpen(false); button.focus(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !panel.hidden) { setOpen(false); button.focus(); } });
@@ -198,10 +213,13 @@
                 body: JSON.stringify({ lang, page: location.pathname.slice(0, 120) || "/", name: name || null, email, message }),
             });
             if (!res.ok) throw new Error(String(res.status));
-            form.remove();
-            body.insertAdjacentHTML("beforeend",
+            // keep the form (hidden) so the page's buttons can always reopen it; "Write another message" brings it back
+            form.hidden = true;
+            body.insertAdjacentHTML("beforeend", `<div class="nw-sent">` +
                 `<div class="nw-msg nw-msg--you">${esc(message).replace(/\n/g, "<br>")}</div>` +
-                `<div class="nw-msg nw-msg--david">${esc(T.thanks(email))}</div>`);
+                `<div class="nw-msg nw-msg--david">${esc(T.thanks(email))}</div>` +
+                `<button type="button" class="nw-quick-btn nw-another">${T.another}</button></div>`);
+            body.querySelector(".nw-another").addEventListener("click", () => { reopenForm(); field("message").focus(); });
         } catch (err) {
             note.innerHTML = T.error;
             send.disabled = false;
