@@ -369,3 +369,14 @@ footer.ft { padding-top: 28px; }
 /* sound on/off for the "How we work together" tones */
 #methode .steps-sound { align-self: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid #34496a; background: #1b2840; font-size: 1rem; cursor: pointer; line-height: 1; transition: border-color .2s, box-shadow .2s; }
 #methode .steps-sound:hover, #methode .steps-sound:focus-visible { border-color: #f5c542; box-shadow: 0 0 14px rgba(245, 197, 66, .35); }
+
+/* email field focus: clean gold frame (the see-through gold ring over navy looked brownish) – 2026-11-05 */
+.nl-strip .newsletter-fields input[type="email"]:focus, .nl-strip .newsletter-fields input[type="email"]:focus-visible { outline: none; border-color: #f5c542; box-shadow: 0 0 0 1px #f5c542, 0 0 18px rgba(245, 197, 66, .45); }
+
+/* "Book your free intro call" (last step): bright glowing yellow instead of the brownish see-through ring (2026-11-05) */
+@keyframes steps-glow-gold {
+    0%, 100% { box-shadow: 0 0 0 1px rgba(245, 197, 66, .6), 0 0 10px 0 rgba(245, 197, 66, .35); }
+    50% { box-shadow: 0 0 0 2px #f5c542, 0 0 28px 8px rgba(245, 197, 66, .6); }
+}
+#methode .steps-next[data-book="1"] { animation: steps-glow-gold 1.8s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { #methode .steps-next[data-book="1"] { animation: none; box-shadow: 0 0 0 2px #f5c542, 0 0 22px rgba(245, 197, 66, .55); } }
