@@ -634,6 +634,8 @@
     html:not([data-theme="light"]) .who-cta { margin: 26px 0 0; text-align: center; color: #c9d3e0; font-size: 1.05rem; }
     html:not([data-theme="light"]) .who-cta a { margin-left: 6px; color: #f5c542; font-weight: 700; text-decoration: none; }
     html:not([data-theme="light"]) .who-cta a:hover, html:not([data-theme="light"]) .who-cta a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+    html:not([data-theme="light"]) #methode .steps-sound { align-self: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid #34496a; background: #1b2840; font-size: 1rem; cursor: pointer; line-height: 1; transition: border-color .2s, box-shadow .2s; }
+    html:not([data-theme="light"]) #methode .steps-sound:hover, html:not([data-theme="light"]) #methode .steps-sound:focus-visible { border-color: #f5c542; box-shadow: 0 0 14px rgba(245, 197, 66, .35); }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -1268,6 +1270,8 @@ html[data-theme="dark"] .who-tile h3 { font-family: var(--display); font-size: 1
 html[data-theme="dark"] .who-cta { margin: 26px 0 0; text-align: center; color: #c9d3e0; font-size: 1.05rem; }
 html[data-theme="dark"] .who-cta a { margin-left: 6px; color: #f5c542; font-weight: 700; text-decoration: none; }
 html[data-theme="dark"] .who-cta a:hover, html[data-theme="dark"] .who-cta a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+html[data-theme="dark"] #methode .steps-sound { align-self: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid #34496a; background: #1b2840; font-size: 1rem; cursor: pointer; line-height: 1; transition: border-color .2s, box-shadow .2s; }
+html[data-theme="dark"] #methode .steps-sound:hover, html[data-theme="dark"] #methode .steps-sound:focus-visible { border-color: #f5c542; box-shadow: 0 0 14px rgba(245, 197, 66, .35); }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }

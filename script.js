@@ -411,9 +411,62 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
     const count = controls.querySelector(".steps-count");
     back.textContent = `← ${L.back}`;
 
+    // sounds (David, 2026-11-05): every step plays a higher note (C – E – G – B, step 4 = just before the peak),
+    // "Book your free intro call" resolves it with a short celebration (C major arpeggio + sparkle).
+    // Generated live with Web Audio (no files), only after a click, quiet, with an on/off switch that is remembered.
+    const SOUND_KEY = "nawee-steps-sound";
+    let soundOn = true;
+    try { soundOn = localStorage.getItem(SOUND_KEY) !== "off"; } catch (e) { /* private mode */ }
+    let ctx = null;
+    const audio = () => {
+        if (!soundOn || !(window.AudioContext || window.webkitAudioContext)) return null;
+        ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+        if (ctx.state === "suspended") ctx.resume();
+        return ctx;
+    };
+    const note = (freq, at, dur = 0.55, vol = 0.12, type = "sine") => {
+        const a = audio(); if (!a) return;
+        const t = a.currentTime + at;
+        [[type, 1, vol], ["triangle", 2, vol * 0.18]].forEach(([wave, mult, v]) => {  // soft tone + a little shimmer
+            const o = a.createOscillator(), g = a.createGain();
+            o.type = wave; o.frequency.value = freq * mult;
+            g.gain.setValueAtTime(0.0001, t);
+            g.gain.exponentialRampToValueAtTime(v, t + 0.015);
+            g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+            o.connect(g).connect(a.destination);
+            o.start(t); o.stop(t + dur + 0.05);
+        });
+    };
+    const STEP_NOTES = [523.25, 659.25, 783.99, 987.77];  // C5 E5 G5 B5
+    const stepTone = (i) => note(STEP_NOTES[Math.min(i, STEP_NOTES.length - 1)], 0, 0.5);
+    const celebrate = () => {
+        [523.25, 659.25, 783.99, 1046.5].forEach((f, k) => note(f, k * 0.075, 0.6, 0.11));   // C E G C – resolved
+        [1046.5, 1318.5, 1568].forEach((f) => note(f, 0.34, 1.1, 0.06));                     // final chord, held
+        [2093, 2637, 3136].forEach((f, k) => note(f, 0.42 + k * 0.06, 0.35, 0.025));          // sparkle
+    };
+    const soundBtn = document.createElement("button");
+    soundBtn.type = "button";
+    soundBtn.className = "steps-sound";
+    const paintSound = () => {
+        soundBtn.textContent = soundOn ? "🔊" : "🔇";
+        soundBtn.setAttribute("aria-pressed", String(soundOn));
+        soundBtn.setAttribute("aria-label", de ? (soundOn ? "Töne ausschalten" : "Töne einschalten") : (soundOn ? "Turn sounds off" : "Turn sounds on"));
+        soundBtn.title = soundBtn.getAttribute("aria-label");
+    };
+    soundBtn.addEventListener("click", () => {
+        soundOn = !soundOn;
+        try { localStorage.setItem(SOUND_KEY, soundOn ? "on" : "off"); } catch (e) { /* ignore */ }
+        paintSound();
+        if (soundOn) stepTone(current);
+    });
+    paintSound();
+    bar.appendChild(soundBtn);
+
     let current = 0;
-    function show(i) {
-        current = Math.max(0, Math.min(steps.length - 1, i));
+    function show(i, silent) {
+        const target = Math.max(0, Math.min(steps.length - 1, i));
+        if (!silent && target !== current) stepTone(target);
+        current = target;
         steps.forEach((step, k) => { step.hidden = k !== current; step.classList.toggle("is-active", k === current); });
         bar.querySelectorAll(".steps-dot").forEach((dot, k) => {
             dot.classList.toggle("is-active", k === current);
@@ -431,7 +484,7 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
     }
     back.addEventListener("click", () => show(current - 1));
     next.addEventListener("click", () => {
-        if (next.dataset.book === "1") { window.open(cal, "_blank", "noopener"); return; }
+        if (next.dataset.book === "1") { celebrate(); window.open(cal, "_blank", "noopener"); return; }
         show(current + 1);
     });
     // swipe on phones
@@ -443,7 +496,7 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
         if (Math.abs(dx) > 40) show(current + (dx < 0 ? 1 : -1));
         x0 = null;
     });
-    show(0);
+    show(0, true);
 })();
 
 // Newsletter strip: slides in and the button glows once when it scrolls into view (styles in dark-extra.css).
