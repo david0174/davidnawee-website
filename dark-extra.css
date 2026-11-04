@@ -120,3 +120,5 @@ h1, h2, h3, h4 { color: var(--dm-head); }
 .price-card .price span { color: #b7c3d3; }
 .price-afford { border-color: #f5c542; background: rgba(245, 197, 66, .1); color: #ffffff; }
 .price-afford strong { color: #f5c542; }
+.price-card--featured { border: 2px solid #f5c542; }
+.price-free a { color: #9cbcf0; }

@@ -1229,3 +1229,8 @@ body { overflow-x: clip; }
 .price-afford { width: fit-content; max-width: 100%; margin: 26px auto 0; padding: 12px 22px; border: 2px solid #f5c542; border-radius: 999px; background: rgba(245, 197, 66, .1); color: #ffffff; font-size: 1.15rem; font-weight: 600; text-align: center; }
 .price-afford strong { color: #f5c542; font-weight: 800; }
 .price-note { margin-top: 10px; font-size: .85rem; }
+/* three price cards, the middle one highlighted (David, 2026-11-04: six blocks were too much) */
+.price-grid { max-width: 1040px; margin: 0 auto; align-items: stretch; }
+.price-card--featured { border: 2px solid #f5c542; box-shadow: 0 14px 34px rgba(245, 197, 66, .12); }
+.price-free { margin: 12px auto 0; text-align: center; color: var(--muted); font-size: .95rem; }
+.price-free a { color: #9cbcf0; font-weight: 600; }
