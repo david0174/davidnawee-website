@@ -224,3 +224,34 @@ mark.hl, .practice-copy mark.hl, .me-hero.me-hero--banner mark.hl { color: #f5c5
 .plus-price strong { font-family: var(--display); font-size: 1.6rem; color: #ffffff; }
 .price-afford a { color: #f5c542; text-decoration: underline; }
 @media (max-width: 640px) { .plus-strip { grid-template-columns: 1fr; padding: 14px 16px; } .price-afford { border-radius: 18px; } }
+
+/* newsletter strip above the footer on every page (2026-11-04) – compact, no extra section on the homepage */
+.nl-strip { background: #0f1a2e; border-top: 1px solid #22324d; padding: 34px 16px; }
+.nl-strip-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr minmax(300px, 440px); gap: 18px 40px; align-items: center; }
+.nl-strip-copy .eyebrow { margin: 0 0 4px; color: #f5c542; }
+.nl-strip-copy h2 { margin: 0 0 6px; font-size: clamp(1.4rem, 2.4vw, 1.8rem); color: #ffffff; }
+.nl-strip-copy p:last-child { margin: 0; color: #c9d3e0; }
+.nl-strip .newsletter-fields { display: flex; gap: 8px; }
+.nl-strip .newsletter-fields input { flex: 1; min-width: 0; padding: 12px 14px; border-radius: 12px; border: 1px solid #34496a; background: #1b2840; color: #ffffff; font: inherit; }
+.nl-strip .newsletter-fields input::placeholder { color: #8fa0b8; }
+.nl-strip .newsletter-fields .button { white-space: nowrap; }
+.nl-strip .newsletter-note { margin: 8px 0 0; font-size: .8rem; color: #8fa0b8; }
+.nl-strip .newsletter-note a { color: #c9d3e0; }
+.nl-strip .nl-status { margin: 8px 0 0; color: #7fdcae; font-size: .9rem; }
+.nl-strip .nl-status--error { color: #ff9a9a; }
+.nl-trap { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+.practice-nl { margin: 12px 0 0; color: #c9d3e0; font-size: .95rem; }
+.practice-nl a { color: #f5c542; font-weight: 600; }
+@media (max-width: 760px) { .nl-strip-inner { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .nl-strip .newsletter-fields { flex-direction: column; } }
+
+/* contact section more compact (David, 2026-11-04): benefits closer together, contact details as a 2×2 grid */
+.consultation-benefit { margin-bottom: 18px; }
+.consultation-benefit h3 { margin: 2px 0 3px; }
+.consultation-details { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 24px; margin-top: 22px; padding-top: 20px; }
+.consultation-detail { margin: 0; }
+.consultation-label { margin-bottom: 3px; }
+.consultation-hours { margin-top: 2px !important; font-size: .82rem !important; color: #b7c3d3 !important; }
+.nl-strip { padding: 34px 6vw; }
+.nl-strip-inner { max-width: 1000px; }
+@media (max-width: 1100px) { .consultation-inner { padding: 0 6vw; } }

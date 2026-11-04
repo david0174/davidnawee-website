@@ -9,9 +9,9 @@
     <link rel="alternate" hreflang="de" href="https://nawee.net/datenschutz.html">
     <link rel="alternate" hreflang="en" href="https://nawee.net/privacy-policy.html">
     <link rel="alternate" hreflang="x-default" href="https://nawee.net/datenschutz.html">
-    <link rel="stylesheet" href="style.css?v=20261104w">
-    <link rel="stylesheet" href="brand.css?v=20261104w">
-    <link rel="stylesheet" href="dark.css?v=20261104w">
+    <link rel="stylesheet" href="style.css?v=20261104x">
+    <link rel="stylesheet" href="brand.css?v=20261104x">
+    <link rel="stylesheet" href="dark.css?v=20261104x">
     
     <link rel="icon" type="image/png" href="assets/favicon-nawee.png">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon-nawee.png">
@@ -58,6 +58,7 @@
                     <a href="index-en.html#fuer-wen">Who It’s For</a>
                     <a href="https://learn.nawee.net/index-en.html">Free Practice</a>
                     <a href="about-me.html">About Me</a>
+                    <a href="#newsletter">Newsletter</a>
                     <div class="mobile-menu-languages">
                         <a href="privacy-policy.html" class="active" aria-current="page" lang="en">English</a>
                         <a href="datenschutz.html" lang="de">Deutsch</a>
@@ -203,11 +204,11 @@
             It covers all Zoho services mentioned in this section (Zoho Mail and Zoho Forms).
         </p>
 
-        <h3 id="newsletter">Newsletter “Smart Tools, Strong Voice”</h3>
+        <h3 id="newsletter">Newsletter (English tips)</h3>
         <p>
-            If you subscribe to our newsletter “Smart Tools, Strong Voice”, we process your email address, the topics you chose
-            (AI, communication or both) and – if provided – your first name in order to send you weekly tips and insights on AI at work and better communication and to address
-            you personally. Sign-up uses the double opt-in procedure: you first receive an email with a confirmation link. Only
+            If you subscribe to our newsletter, we process your email address (and, if provided, your first name) in order to
+            send you one short email a week with English tips and news from learn.nawee.net and to address you personally.
+            Sign-up uses the double opt-in procedure: you first receive an email with a confirmation link. Only
             after you confirm do we add you to the mailing list. We store the time of sign-up and confirmation as well as your IP
             address in order to be able to prove your consent.
         </p>
@@ -220,7 +221,7 @@
         <p>
             The newsletter is sent via <strong>Brevo</strong> (Sendinblue SAS, 106 boulevard Haussmann, 75008 Paris, France). A
             data processing agreement is in place with Brevo. The sign-up form is part of our own website; no content is loaded
-            from Brevo when you simply view the page. Only when you click “Subscribe” are your details and your IP address
+            from Brevo when you simply view the page. Only when you click “Sign up” are your details and your IP address
             transmitted to Brevo. So that you don’t sign up twice by mistake, your browser stores a scrambled short form
             (checksum) of your email address locally (localStorage) – not the address itself.
         </p>
@@ -336,6 +337,30 @@
         </p>
     </main>
 
+    <section class="nl-strip" id="newsletter" aria-label="Newsletter">
+        <div class="nl-strip-inner">
+            <div class="nl-strip-copy">
+                <p class="eyebrow">FREE NEWSLETTER</p>
+                <h2>One English tip a week.</h2>
+                <p>A useful phrase, a tip for speaking with confidence and what’s new on learn.nawee.net – one short email a week.</p>
+            </div>
+            <!-- sent to Brevo (learning newsletter list) by script.js only when someone clicks the button -->
+            <form class="nl-form" method="POST" action="https://af383ba2.sibforms.com/serve/MUIFAHCRAukBGHT3kpTtyqLBt47npeoNnnpJYBJTezKMlJ6y4D8KTAX4gTCY_cG4jOc-6sh0cOULoSAqjV17U-chHU8oaByn2DjUSMaUi6-fFxB-KxSgBi4U4r0hcsPVlOvCtpbEQfqXOG8jKfGwR0i3ZYTKi0SLA_-Enap8Ilpl7dn4MX9kbBK0aeRog_IWy6cDQoU4dmmjyt5_hA=="
+                  data-success="📩 Almost there! Please check your inbox and click the confirmation link." data-error="Sorry, that didn’t work. Please try again later or write to david@nawee.net." data-already="This email address is already subscribed. 📬 Check your inbox – or write to david@nawee.net." data-sending="Sending …">
+                <div class="newsletter-fields">
+                    <label class="visually-hidden" for="nl-email">Your email address</label>
+                    <input type="email" id="nl-email" name="EMAIL" autocomplete="email" placeholder="Your email address" required>
+                    <button class="button primary" type="submit">Sign up <span aria-hidden="true">→</span></button>
+                </div>
+                <p class="nl-status" role="status" aria-live="polite" hidden></p>
+                <p class="newsletter-note">No spam. Unsubscribe anytime. More in the <a href="privacy-policy.html#newsletter">privacy policy</a>.</p>
+                <input type="text" name="nl_zx_hp" value="" class="nl-trap" tabindex="-1" autocomplete="off" data-lpignore="true" data-1p-ignore aria-hidden="true">
+                <input type="hidden" name="email_address_check" value="">
+                <input type="hidden" name="locale" value="en">
+            </form>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-brand">
             <img class="footer-logo logo" src="assets/logo_notext-dark.png" alt="Nawee" width="150" height="75">
@@ -376,7 +401,7 @@
             <p>© 2026 Nawee · David Nawee · <a href="tel:+4951193676970">+49 511 936 76970</a> (Mon–Fri, 9 am–6 pm) · <a href="imprint.html">Legal Notice</a> · <a href="privacy-policy.html">Privacy Policy</a></p>
         </div>
     </footer>
-    <script src="script.js?v=20261104w"></script>
-    <script src="chat-widget.js?v=20261104w"></script>
+    <script src="script.js?v=20261104x"></script>
+    <script src="chat-widget.js?v=20261104x"></script>
 </body>
 </html>

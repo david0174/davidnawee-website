@@ -536,6 +536,30 @@
     html:not([data-theme="light"]) .plus-price { color: #b7c3d3; font-weight: 400; font-size: 1rem; }
     html:not([data-theme="light"]) .plus-price strong { font-family: var(--display); font-size: 1.6rem; color: #ffffff; }
     html:not([data-theme="light"]) .price-afford a { color: #f5c542; text-decoration: underline; }
+    html:not([data-theme="light"]) .nl-strip { background: #0f1a2e; border-top: 1px solid #22324d; padding: 34px 16px; }
+    html:not([data-theme="light"]) .nl-strip-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr minmax(300px, 440px); gap: 18px 40px; align-items: center; }
+    html:not([data-theme="light"]) .nl-strip-copy .eyebrow { margin: 0 0 4px; color: #f5c542; }
+    html:not([data-theme="light"]) .nl-strip-copy h2 { margin: 0 0 6px; font-size: clamp(1.4rem, 2.4vw, 1.8rem); color: #ffffff; }
+    html:not([data-theme="light"]) .nl-strip-copy p:last-child { margin: 0; color: #c9d3e0; }
+    html:not([data-theme="light"]) .nl-strip .newsletter-fields { display: flex; gap: 8px; }
+    html:not([data-theme="light"]) .nl-strip .newsletter-fields input { flex: 1; min-width: 0; padding: 12px 14px; border-radius: 12px; border: 1px solid #34496a; background: #1b2840; color: #ffffff; font: inherit; }
+    html:not([data-theme="light"]) .nl-strip .newsletter-fields input::placeholder { color: #8fa0b8; }
+    html:not([data-theme="light"]) .nl-strip .newsletter-fields .button { white-space: nowrap; }
+    html:not([data-theme="light"]) .nl-strip .newsletter-note { margin: 8px 0 0; font-size: .8rem; color: #8fa0b8; }
+    html:not([data-theme="light"]) .nl-strip .newsletter-note a { color: #c9d3e0; }
+    html:not([data-theme="light"]) .nl-strip .nl-status { margin: 8px 0 0; color: #7fdcae; font-size: .9rem; }
+    html:not([data-theme="light"]) .nl-strip .nl-status--error { color: #ff9a9a; }
+    html:not([data-theme="light"]) .nl-trap { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+    html:not([data-theme="light"]) .practice-nl { margin: 12px 0 0; color: #c9d3e0; font-size: .95rem; }
+    html:not([data-theme="light"]) .practice-nl a { color: #f5c542; font-weight: 600; }
+    html:not([data-theme="light"]) .consultation-benefit { margin-bottom: 18px; }
+    html:not([data-theme="light"]) .consultation-benefit h3 { margin: 2px 0 3px; }
+    html:not([data-theme="light"]) .consultation-details { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 24px; margin-top: 22px; padding-top: 20px; }
+    html:not([data-theme="light"]) .consultation-detail { margin: 0; }
+    html:not([data-theme="light"]) .consultation-label { margin-bottom: 3px; }
+    html:not([data-theme="light"]) .consultation-hours { margin-top: 2px !important; font-size: .82rem !important; color: #b7c3d3 !important; }
+    html:not([data-theme="light"]) .nl-strip { padding: 34px 6vw; }
+    html:not([data-theme="light"]) .nl-strip-inner { max-width: 1000px; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -1072,6 +1096,30 @@ html[data-theme="dark"] .plus-strip .price-tag { color: #f5c542; }
 html[data-theme="dark"] .plus-price { color: #b7c3d3; font-weight: 400; font-size: 1rem; }
 html[data-theme="dark"] .plus-price strong { font-family: var(--display); font-size: 1.6rem; color: #ffffff; }
 html[data-theme="dark"] .price-afford a { color: #f5c542; text-decoration: underline; }
+html[data-theme="dark"] .nl-strip { background: #0f1a2e; border-top: 1px solid #22324d; padding: 34px 16px; }
+html[data-theme="dark"] .nl-strip-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr minmax(300px, 440px); gap: 18px 40px; align-items: center; }
+html[data-theme="dark"] .nl-strip-copy .eyebrow { margin: 0 0 4px; color: #f5c542; }
+html[data-theme="dark"] .nl-strip-copy h2 { margin: 0 0 6px; font-size: clamp(1.4rem, 2.4vw, 1.8rem); color: #ffffff; }
+html[data-theme="dark"] .nl-strip-copy p:last-child { margin: 0; color: #c9d3e0; }
+html[data-theme="dark"] .nl-strip .newsletter-fields { display: flex; gap: 8px; }
+html[data-theme="dark"] .nl-strip .newsletter-fields input { flex: 1; min-width: 0; padding: 12px 14px; border-radius: 12px; border: 1px solid #34496a; background: #1b2840; color: #ffffff; font: inherit; }
+html[data-theme="dark"] .nl-strip .newsletter-fields input::placeholder { color: #8fa0b8; }
+html[data-theme="dark"] .nl-strip .newsletter-fields .button { white-space: nowrap; }
+html[data-theme="dark"] .nl-strip .newsletter-note { margin: 8px 0 0; font-size: .8rem; color: #8fa0b8; }
+html[data-theme="dark"] .nl-strip .newsletter-note a { color: #c9d3e0; }
+html[data-theme="dark"] .nl-strip .nl-status { margin: 8px 0 0; color: #7fdcae; font-size: .9rem; }
+html[data-theme="dark"] .nl-strip .nl-status--error { color: #ff9a9a; }
+html[data-theme="dark"] .nl-trap { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+html[data-theme="dark"] .practice-nl { margin: 12px 0 0; color: #c9d3e0; font-size: .95rem; }
+html[data-theme="dark"] .practice-nl a { color: #f5c542; font-weight: 600; }
+html[data-theme="dark"] .consultation-benefit { margin-bottom: 18px; }
+html[data-theme="dark"] .consultation-benefit h3 { margin: 2px 0 3px; }
+html[data-theme="dark"] .consultation-details { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 24px; margin-top: 22px; padding-top: 20px; }
+html[data-theme="dark"] .consultation-detail { margin: 0; }
+html[data-theme="dark"] .consultation-label { margin-bottom: 3px; }
+html[data-theme="dark"] .consultation-hours { margin-top: 2px !important; font-size: .82rem !important; color: #b7c3d3 !important; }
+html[data-theme="dark"] .nl-strip { padding: 34px 6vw; }
+html[data-theme="dark"] .nl-strip-inner { max-width: 1000px; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }
@@ -1105,6 +1153,7 @@ html[data-theme="dark"] .price-afford a { color: #f5c542; text-decoration: under
     html:not([data-theme="light"]) .banner-tagline { gap: 10px; }
     html:not([data-theme="light"]) .banner-tagline::before, html:not([data-theme="light"]) .banner-tagline::after { flex: 0 0 22px; }
     html:not([data-theme="light"]) .banner-tagline span { font-size: .74rem; letter-spacing: .12em; line-height: 1.6; }
+    html:not([data-theme="light"]) .nl-strip-inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
     html[data-theme="dark"] .sticky-cta { background: rgba(20, 24, 31, .96); }
@@ -1113,6 +1162,7 @@ html[data-theme="dark"] .price-afford a { color: #f5c542; text-decoration: under
     html[data-theme="dark"] .banner-tagline { gap: 10px; }
     html[data-theme="dark"] .banner-tagline::before, html[data-theme="dark"] .banner-tagline::after { flex: 0 0 22px; }
     html[data-theme="dark"] .banner-tagline span { font-size: .74rem; letter-spacing: .12em; line-height: 1.6; }
+    html[data-theme="dark"] .nl-strip-inner { grid-template-columns: 1fr; }
 }
 @media (prefers-color-scheme: dark) and (max-width: 640px) {
     html:not([data-theme="light"]) .plus-strip { grid-template-columns: 1fr; padding: 14px 16px; }
@@ -1121,4 +1171,16 @@ html[data-theme="dark"] .price-afford a { color: #f5c542; text-decoration: under
 @media (max-width: 640px) {
     html[data-theme="dark"] .plus-strip { grid-template-columns: 1fr; padding: 14px 16px; }
     html[data-theme="dark"] .price-afford { border-radius: 18px; }
+}
+@media (prefers-color-scheme: dark) and (max-width: 420px) {
+    html:not([data-theme="light"]) .nl-strip .newsletter-fields { flex-direction: column; }
+}
+@media (max-width: 420px) {
+    html[data-theme="dark"] .nl-strip .newsletter-fields { flex-direction: column; }
+}
+@media (prefers-color-scheme: dark) and (max-width: 1100px) {
+    html:not([data-theme="light"]) .consultation-inner { padding: 0 6vw; }
+}
+@media (max-width: 1100px) {
+    html[data-theme="dark"] .consultation-inner { padding: 0 6vw; }
 }
