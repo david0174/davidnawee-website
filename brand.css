@@ -1304,7 +1304,7 @@ body { overflow-x: clip; }
 .contact-fast strong { color: #f5c542; }
 
 /* "Who is it for?" – four slim tiles instead of big cards (David, 2026-11-04: too bulky) */
-.who-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; max-width: 1180px; margin: 0 auto; }
+.who-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: 1000px; margin: 0 auto; }
 .who-tile { padding: 22px 20px; border: 1px solid #2b3a4f; border-radius: 18px; background: #151f2e; }
 .who-icon { display: grid; place-items: center; width: 44px; height: 44px; margin-bottom: 12px; border-radius: 12px; background: rgba(245, 197, 66, .14); font-size: 1.35rem; }
 .who-tile h3 { margin: 0 0 6px; font-size: 1.1rem; }
@@ -1312,7 +1312,7 @@ body { overflow-x: clip; }
 .who-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
 .who-tags li { padding: 4px 10px; border: 1px solid #2b3a4f; border-radius: 999px; color: #dbe5f5; font-size: .8rem; }
 .who-tags li::before { display: none; }
-@media (max-width: 1000px) { .who-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 860px) { .who-grid { grid-template-columns: minmax(0, 1fr); max-width: 520px; } }
 @media (max-width: 560px) { .who-grid { grid-template-columns: minmax(0, 1fr); } }
 
 /* practice band: a highlighted section that sends people to learn.nawee.net (David, 2026-11-04) */
