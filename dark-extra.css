@@ -195,3 +195,7 @@ button.button.secondary:hover { background: #f5c542; border-color: #f5c542; colo
 .about-highlights li { padding: 12px 14px; border: 1px solid #34496a; border-radius: 14px; background: #1b2840; }
 .about-highlights strong { color: #ffffff; }
 .about-highlights svg { color: #f5c542; }
+/* About me: links gold instead of light blue (white + gold two-tone only) */
+.about-copy a, .about-highlights a { color: #f5c542; }
+/* "Let's talk for 15 minutes" box: soft gold-blue glow */
+.consult-card { border: 1px solid rgba(245, 197, 66, .45); box-shadow: 0 0 0 1px rgba(245, 197, 66, .15), 0 0 40px rgba(245, 197, 66, .18), 0 0 90px rgba(47, 116, 230, .22); }
