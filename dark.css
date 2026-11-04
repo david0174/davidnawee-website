@@ -379,6 +379,7 @@
     html:not([data-theme="light"]) .nw-chat-nudge-text { color: #d5dae4; }
     html:not([data-theme="light"]) .nw-chat-nudge-x { color: #c9cbce; }
     html:not([data-theme="light"]) .nw-chat-nudge-x:hover { background: #181d26; }
+    html:not([data-theme="light"]) .practice-icon { background: rgba(91, 75, 31, .14); }
     html:not([data-theme="light"]) body { background: var(--dm-bg); color: var(--ink); }
     html:not([data-theme="light"]) .language-toggle img { filter: invert(1); }
     html:not([data-theme="light"]) h1, html:not([data-theme="light"]) h2, html:not([data-theme="light"]) h3, html:not([data-theme="light"]) h4 { color: var(--dm-head); }
@@ -450,7 +451,7 @@
     html:not([data-theme="light"]) .price-afford strong { color: #f5c542; }
     html:not([data-theme="light"]) .price-card--featured { border: 2px solid #f5c542; }
     html:not([data-theme="light"]) .price-free a { color: #9cbcf0; }
-    html:not([data-theme="light"]) .primary:hover, html:not([data-theme="light"]) .primary:focus-visible, html:not([data-theme="light"]) .button.primary:hover, html:not([data-theme="light"]) .button.primary:focus-visible, html:not([data-theme="light"]) .nav-cta:hover, html:not([data-theme="light"]) .nav-cta:focus-visible { background: #f5c542; border-color: #f5c542; color: #0d1b3a; }
+    html:not([data-theme="light"]) .primary:hover, html:not([data-theme="light"]) .primary:focus-visible, html:not([data-theme="light"]) .button.primary:hover, html:not([data-theme="light"]) .button.primary:focus-visible, html:not([data-theme="light"]) .nav-cta:hover, html:not([data-theme="light"]) .nav-cta:focus-visible { background: #2f74e6; border-color: #2f74e6; color: #ffffff; box-shadow: 0 0 0 4px rgba(47, 116, 230, .25), 0 10px 24px rgba(21, 84, 192, .35); }
     html:not([data-theme="light"]) .secondary:hover, html:not([data-theme="light"]) .secondary:focus-visible, html:not([data-theme="light"]) .button.secondary:hover, html:not([data-theme="light"]) .button.secondary:focus-visible, html:not([data-theme="light"]) .me-hero.me-hero--banner .button.secondary:hover, html:not([data-theme="light"]) .me-hero.me-hero--banner .button.secondary:focus-visible, html:not([data-theme="light"]) button.button.secondary:hover { background: #f5c542; border-color: #f5c542; color: #0d1b3a; }
     html:not([data-theme="light"]) #methode .steps-dot-num { background: #1d3263; color: #f5c542; }
     html:not([data-theme="light"]) #methode .steps-dot.is-active, html:not([data-theme="light"]) #methode .steps-dot:hover { border-color: #f5c542; color: #ffffff; }
@@ -463,6 +464,10 @@
     html:not([data-theme="light"]) .nw-chat-nudge { background: #ffffff; border-color: #f5c542; }
     html:not([data-theme="light"]) .nw-chat-nudge-text { color: #0d1b3a; }
     html:not([data-theme="light"]) .nw-chat-nudge-x { color: #5b6576; }
+    html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta) { position: relative; transition: color .15s; }
+    html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta):hover, html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta):focus-visible { color: #f5c542; }
+    html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta)::before { content: ""; position: absolute; left: 0; right: 0; bottom: -7px; height: 2px; border-radius: 2px; background: #f5c542; transform: scaleX(0); transition: transform .2s ease; }
+    html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta):hover::before, html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta):focus-visible::before { transform: scaleX(1); }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -842,6 +847,7 @@ html[data-theme="dark"] .nw-chat-nudge { border: 2px solid #5b4b1f; background: 
 html[data-theme="dark"] .nw-chat-nudge-text { color: #d5dae4; }
 html[data-theme="dark"] .nw-chat-nudge-x { color: #c9cbce; }
 html[data-theme="dark"] .nw-chat-nudge-x:hover { background: #181d26; }
+html[data-theme="dark"] .practice-icon { background: rgba(91, 75, 31, .14); }
 html[data-theme="dark"] body { background: var(--dm-bg); color: var(--ink); }
 html[data-theme="dark"] .language-toggle img { filter: invert(1); }
 html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4 { color: var(--dm-head); }
@@ -913,7 +919,7 @@ html[data-theme="dark"] .price-afford { border-color: #f5c542; background: rgba(
 html[data-theme="dark"] .price-afford strong { color: #f5c542; }
 html[data-theme="dark"] .price-card--featured { border: 2px solid #f5c542; }
 html[data-theme="dark"] .price-free a { color: #9cbcf0; }
-html[data-theme="dark"] .primary:hover, html[data-theme="dark"] .primary:focus-visible, html[data-theme="dark"] .button.primary:hover, html[data-theme="dark"] .button.primary:focus-visible, html[data-theme="dark"] .nav-cta:hover, html[data-theme="dark"] .nav-cta:focus-visible { background: #f5c542; border-color: #f5c542; color: #0d1b3a; }
+html[data-theme="dark"] .primary:hover, html[data-theme="dark"] .primary:focus-visible, html[data-theme="dark"] .button.primary:hover, html[data-theme="dark"] .button.primary:focus-visible, html[data-theme="dark"] .nav-cta:hover, html[data-theme="dark"] .nav-cta:focus-visible { background: #2f74e6; border-color: #2f74e6; color: #ffffff; box-shadow: 0 0 0 4px rgba(47, 116, 230, .25), 0 10px 24px rgba(21, 84, 192, .35); }
 html[data-theme="dark"] .secondary:hover, html[data-theme="dark"] .secondary:focus-visible, html[data-theme="dark"] .button.secondary:hover, html[data-theme="dark"] .button.secondary:focus-visible, html[data-theme="dark"] .me-hero.me-hero--banner .button.secondary:hover, html[data-theme="dark"] .me-hero.me-hero--banner .button.secondary:focus-visible, html[data-theme="dark"] button.button.secondary:hover { background: #f5c542; border-color: #f5c542; color: #0d1b3a; }
 html[data-theme="dark"] #methode .steps-dot-num { background: #1d3263; color: #f5c542; }
 html[data-theme="dark"] #methode .steps-dot.is-active, html[data-theme="dark"] #methode .steps-dot:hover { border-color: #f5c542; color: #ffffff; }
@@ -926,6 +932,10 @@ html[data-theme="dark"] .banner-tagline { justify-content: center; }
 html[data-theme="dark"] .nw-chat-nudge { background: #ffffff; border-color: #f5c542; }
 html[data-theme="dark"] .nw-chat-nudge-text { color: #0d1b3a; }
 html[data-theme="dark"] .nw-chat-nudge-x { color: #5b6576; }
+html[data-theme="dark"] .site-header nav > a:not(.nav-cta) { position: relative; transition: color .15s; }
+html[data-theme="dark"] .site-header nav > a:not(.nav-cta):hover, html[data-theme="dark"] .site-header nav > a:not(.nav-cta):focus-visible { color: #f5c542; }
+html[data-theme="dark"] .site-header nav > a:not(.nav-cta)::before { content: ""; position: absolute; left: 0; right: 0; bottom: -7px; height: 2px; border-radius: 2px; background: #f5c542; transform: scaleX(0); transition: transform .2s ease; }
+html[data-theme="dark"] .site-header nav > a:not(.nav-cta):hover::before, html[data-theme="dark"] .site-header nav > a:not(.nav-cta):focus-visible::before { transform: scaleX(1); }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }

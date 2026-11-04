@@ -124,7 +124,8 @@ h1, h2, h3, h4 { color: var(--dm-head); }
 .price-free a { color: #9cbcf0; }
 
 /* main buttons on hover: gold with navy text instead of near-black (David, 2026-11-04) */
-.primary:hover, .primary:focus-visible, .button.primary:hover, .button.primary:focus-visible, .nav-cta:hover, .nav-cta:focus-visible { background: #f5c542; border-color: #f5c542; color: #0d1b3a; }
+/* blue buttons: brighter blue + glow on hover (David, 2026-11-04: no yellow on 'Book a free call') */
+.primary:hover, .primary:focus-visible, .button.primary:hover, .button.primary:focus-visible, .nav-cta:hover, .nav-cta:focus-visible { background: #2f74e6; border-color: #2f74e6; color: #ffffff; box-shadow: 0 0 0 4px rgba(47, 116, 230, .25), 0 10px 24px rgba(21, 84, 192, .35); }
 
 /* dark ("black") buttons on hover: gold with navy text as well (David, 2026-11-04) */
 .secondary:hover, .secondary:focus-visible, .button.secondary:hover, .button.secondary:focus-visible,
@@ -147,3 +148,9 @@ button.button.secondary:hover { background: #f5c542; border-color: #f5c542; colo
 .nw-chat-nudge { background: #ffffff; border-color: #f5c542; }
 .nw-chat-nudge-text { color: #0d1b3a; }
 .nw-chat-nudge-x { color: #5b6576; }
+
+/* menu items on hover: gold text + gold underline (clearly visible) */
+.site-header nav > a:not(.nav-cta) { position: relative; transition: color .15s; }
+.site-header nav > a:not(.nav-cta):hover, .site-header nav > a:not(.nav-cta):focus-visible { color: #f5c542; }
+.site-header nav > a:not(.nav-cta)::before { content: ""; position: absolute; left: 0; right: 0; bottom: -7px; height: 2px; border-radius: 2px; background: #f5c542; transform: scaleX(0); transition: transform .2s ease; }
+.site-header nav > a:not(.nav-cta):hover::before, .site-header nav > a:not(.nav-cta):focus-visible::before { transform: scaleX(1); }

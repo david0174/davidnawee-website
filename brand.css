@@ -1292,3 +1292,9 @@ body { overflow-x: clip; }
     body:has(.sticky-cta) .nw-chat-nudge { bottom: calc(94px + env(safe-area-inset-bottom)); }
 }
 @media (prefers-reduced-motion: reduce) { .nw-chat-nudge { animation: none; } }
+
+/* "practice for free" band after the steps (learn.nawee.net) */
+.practice-band .cards { max-width: 1080px; margin: 0 auto; }
+.practice-card { text-align: left; }
+.practice-icon { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 12px; border-radius: 14px; background: rgba(245, 197, 66, .14); font-size: 1.5rem; }
+.practice-actions { justify-content: center; margin-top: 26px; }
