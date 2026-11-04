@@ -51,16 +51,6 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://nawee.net/karriere.html</loc>
-    <lastmod>2026-10-22</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nawee.net/careers.html</loc>
-    <lastmod>2026-10-22</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://nawee.net/projekte.html</loc>
     <lastmod>2026-10-28</lastmod>
     <priority>0.7</priority>
@@ -69,16 +59,6 @@
     <loc>https://nawee.net/projects.html</loc>
     <lastmod>2026-10-28</lastmod>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nawee.net/newsletter.html</loc>
-    <lastmod>2026-11-03</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nawee.net/newsletter-en.html</loc>
-    <lastmod>2026-11-03</lastmod>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://nawee.net/business-startpaket.html</loc>
