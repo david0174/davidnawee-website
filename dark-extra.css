@@ -255,3 +255,8 @@ mark.hl, .practice-copy mark.hl, .me-hero.me-hero--banner mark.hl { color: #f5c5
 .nl-strip { padding: 34px 6vw; }
 .nl-strip-inner { max-width: 1000px; }
 @media (max-width: 1100px) { .consultation-inner { padding: 0 6vw; } }
+
+/* section rhythm (David, 2026-11-04): practice band (dark) → contact (lighter) → newsletter strip (dark) → footer */
+#kontakt { background: #131e31; border-top: 1px solid #22314a; border-bottom: 1px solid #22314a; }
+#kontakt .consultation-form { background: #0f1828; }
+.nl-strip { background: #0a101a; border-top: 0; }

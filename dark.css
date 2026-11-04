@@ -560,6 +560,9 @@
     html:not([data-theme="light"]) .consultation-hours { margin-top: 2px !important; font-size: .82rem !important; color: #b7c3d3 !important; }
     html:not([data-theme="light"]) .nl-strip { padding: 34px 6vw; }
     html:not([data-theme="light"]) .nl-strip-inner { max-width: 1000px; }
+    html:not([data-theme="light"]) #kontakt { background: #131e31; border-top: 1px solid #22314a; border-bottom: 1px solid #22314a; }
+    html:not([data-theme="light"]) #kontakt .consultation-form { background: #0f1828; }
+    html:not([data-theme="light"]) .nl-strip { background: #0a101a; border-top: 0; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -1120,6 +1123,9 @@ html[data-theme="dark"] .consultation-label { margin-bottom: 3px; }
 html[data-theme="dark"] .consultation-hours { margin-top: 2px !important; font-size: .82rem !important; color: #b7c3d3 !important; }
 html[data-theme="dark"] .nl-strip { padding: 34px 6vw; }
 html[data-theme="dark"] .nl-strip-inner { max-width: 1000px; }
+html[data-theme="dark"] #kontakt { background: #131e31; border-top: 1px solid #22314a; border-bottom: 1px solid #22314a; }
+html[data-theme="dark"] #kontakt .consultation-form { background: #0f1828; }
+html[data-theme="dark"] .nl-strip { background: #0a101a; border-top: 0; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }
