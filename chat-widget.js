@@ -41,11 +41,11 @@
     const LESSONS = {
         de: { lesson: "Stunde", price: "Preis", where: "Ort", online: "Online", inPerson: "Vor Ort (Hannover)",
               title: "Stunde anfragen", details: "Passende Zeiten, Ihr Niveau und Ziel (optional)", pick: "Bitte wählen Sie eine Stunde aus.",
-              types: [["general", "Allgemeines Englisch · 60 Min. · 30 €"], ["general-pack", "Allgemeines Englisch · 10er-Paket · 270 €"], ["pro", "Berufsenglisch · 60 Min. · 45 €"], ["pro-pack", "Berufsenglisch · 10er-Paket · 405 €"]],
+              types: [["general", "Allgemeines Englisch · 60 Min. · 30 €"], ["general-pack", "Allgemeines Englisch · 10er-Paket · 260 €"], ["pro", "Berufsenglisch · 60 Min. · 45 €"], ["pro-pack", "Berufsenglisch · 10er-Paket · 400 €"]],
               tiers: [] },
         en: { lesson: "Lesson", price: "Price", where: "Where", online: "Online", inPerson: "In person (Hannover)",
               title: "Request a lesson", details: "Times that suit you, your level and goal (optional)", pick: "Please choose a lesson.",
-              types: [["general", "General English · 60 min · €30"], ["general-pack", "General English · 10-lesson package · €270"], ["pro", "Professional English · 60 min · €45"], ["pro-pack", "Professional English · 10-lesson package · €405"]],
+              types: [["general", "General English · 60 min · €30"], ["general-pack", "General English · 10-lesson package · €260"], ["pro", "Professional English · 60 min · €45"], ["pro-pack", "Professional English · 10-lesson package · €400"]],
               tiers: [] },
     }[lang];
     const TIERED = [];  // lesson types where the visitor picks a price tier (none since 2026-11-05: fixed prices)
