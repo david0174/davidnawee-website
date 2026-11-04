@@ -460,7 +460,7 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
         if (soundOn) stepTone(current);
     });
     paintSound();
-    bar.appendChild(soundBtn);
+    list.appendChild(soundBtn);  // small, in the top-right corner of the step tile (not in the step bar, where it looked like a 5th step)
 
     let current = 0;
     function show(i, silent) {

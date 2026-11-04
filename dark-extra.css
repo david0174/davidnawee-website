@@ -398,3 +398,7 @@ footer.ft { padding-top: 28px; }
 #methode .steps-next { animation: steps-glow-gold 2.2s ease-in-out infinite; }
 #methode .steps-next[data-book="1"] { animation-duration: 1.6s; }
 #angebote .price-pack { background: #15213a; }
+/* sound switch: small icon in the top-right corner of the step tile (2026-11-05) */
+#methode .steps-carousel { position: relative; }
+#methode .steps-sound { position: absolute; top: 14px; right: 14px; z-index: 2; width: 32px; height: 32px; font-size: .85rem; opacity: .75; }
+#methode .steps-sound:hover, #methode .steps-sound:focus-visible { opacity: 1; }

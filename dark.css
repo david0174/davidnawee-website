@@ -618,6 +618,9 @@
     html:not([data-theme="light"]) #methode .steps-next { animation: steps-glow-gold 2.2s ease-in-out infinite; }
     html:not([data-theme="light"]) #methode .steps-next[data-book="1"] { animation-duration: 1.6s; }
     html:not([data-theme="light"]) #angebote .price-pack { background: #15213a; }
+    html:not([data-theme="light"]) #methode .steps-carousel { position: relative; }
+    html:not([data-theme="light"]) #methode .steps-sound { position: absolute; top: 14px; right: 14px; z-index: 2; width: 32px; height: 32px; font-size: .85rem; opacity: .75; }
+    html:not([data-theme="light"]) #methode .steps-sound:hover, html:not([data-theme="light"]) #methode .steps-sound:focus-visible { opacity: 1; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -1236,6 +1239,9 @@ html[data-theme="dark"] #angebote .price-pack { border: 1px solid #f5c542; backg
 html[data-theme="dark"] #methode .steps-next { animation: steps-glow-gold 2.2s ease-in-out infinite; }
 html[data-theme="dark"] #methode .steps-next[data-book="1"] { animation-duration: 1.6s; }
 html[data-theme="dark"] #angebote .price-pack { background: #15213a; }
+html[data-theme="dark"] #methode .steps-carousel { position: relative; }
+html[data-theme="dark"] #methode .steps-sound { position: absolute; top: 14px; right: 14px; z-index: 2; width: 32px; height: 32px; font-size: .85rem; opacity: .75; }
+html[data-theme="dark"] #methode .steps-sound:hover, html[data-theme="dark"] #methode .steps-sound:focus-visible { opacity: 1; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }
