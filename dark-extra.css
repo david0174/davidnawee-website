@@ -260,3 +260,13 @@ mark.hl, .practice-copy mark.hl, .me-hero.me-hero--banner mark.hl { color: #f5c5
 #kontakt { background: #131e31; border-top: 1px solid #22314a; border-bottom: 1px solid #22314a; }
 #kontakt .consultation-form { background: #0f1828; }
 .nl-strip { background: #0a101a; border-top: 0; }
+
+/* language switcher pops forward on hover so people notice it (David, 2026-11-04): gold ring + glow, slight zoom, small label */
+.language-switch { position: relative; }
+.language-toggle { position: relative; border-radius: 50%; padding: 8px; border: 2px solid transparent; transition: transform .2s ease, border-color .2s, box-shadow .2s, background .2s; }
+.language-toggle:hover, .language-toggle:focus-visible, .language-toggle[aria-expanded="true"] { transform: scale(1.15); border-color: #f5c542; background: rgba(245, 197, 66, .12); box-shadow: 0 0 0 4px rgba(245, 197, 66, .15), 0 0 22px rgba(245, 197, 66, .45); }
+.language-toggle[aria-expanded="false"]:hover::after, .language-toggle[aria-expanded="false"]:focus-visible::after {
+    content: "Language · Sprache"; position: absolute; top: calc(100% + 10px); right: -4px; padding: 5px 10px; border-radius: 8px;
+    background: #f5c542; color: #0d1b3a; font-size: .72rem; font-weight: 800; letter-spacing: .04em; white-space: nowrap; pointer-events: none; transform: scale(.87); transform-origin: top right;
+}
+@media (prefers-reduced-motion: reduce) { .language-toggle:hover { transform: none; } }
