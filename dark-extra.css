@@ -154,3 +154,5 @@ button.button.secondary:hover { background: #f5c542; border-color: #f5c542; colo
 .site-header nav > a:not(.nav-cta):hover, .site-header nav > a:not(.nav-cta):focus-visible { color: #f5c542; }
 .site-header nav > a:not(.nav-cta)::before { content: ""; position: absolute; left: 0; right: 0; bottom: -7px; height: 2px; border-radius: 2px; background: #f5c542; transform: scaleX(0); transition: transform .2s ease; }
 .site-header nav > a:not(.nav-cta):hover::before, .site-header nav > a:not(.nav-cta):focus-visible::before { transform: scaleX(1); }
+.contact-fast { border-color: #f5c542; background: rgba(245, 197, 66, .1); color: #ffffff; }
+.contact-fast strong { color: #f5c542; }

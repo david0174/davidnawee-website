@@ -380,6 +380,8 @@
     html:not([data-theme="light"]) .nw-chat-nudge-x { color: #c9cbce; }
     html:not([data-theme="light"]) .nw-chat-nudge-x:hover { background: #181d26; }
     html:not([data-theme="light"]) .practice-icon { background: rgba(91, 75, 31, .14); }
+    html:not([data-theme="light"]) .contact-fast { border: 2px solid #5b4b1f; background: rgba(91, 75, 31, .1); }
+    html:not([data-theme="light"]) .contact-fast strong { color: #f1d27e; }
     html:not([data-theme="light"]) body { background: var(--dm-bg); color: var(--ink); }
     html:not([data-theme="light"]) .language-toggle img { filter: invert(1); }
     html:not([data-theme="light"]) h1, html:not([data-theme="light"]) h2, html:not([data-theme="light"]) h3, html:not([data-theme="light"]) h4 { color: var(--dm-head); }
@@ -468,6 +470,8 @@
     html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta):hover, html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta):focus-visible { color: #f5c542; }
     html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta)::before { content: ""; position: absolute; left: 0; right: 0; bottom: -7px; height: 2px; border-radius: 2px; background: #f5c542; transform: scaleX(0); transition: transform .2s ease; }
     html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta):hover::before, html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta):focus-visible::before { transform: scaleX(1); }
+    html:not([data-theme="light"]) .contact-fast { border-color: #f5c542; background: rgba(245, 197, 66, .1); color: #ffffff; }
+    html:not([data-theme="light"]) .contact-fast strong { color: #f5c542; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -848,6 +852,8 @@ html[data-theme="dark"] .nw-chat-nudge-text { color: #d5dae4; }
 html[data-theme="dark"] .nw-chat-nudge-x { color: #c9cbce; }
 html[data-theme="dark"] .nw-chat-nudge-x:hover { background: #181d26; }
 html[data-theme="dark"] .practice-icon { background: rgba(91, 75, 31, .14); }
+html[data-theme="dark"] .contact-fast { border: 2px solid #5b4b1f; background: rgba(91, 75, 31, .1); }
+html[data-theme="dark"] .contact-fast strong { color: #f1d27e; }
 html[data-theme="dark"] body { background: var(--dm-bg); color: var(--ink); }
 html[data-theme="dark"] .language-toggle img { filter: invert(1); }
 html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4 { color: var(--dm-head); }
@@ -936,6 +942,8 @@ html[data-theme="dark"] .site-header nav > a:not(.nav-cta) { position: relative;
 html[data-theme="dark"] .site-header nav > a:not(.nav-cta):hover, html[data-theme="dark"] .site-header nav > a:not(.nav-cta):focus-visible { color: #f5c542; }
 html[data-theme="dark"] .site-header nav > a:not(.nav-cta)::before { content: ""; position: absolute; left: 0; right: 0; bottom: -7px; height: 2px; border-radius: 2px; background: #f5c542; transform: scaleX(0); transition: transform .2s ease; }
 html[data-theme="dark"] .site-header nav > a:not(.nav-cta):hover::before, html[data-theme="dark"] .site-header nav > a:not(.nav-cta):focus-visible::before { transform: scaleX(1); }
+html[data-theme="dark"] .contact-fast { border-color: #f5c542; background: rgba(245, 197, 66, .1); color: #ffffff; }
+html[data-theme="dark"] .contact-fast strong { color: #f5c542; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }

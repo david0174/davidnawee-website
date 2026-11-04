@@ -11,7 +11,7 @@
         de: {
             open: "Nachricht an David schreiben", close: "Chat schließen",
             nudge: "Fragen? Schreiben Sie mir direkt 👋", nudgeClose: "Hinweis schließen",
-            name: "David Nawee", status: "Antwortet meist innerhalb von 24 Stunden",
+            name: "David Nawee", status: "Antwortet meist innerhalb weniger Stunden",
             hello: "Hallo, ich bin David 👋",
             intro: "Fragen zum Englischunterricht oder zu den Preisen? Schreiben Sie mir – ich antworte per E-Mail.",
             message: "Ihre Nachricht", email: "Ihre E-Mail-Adresse (für meine Antwort)", yourName: "Ihr Name (optional)",
@@ -24,7 +24,7 @@
         en: {
             open: "Send David a message", close: "Close chat",
             nudge: "Questions? Write me directly 👋", nudgeClose: "Close hint",
-            name: "David Nawee", status: "Usually replies within 24 hours",
+            name: "David Nawee", status: "Usually replies within a few hours",
             hello: "Hi, I’m David 👋",
             intro: "Questions about English lessons or prices? Write me – I’ll reply by email.",
             message: "Your message", email: "Your email (for my reply)", yourName: "Your name (optional)",
