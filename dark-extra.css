@@ -298,3 +298,27 @@ button.tier:hover, button.tier:focus-visible { border-color: #f5c542; background
 .card-request { margin-top: auto; padding-top: 12px; color: #f5c542; font-weight: 700; text-decoration: none; align-self: flex-start; }
 .card-request:hover, .card-request:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
 .plus-strip .card-request { display: inline-block; margin-top: 6px; padding-top: 0; }
+
+/* footer rebuilt (David, 2026-11-05): 3 tidy columns (brand · navigation · contact) + one slim bar (© + legal links) – shorter, no duplicates */
+footer.ft { display: block; padding: 34px 6vw 0; background: #0d1422; border-top: 1px solid #22314a; color: #b7c3d3; font-size: .9rem; }
+.ft-main { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 24px 48px; align-items: start; padding-bottom: 26px; }
+.ft-brand .footer-logo { width: 120px; height: auto; margin: 0 0 8px; display: block; }
+.ft-claim { margin: 0; max-width: 34ch; color: #b7c3d3; line-height: 1.5; }
+.ft-h { margin: 0 0 8px; color: #f5c542; font-size: .72rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.ft-nav, .ft-contact { display: flex; flex-direction: column; gap: 6px; }
+footer.ft a { color: #dbe3ee; text-decoration: none; }
+footer.ft a:hover, footer.ft a:focus-visible { color: #f5c542; }
+.ft-small { color: #8fa0b8; font-size: .8rem; line-height: 1.5; }
+.ft-social { display: flex; gap: 12px; margin-top: 4px; }
+.ft-social a { display: inline-flex; }
+.ft-bar { max-width: 1080px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 24px; padding: 14px 0 18px; border-top: 1px solid #22314a; font-size: .78rem; color: #8fa0b8; }
+.ft-bar p { margin: 0; }
+.ft-legal { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+footer.ft .ft-legal a { color: #8fa0b8; }
+@media (max-width: 760px) {
+    .ft-main { grid-template-columns: 1fr 1fr; gap: 22px 24px; }
+    .ft-brand { grid-column: 1 / -1; }
+    .ft-bar { flex-direction: column; align-items: flex-start; }
+}
+footer.ft .ft-nav, footer.ft .ft-contact { align-items: flex-start; text-align: left; }
+footer.ft nav.ft-nav > a, footer.ft .ft-legal > a { display: inline; margin: 0; padding: 0; text-align: left; break-inside: auto; }
