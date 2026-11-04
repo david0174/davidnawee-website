@@ -1225,3 +1225,7 @@ body { overflow-x: clip; }
 .price-card .price span { font-family: inherit; font-size: .95rem; font-weight: 500; color: var(--muted); }
 #fuer-wen .cards.cards-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 1000px; }
 @media (max-width: 760px) { #fuer-wen .cards.cards-2 { grid-template-columns: minmax(0, 1fr); } }
+/* "Can't afford it?" – clearly visible so nobody is put off by the prices (David, 2026-11-04) */
+.price-afford { width: fit-content; max-width: 100%; margin: 26px auto 0; padding: 12px 22px; border: 2px solid #f5c542; border-radius: 999px; background: rgba(245, 197, 66, .1); color: #ffffff; font-size: 1.15rem; font-weight: 600; text-align: center; }
+.price-afford strong { color: #f5c542; font-weight: 800; }
+.price-note { margin-top: 10px; font-size: .85rem; }

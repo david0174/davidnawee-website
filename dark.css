@@ -365,6 +365,8 @@
     html:not([data-theme="light"]) .pillar--dev { background: linear-gradient(160deg, rgba(53, 41, 81, .3), rgba(53, 41, 81, .12)); border: 1px solid rgba(44, 33, 71, .45); }
     html:not([data-theme="light"]) .price-tag { color: var(--dm-link); }
     html:not([data-theme="light"]) .price strong { color: var(--dm-head); }
+    html:not([data-theme="light"]) .price-afford { border: 2px solid #5b4b1f; background: rgba(91, 75, 31, .1); }
+    html:not([data-theme="light"]) .price-afford strong { color: #f1d27e; }
     html:not([data-theme="light"]) body { background: var(--dm-bg); color: var(--ink); }
     html:not([data-theme="light"]) .language-toggle img { filter: invert(1); }
     html:not([data-theme="light"]) h1, html:not([data-theme="light"]) h2, html:not([data-theme="light"]) h3, html:not([data-theme="light"]) h4 { color: var(--dm-head); }
@@ -432,6 +434,8 @@
     html:not([data-theme="light"]) .price-tag { color: #f5c542; }
     html:not([data-theme="light"]) .price strong { color: #ffffff; }
     html:not([data-theme="light"]) .price-card .price span { color: #b7c3d3; }
+    html:not([data-theme="light"]) .price-afford { border-color: #f5c542; background: rgba(245, 197, 66, .1); color: #ffffff; }
+    html:not([data-theme="light"]) .price-afford strong { color: #f5c542; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -797,6 +801,8 @@ html[data-theme="dark"] .about-highlights a { color: var(--dm-link); }
 html[data-theme="dark"] .pillar--dev { background: linear-gradient(160deg, rgba(53, 41, 81, .3), rgba(53, 41, 81, .12)); border: 1px solid rgba(44, 33, 71, .45); }
 html[data-theme="dark"] .price-tag { color: var(--dm-link); }
 html[data-theme="dark"] .price strong { color: var(--dm-head); }
+html[data-theme="dark"] .price-afford { border: 2px solid #5b4b1f; background: rgba(91, 75, 31, .1); }
+html[data-theme="dark"] .price-afford strong { color: #f1d27e; }
 html[data-theme="dark"] body { background: var(--dm-bg); color: var(--ink); }
 html[data-theme="dark"] .language-toggle img { filter: invert(1); }
 html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4 { color: var(--dm-head); }
@@ -864,6 +870,8 @@ html[data-theme="dark"] .menu-toggle span { background: #e7edf6; }
 html[data-theme="dark"] .price-tag { color: #f5c542; }
 html[data-theme="dark"] .price strong { color: #ffffff; }
 html[data-theme="dark"] .price-card .price span { color: #b7c3d3; }
+html[data-theme="dark"] .price-afford { border-color: #f5c542; background: rgba(245, 197, 66, .1); color: #ffffff; }
+html[data-theme="dark"] .price-afford strong { color: #f5c542; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }
