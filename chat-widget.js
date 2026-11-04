@@ -141,8 +141,12 @@
         req.querySelectorAll(`[data-group="${group}"] .nw-pill`).forEach((p) => p.setAttribute("aria-pressed", String(p.dataset.v === value)));
         if (group === "type") tierWrap.hidden = !TIERED.includes(value);
     };
+    const quickCall = root.querySelector(".nw-quick-call"), quickReq = root.querySelector("[data-quick-request]");
+    const markQuick = (btn) => [quickCall, quickReq].forEach((b) => { b.classList.toggle("is-on", b === btn); b.setAttribute("aria-pressed", String(b === btn)); });
+    quickCall.addEventListener("click", () => markQuick(quickCall));
     const setRequestMode = (on, type, tier) => {
         req.hidden = !on;
+        markQuick(on ? quickReq : null);
         field("message").placeholder = on ? LESSONS.details : T.message;
         field("message").rows = on ? 3 : 4;
         if (on) { pick("type", type || chosen.type || ""); if (TIERED.length) pick("tier", tier || chosen.tier || ""); pick("where", chosen.where || "online"); }
