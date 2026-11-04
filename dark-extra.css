@@ -202,3 +202,6 @@ button.button.secondary:hover { background: #f5c542; border-color: #f5c542; colo
 /* links to learn.nawee.net: gold pill on hover so people want to click */
 a[href^="https://learn.nawee.net"]:not(.button):not(.practice-shot) { border-radius: 6px; padding: 1px 4px; margin: 0 -4px; transition: background-color .15s, color .15s, box-shadow .15s; }
 a[href^="https://learn.nawee.net"]:not(.button):not(.practice-shot):hover, a[href^="https://learn.nawee.net"]:not(.button):not(.practice-shot):focus-visible { background: #f5c542; color: #0d1b3a; box-shadow: 0 0 18px rgba(245, 197, 66, .45); text-decoration: none; }
+/* price tiles: no permanent highlight – the tile under the mouse gets the gold border + glow (David, 2026-11-04) */
+.price-card, .price-card--featured { border: 2px solid #34496a; box-shadow: none; transition: border-color .2s, box-shadow .2s, transform .2s; }
+.price-card:hover, .price-card:focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .2), 0 0 36px rgba(245, 197, 66, .28); transform: translateY(-4px); }

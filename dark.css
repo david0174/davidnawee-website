@@ -519,6 +519,8 @@
     html:not([data-theme="light"]) .consult-card { border: 1px solid rgba(245, 197, 66, .45); box-shadow: 0 0 0 1px rgba(245, 197, 66, .15), 0 0 40px rgba(245, 197, 66, .18), 0 0 90px rgba(47, 116, 230, .22); }
     html:not([data-theme="light"]) a[href^="https://learn.nawee.net"]:not(.button):not(.practice-shot) { border-radius: 6px; padding: 1px 4px; margin: 0 -4px; transition: background-color .15s, color .15s, box-shadow .15s; }
     html:not([data-theme="light"]) a[href^="https://learn.nawee.net"]:not(.button):not(.practice-shot):hover, html:not([data-theme="light"]) a[href^="https://learn.nawee.net"]:not(.button):not(.practice-shot):focus-visible { background: #f5c542; color: #0d1b3a; box-shadow: 0 0 18px rgba(245, 197, 66, .45); text-decoration: none; }
+    html:not([data-theme="light"]) .price-card, html:not([data-theme="light"]) .price-card--featured { border: 2px solid #34496a; box-shadow: none; transition: border-color .2s, box-shadow .2s, transform .2s; }
+    html:not([data-theme="light"]) .price-card:hover, html:not([data-theme="light"]) .price-card:focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .2), 0 0 36px rgba(245, 197, 66, .28); transform: translateY(-4px); }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -1038,6 +1040,8 @@ html[data-theme="dark"] .about-copy a, html[data-theme="dark"] .about-highlights
 html[data-theme="dark"] .consult-card { border: 1px solid rgba(245, 197, 66, .45); box-shadow: 0 0 0 1px rgba(245, 197, 66, .15), 0 0 40px rgba(245, 197, 66, .18), 0 0 90px rgba(47, 116, 230, .22); }
 html[data-theme="dark"] a[href^="https://learn.nawee.net"]:not(.button):not(.practice-shot) { border-radius: 6px; padding: 1px 4px; margin: 0 -4px; transition: background-color .15s, color .15s, box-shadow .15s; }
 html[data-theme="dark"] a[href^="https://learn.nawee.net"]:not(.button):not(.practice-shot):hover, html[data-theme="dark"] a[href^="https://learn.nawee.net"]:not(.button):not(.practice-shot):focus-visible { background: #f5c542; color: #0d1b3a; box-shadow: 0 0 18px rgba(245, 197, 66, .45); text-decoration: none; }
+html[data-theme="dark"] .price-card, html[data-theme="dark"] .price-card--featured { border: 2px solid #34496a; box-shadow: none; transition: border-color .2s, box-shadow .2s, transform .2s; }
+html[data-theme="dark"] .price-card:hover, html[data-theme="dark"] .price-card:focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .2), 0 0 36px rgba(245, 197, 66, .28); transform: translateY(-4px); }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }
