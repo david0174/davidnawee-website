@@ -70,4 +70,14 @@
     <lastmod>2026-11-02</lastmod>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://nawee.net/ueber-mich.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nawee.net/about-me.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <priority>0.6</priority>
+  </url>
 </urlset>
