@@ -445,3 +445,16 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
     });
     show(0);
 })();
+
+// Newsletter strip: slides in and the button glows once when it scrolls into view (styles in dark-extra.css).
+// Content stays visible without JavaScript or with reduced motion (the hidden start state only applies with .nl-anim).
+(() => {
+    const strip = document.querySelector(".nl-strip");
+    if (!strip || !("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    strip.classList.add("nl-anim");
+    new IntersectionObserver((entries, obs) => {
+        if (!entries[0].isIntersecting) return;
+        strip.classList.add("nl-in");
+        obs.disconnect();
+    }, { threshold: 0.35 }).observe(strip);
+})();

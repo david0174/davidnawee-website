@@ -333,3 +333,18 @@ footer.ft nav.ft-nav > a, footer.ft .ft-legal > a { display: inline; margin: 0; 
 #angebote .price-afford { max-width: 860px; border-radius: 22px; }
 @media (max-width: 700px) { #angebote .cards.price-grid.price-grid--2 { grid-template-columns: 1fr; } }
 #angebote .price-pack { flex-direction: column; align-items: flex-start; gap: 2px; }
+
+/* newsletter strip pops more (David, 2026-11-05): gold top line, warm gradient, slide-in + one-time button glow when scrolled into view */
+.nl-strip { position: relative; background: linear-gradient(120deg, #0a101a 0%, #10203d 55%, #2a2a1c 100%); border-top: 0; }
+.nl-strip::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #f5c542 30%, #f5c542 70%, transparent); }
+.nl-strip-copy h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); }
+.nl-icon { display: inline-block; margin-right: 4px; }
+.nl-strip .newsletter-fields input { border-color: #4a6188; }
+.nl-strip .newsletter-fields input:focus { outline: none; border-color: #f5c542; box-shadow: 0 0 0 3px rgba(245, 197, 66, .2); }
+.nl-anim .nl-strip-copy, .nl-anim .nl-form { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s cubic-bezier(.22, 1, .36, 1); }
+.nl-anim .nl-form { transition-delay: .15s; }
+.nl-anim.nl-in .nl-strip-copy, .nl-anim.nl-in .nl-form { opacity: 1; transform: none; }
+.nl-anim.nl-in .nl-icon { animation: nl-wiggle .9s ease .5s 1; }
+.nl-anim.nl-in .newsletter-fields .button { animation: nl-glow 1.6s ease .7s 1; }
+@keyframes nl-wiggle { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-14deg); } 50% { transform: rotate(10deg); } 75% { transform: rotate(-6deg); } }
+@keyframes nl-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(245, 197, 66, 0); } 40% { box-shadow: 0 0 0 6px rgba(245, 197, 66, .35), 0 0 28px rgba(245, 197, 66, .5); } }
