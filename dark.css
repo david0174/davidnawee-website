@@ -440,6 +440,7 @@
     html:not([data-theme="light"]) .price-card--featured { border: 2px solid #f5c542; }
     html:not([data-theme="light"]) .price-free a { color: #9cbcf0; }
     html:not([data-theme="light"]) .primary:hover, html:not([data-theme="light"]) .primary:focus-visible, html:not([data-theme="light"]) .button.primary:hover, html:not([data-theme="light"]) .button.primary:focus-visible, html:not([data-theme="light"]) .nav-cta:hover, html:not([data-theme="light"]) .nav-cta:focus-visible { background: #f5c542; border-color: #f5c542; color: #0d1b3a; }
+    html:not([data-theme="light"]) .secondary:hover, html:not([data-theme="light"]) .secondary:focus-visible, html:not([data-theme="light"]) .button.secondary:hover, html:not([data-theme="light"]) .button.secondary:focus-visible, html:not([data-theme="light"]) .me-hero.me-hero--banner .button.secondary:hover, html:not([data-theme="light"]) .me-hero.me-hero--banner .button.secondary:focus-visible, html:not([data-theme="light"]) button.button.secondary:hover { background: #f5c542; border-color: #f5c542; color: #0d1b3a; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -880,6 +881,7 @@ html[data-theme="dark"] .price-afford strong { color: #f5c542; }
 html[data-theme="dark"] .price-card--featured { border: 2px solid #f5c542; }
 html[data-theme="dark"] .price-free a { color: #9cbcf0; }
 html[data-theme="dark"] .primary:hover, html[data-theme="dark"] .primary:focus-visible, html[data-theme="dark"] .button.primary:hover, html[data-theme="dark"] .button.primary:focus-visible, html[data-theme="dark"] .nav-cta:hover, html[data-theme="dark"] .nav-cta:focus-visible { background: #f5c542; border-color: #f5c542; color: #0d1b3a; }
+html[data-theme="dark"] .secondary:hover, html[data-theme="dark"] .secondary:focus-visible, html[data-theme="dark"] .button.secondary:hover, html[data-theme="dark"] .button.secondary:focus-visible, html[data-theme="dark"] .me-hero.me-hero--banner .button.secondary:hover, html[data-theme="dark"] .me-hero.me-hero--banner .button.secondary:focus-visible, html[data-theme="dark"] button.button.secondary:hover { background: #f5c542; border-color: #f5c542; color: #0d1b3a; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }

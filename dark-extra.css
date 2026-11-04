@@ -125,3 +125,8 @@ h1, h2, h3, h4 { color: var(--dm-head); }
 
 /* main buttons on hover: gold with navy text instead of near-black (David, 2026-11-04) */
 .primary:hover, .primary:focus-visible, .button.primary:hover, .button.primary:focus-visible, .nav-cta:hover, .nav-cta:focus-visible { background: #f5c542; border-color: #f5c542; color: #0d1b3a; }
+
+/* dark ("black") buttons on hover: gold with navy text as well (David, 2026-11-04) */
+.secondary:hover, .secondary:focus-visible, .button.secondary:hover, .button.secondary:focus-visible,
+.me-hero.me-hero--banner .button.secondary:hover, .me-hero.me-hero--banner .button.secondary:focus-visible,
+button.button.secondary:hover { background: #f5c542; border-color: #f5c542; color: #0d1b3a; }
