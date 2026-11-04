@@ -11,26 +11,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nawee.net/englisch.html</loc>
-    <lastmod>2026-10-22</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nawee.net/english.html</loc>
-    <lastmod>2026-10-22</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nawee.net/englischunterricht.html</loc>
-    <lastmod>2026-10-22</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://nawee.net/english-teaching.html</loc>
-    <lastmod>2026-10-22</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nawee.net/impressum.html</loc>
     <lastmod>2026-10-22</lastmod>
     <priority>0.3</priority>
@@ -91,41 +71,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nawee.net/ki-schulung-hannover.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nawee.net/ki-beratung.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nawee.net/ai-consulting.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nawee.net/business-beratung.html</loc>
-    <lastmod>2026-11-02</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nawee.net/business-consulting.html</loc>
-    <lastmod>2026-11-02</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nawee.net/gruendungs-check.html</loc>
-    <lastmod>2026-11-03</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nawee.net/journey-check.html</loc>
-    <lastmod>2026-11-03</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://nawee.net/newsletter.html</loc>
     <lastmod>2026-11-03</lastmod>
     <priority>0.5</priority>
@@ -134,16 +79,6 @@
     <loc>https://nawee.net/newsletter-en.html</loc>
     <lastmod>2026-11-03</lastmod>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nawee.net/kommunikation-fuehrung.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nawee.net/communication-leadership.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://nawee.net/business-startpaket.html</loc>

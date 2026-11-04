@@ -9,8 +9,8 @@
     <meta name="theme-color" content="#172b45">
     <link rel="icon" type="image/png" href="assets/favicon-nawee.png">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon-nawee.png">
-    <meta property="og:title" content="David Nawee – KI- & Business-Berater, Kommunikationscoach">
-    <meta property="og:description" content="Business gründen · KI-Beratung · Kommunikationscoaching – Hannover & online">
+    <meta property="og:title" content="David Nawee – Englischlehrer &amp; Coach (Muttersprachler)">
+    <meta property="og:description" content="Englischunterricht mit Muttersprachler – jedes Niveau, jedes Budget – Hannover &amp; online">
     <meta property="og:image" content="https://nawee.net/assets/david-portrait.jpg">
     <!-- Cloudflare Web Analytics: cookie-free visit statistics (see privacy policy, section 3) --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4dfcab1048a842c7a2b8a92bf5b7c93a"}'></script><!-- End Cloudflare Web Analytics -->
     <style>
@@ -52,8 +52,8 @@
         <div class="top">
             <img src="assets/david-portrait.jpg" alt="David Nawee">
             <h1>David Nawee</h1>
-            <p class="role">KI- &amp; Business-Berater<br>Kommunikationscoach</p>
-            <p class="role-en">AI &amp; Business Consultant<br>Communication Coach</p>
+            <p class="role">Englischlehrer &amp; Coach<br>Muttersprachler (USA)</p>
+            <p class="role-en">English Teacher &amp; Coach<br>Native speaker (US)</p>
             <p class="place">Hannover · Online</p>
         </div>
         <div class="actions">
@@ -71,7 +71,7 @@
             <p>Scannen, um diese Karte zu öffnen · Scan to open this card</p>
         </div>
     </div>
-    <p class="offers">Business gründen · KI-Beratung &amp; Training · Kommunikationscoaching</p>
+    <p class="offers">Englischunterricht für jedes Niveau · Kleingruppen ab 12 € · Einzelunterricht ab 19 €</p>
     <p class="legal"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
 </main>
 <div class="toast" role="status" data-toast></div>
@@ -79,7 +79,7 @@
     // share the card: the phone's share menu (WhatsApp, Mail, …) or copy the link
     document.querySelector("[data-share]").addEventListener("click", async () => {
         const url = "https://nawee.net/karte.html";
-        const data = { title: "David Nawee – KI- & Business-Berater, Kommunikationscoach", url };
+        const data = { title: "David Nawee – Englischlehrer & Coach (Muttersprachler)", url };
         if (navigator.share) { try { await navigator.share(data); } catch { /* closed */ } return; }
         try { await navigator.clipboard.writeText(url); } catch { return; }
         const t = document.querySelector("[data-toast]");

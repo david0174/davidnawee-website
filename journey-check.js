@@ -11,16 +11,13 @@
 
     const T = {
         en: {
-            journey: "business-consulting.html#steps",
             steps: {
-                idea: ["Idea & foundation", "We sharpen your target customers, your offer and your prices.", "business-consulting.html#steps"],
-                setup: ["Setup", "You get a clear checklist for registration and taxes – and a tax adviser if you need one.", "business-consulting.html#steps"],
-                digital: ["Digital presence", "Website, email, booking and payments – so customers can find and book you.", "business-starter-package.html"],
-                ai: ["AI & automation", "The right AI tools, with inquiries and appointments running on their own.", "ai-consulting.html"],
-                customers: ["Win customers", "Your offer in one clear sentence and confident sales conversations.", "communication-leadership.html"],
-                growth: ["Growth", "Regular check-ins so you keep moving – and stay focused.", "business-consulting.html#steps"],
+                website: ["Website & booking", "A professional website with booking, payments and your Google profile.", "business-starter-package.html"],
+                ai: ["AI tools & automation", "The right AI tools, with inquiries and appointments running on their own.", "ai-consulting.html"],
+                training: ["AI training", "You and your team use AI safely and productively.", "ai-consulting.html#ai-training"],
+                communication: ["Communication coaching", "Your offer in one clear sentence and confident conversations with customers.", "communication-leadership.html"],
             },
-            byStage: { idea: ["idea", "setup"], soon: ["idea", "setup", "digital"], new: ["digital", "ai"], running: ["ai", "customers", "growth"] },
+            byStage: { idea: ["website", "ai"], soon: ["website", "ai"], new: ["ai", "website"], running: ["ai", "training"] },
             invalid: "Please answer questions 1 and 2 and enter a valid email address.",
             sending: "Sending …", send: "Send my answers",
             error: 'Sorry, that didn’t work. Feel free to email me at <a href="mailto:david@nawee.net">david@nawee.net</a>.',
@@ -33,16 +30,13 @@
             labels: { stage: "Stage", who: "Who", needs: "Needs", timing: "Timing", language: "Language", challenge: "Biggest challenge" },
         },
         de: {
-            journey: "business-beratung.html#steps",
             steps: {
-                idea: ["Idee & Fundament", "Wir schärfen Ihre Zielkunden, Ihr Angebot und Ihre Preise.", "business-beratung.html#steps"],
-                setup: ["Gründung", "Sie bekommen eine klare Checkliste für Anmeldung und Steuern – und bei Bedarf eine Steuerberatung.", "business-beratung.html#steps"],
-                digital: ["Digitaler Auftritt", "Website, E-Mail, Buchung und Zahlungen – damit Kunden Sie finden und buchen können.", "business-startpaket.html"],
-                ai: ["KI & Automatisierung", "Die passenden KI-Tools, Anfragen und Termine laufen automatisch.", "ki-beratung.html"],
-                customers: ["Kunden gewinnen", "Ihr Angebot in einem klaren Satz und sichere Verkaufsgespräche.", "kommunikation-fuehrung.html"],
-                growth: ["Wachstum", "Regelmäßige Check-ins, damit Sie dranbleiben – und fokussiert bleiben.", "business-beratung.html#steps"],
+                website: ["Website & Buchung", "Eine professionelle Website mit Buchung, Zahlungen und Google-Profil.", "business-startpaket.html"],
+                ai: ["KI-Tools & Automatisierung", "Die passenden KI-Tools, Anfragen und Termine laufen automatisch.", "ki-beratung.html"],
+                training: ["KI-Training", "Sie und Ihr Team nutzen KI sicher und produktiv.", "ki-beratung.html#ki-training"],
+                communication: ["Kommunikationscoaching", "Ihr Angebot in einem klaren Satz und sichere Gespräche mit Kunden.", "kommunikation-fuehrung.html"],
             },
-            byStage: { idea: ["idea", "setup"], soon: ["idea", "setup", "digital"], new: ["digital", "ai"], running: ["ai", "customers", "growth"] },
+            byStage: { idea: ["website", "ai"], soon: ["website", "ai"], new: ["ai", "website"], running: ["ai", "training"] },
             invalid: "Bitte beantworten Sie Frage 1 und 2 und geben Sie eine gültige E-Mail-Adresse an.",
             sending: "Wird gesendet …", send: "Antworten senden",
             error: 'Das hat leider nicht geklappt. Schreiben Sie mir gern an <a href="mailto:david@nawee.net">david@nawee.net</a>.',
@@ -100,9 +94,9 @@
         }
 
         // personal suggestion: the steps they ticked (in journey order), otherwise what fits their stage
-        const order = ["idea", "setup", "digital", "ai", "customers", "growth"];
+        const order = ["website", "ai", "training", "communication"];
         const picked = needs.map((n) => n.value);
-        const keys = (picked.length ? order.filter((k) => picked.includes(k)) : T.byStage[stage.value] || ["idea"]).slice(0, 3);
+        const keys = (picked.length ? order.filter((k) => picked.includes(k)) : T.byStage[stage.value] || ["website"]).slice(0, 3);
         const items = keys.map((k) => {
             const s = T.steps[k];
             return `<li><strong>${s[0]}</strong> – ${s[1]} <a class="text-link" href="${s[2]}">${T.more} →</a></li>`;
