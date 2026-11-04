@@ -20,6 +20,7 @@
             thanks: (mail) => `Danke! Ihre Nachricht ist angekommen. Ich antworte Ihnen so bald wie möglich an ${mail}.`,
             error: 'Das hat leider nicht geklappt. Schreiben Sie mir gern direkt an <a href="mailto:david@nawee.net">david@nawee.net</a>.',
             invalid: "Bitte schreiben Sie eine Nachricht und geben Sie eine gültige E-Mail-Adresse an.",
+            request: "Hallo David, ich möchte eine Stunde anfragen.\nStunde: Einzelstunde / Kleingruppe / 10er-Paket / 1:1 Plus\nPreis: Ermäßigt / Standard / Unterstützer\nOnline oder vor Ort: \nPassende Zeiten: \nMein Niveau und Ziel: ",
         },
         en: {
             open: "Send David a message", close: "Close chat",
@@ -33,6 +34,7 @@
             thanks: (mail) => `Thanks! Your message has arrived. I’ll get back to you at ${mail} as soon as I can.`,
             error: 'Sorry, that didn’t work. Feel free to email me directly at <a href="mailto:david@nawee.net">david@nawee.net</a>.',
             invalid: "Please write a message and enter a valid email address.",
+            request: "Hi David, I’d like to request a lesson.\nLesson: 1:1 / small group / 10-lesson package / 1:1 Plus\nPrice: Reduced / Standard / Supporter\nOnline or in person: \nTimes that suit me: \nMy level and goal: ",
         },
     }[lang];
 
@@ -104,6 +106,15 @@
     };
     button.addEventListener("click", () => setOpen(panel.hidden));
     nudge.querySelector(".nw-chat-nudge-text").addEventListener("click", () => setOpen(true));
+    // "Request a lesson" buttons (data-lesson-request): open the chat with a short request template to fill in.
+    // Without JavaScript the button's own link (an email with the same template) still works.
+    document.addEventListener("click", (e) => {
+        const b = e.target.closest("[data-lesson-request]");
+        if (!b || !form.isConnected) return;
+        e.preventDefault();
+        setOpen(true);
+        if (!field("message").value.trim()) { field("message").value = T.request; field("message").rows = 8; }
+    });
     root.querySelector(".nw-chat-x").addEventListener("click", () => { setOpen(false); button.focus(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !panel.hidden) { setOpen(false); button.focus(); } });
 
