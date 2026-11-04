@@ -381,3 +381,11 @@ footer.ft { padding-top: 28px; }
 #methode .steps-next[data-book="1"] { animation: steps-glow-gold 1.8s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { #methode .steps-next[data-book="1"] { animation: none; box-shadow: 0 0 0 2px #f5c542, 0 0 22px rgba(245, 197, 66, .55); } }
 .who-or { margin: 0 6px; color: #8fa0b8; }
+
+/* chat: quick choices under the greeting – free call or lesson request (2026-11-05) */
+.nw-quick { display: flex; flex-wrap: wrap; gap: 6px; }
+.nw-quick-btn { padding: 7px 12px; border: 1px solid #cfdaea; border-radius: 999px; background: #ffffff; color: #1554c0; font: inherit; font-size: .85rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: border-color .15s, background .15s; }
+.nw-quick-btn:hover, .nw-quick-btn:focus-visible { border-color: #1554c0; background: #eef4ff; }
+.nw-quick-call { background: #1554c0; border-color: #1554c0; color: #ffffff; }
+.nw-quick-call:hover, .nw-quick-call:focus-visible { background: #2f74e6; border-color: #2f74e6; color: #ffffff; }
+.nw-req[hidden], [data-tier-wrap][hidden] { display: none !important; }

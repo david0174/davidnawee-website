@@ -14,6 +14,7 @@
             name: "David Nawee", status: "Antwortet meist innerhalb weniger Stunden",
             hello: "Hallo, ich bin David 👋",
             intro: "Fragen zum Englischunterricht oder zu den Preisen? Schreiben Sie mir – ich antworte per E-Mail.",
+            call: "📅 Kostenloses 15-Min.-Gespräch buchen", requestBtn: "✍️ Stunde anfragen",
             message: "Ihre Nachricht", email: "Ihre E-Mail-Adresse (für meine Antwort)", yourName: "Ihr Name (optional)",
             send: "Senden", sending: "Wird gesendet …",
             privacy: 'Ich speichere Ihre Angaben, um Ihnen zu antworten. Mehr in der <a href="datenschutz.html#chat">Datenschutzerklärung</a>.',
@@ -27,6 +28,7 @@
             name: "David Nawee", status: "Usually replies within a few hours",
             hello: "Hi, I’m David 👋",
             intro: "Questions about English lessons or prices? Write me – I’ll reply by email.",
+            call: "📅 Book a free 15-min call", requestBtn: "✍️ Request a lesson",
             message: "Your message", email: "Your email (for my reply)", yourName: "Your name (optional)",
             send: "Send", sending: "Sending …",
             privacy: 'I store your details to reply to you. More in the <a href="privacy-policy.html#chat">privacy policy</a>.',
@@ -64,6 +66,10 @@
             </header>
             <div class="nw-chat-body">
                 <div class="nw-msg nw-msg--david"><strong>${T.hello}</strong> ${T.intro}</div>
+                <div class="nw-quick">
+                    <a class="nw-quick-btn nw-quick-call" href="https://cal.com/nawee/15min" target="_blank" rel="noopener">${T.call}</a>
+                    <button type="button" class="nw-quick-btn" data-quick-request>${T.requestBtn}</button>
+                </div>
                 <form class="nw-chat-form" novalidate>
                     <div class="nw-req" hidden>
                         <p class="nw-req-h">${LESSONS.lesson}</p>
@@ -150,6 +156,7 @@
         setOpen(true);
     });
     button.addEventListener("click", () => setRequestMode(false));
+    root.querySelector("[data-quick-request]").addEventListener("click", () => { setRequestMode(true); field("message").focus(); });
     nudge.querySelector(".nw-chat-nudge-text").addEventListener("click", () => setRequestMode(false));
     root.querySelector(".nw-chat-x").addEventListener("click", () => { setOpen(false); button.focus(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !panel.hidden) { setOpen(false); button.focus(); } });
