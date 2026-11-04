@@ -199,3 +199,6 @@ button.button.secondary:hover { background: #f5c542; border-color: #f5c542; colo
 .about-copy a, .about-highlights a { color: #f5c542; }
 /* "Let's talk for 15 minutes" box: soft gold-blue glow */
 .consult-card { border: 1px solid rgba(245, 197, 66, .45); box-shadow: 0 0 0 1px rgba(245, 197, 66, .15), 0 0 40px rgba(245, 197, 66, .18), 0 0 90px rgba(47, 116, 230, .22); }
+/* links to learn.nawee.net: gold pill on hover so people want to click */
+a[href^="https://learn.nawee.net"]:not(.button):not(.practice-shot) { border-radius: 6px; padding: 1px 4px; margin: 0 -4px; transition: background-color .15s, color .15s, box-shadow .15s; }
+a[href^="https://learn.nawee.net"]:not(.button):not(.practice-shot):hover, a[href^="https://learn.nawee.net"]:not(.button):not(.practice-shot):focus-visible { background: #f5c542; color: #0d1b3a; box-shadow: 0 0 18px rgba(245, 197, 66, .45); text-decoration: none; }
