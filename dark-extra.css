@@ -348,3 +348,10 @@ footer.ft nav.ft-nav > a, footer.ft .ft-legal > a { display: inline; margin: 0; 
 .nl-anim.nl-in .newsletter-fields .button { animation: nl-glow 1.6s ease .7s 1; }
 @keyframes nl-wiggle { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-14deg); } 50% { transform: rotate(10deg); } 75% { transform: rotate(-6deg); } }
 @keyframes nl-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(245, 197, 66, 0); } 40% { box-shadow: 0 0 0 6px rgba(245, 197, 66, .35), 0 0 28px rgba(245, 197, 66, .5); } }
+
+/* shorter footer (2026-11-05): navigation links in two short columns */
+footer.ft .ft-nav { display: grid; grid-template-columns: repeat(2, max-content); column-gap: 28px; row-gap: 6px; align-content: start; }
+footer.ft .ft-nav .ft-h { grid-column: 1 / -1; }
+.ft-main { padding-bottom: 20px; }
+footer.ft { padding-top: 28px; }
+@media (max-width: 760px) { footer.ft .ft-nav { grid-template-columns: 1fr; } footer.ft .ft-contact a { white-space: nowrap; } }
