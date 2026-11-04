@@ -156,3 +156,22 @@ button.button.secondary:hover { background: #f5c542; border-color: #f5c542; colo
 .site-header nav > a:not(.nav-cta):hover::before, .site-header nav > a:not(.nav-cta):focus-visible::before { transform: scaleX(1); }
 .contact-fast { border-color: #f5c542; background: rgba(245, 197, 66, .1); color: #ffffff; }
 .contact-fast strong { color: #f5c542; }
+.who-tile { background: #151f2e; border-color: #2b3a4f; }
+.who-tags li { border-color: #2b3a4f; color: #dbe5f5; }
+.practice-inner { border-color: #f5c542; background: radial-gradient(ellipse 60% 80% at 100% 0%, rgba(47, 123, 255, .35), transparent 70%), linear-gradient(160deg, #0f2659 0%, #0a1838 70%); }
+.practice-copy h2 { color: #ffffff; }
+.practice-chips li { background: rgba(245, 197, 66, .14); color: #f5c542; }
+.practice-shot { background: #ffffff; }
+.practice-browser { background: #e9eef6; }
+.practice-browser b { background: #ffffff; color: #0d1b3a; }
+.hero-practice a { color: #f5c542; }
+
+/* more contrast in the dark design (David, 2026-11-04): sections alternate lighter / darker, cards stand out */
+#fuer-wen, #methode, #ueber-mich { background: #131e31; border-top: 1px solid #22314a; border-bottom: 1px solid #22314a; }
+#angebote, #ueben, #kontakt { background: #0a101a; }
+.card, .price-card, .who-tile, .audience-card, .offer-card { background: #1b2840; border-color: #34496a; }
+.price-card--featured { background: #1e2d49; border-color: #f5c542; }
+#methode .steps-carousel .process-step { background: #1b2840; border-color: #34496a; border-top-color: #f5c542; }
+#methode .steps-dot { border-color: #34496a; }
+.who-tags li { border-color: #3d5378; background: #22314d; }
+.card h3, .who-tile h3, .price-card h3 { color: #ffffff; }

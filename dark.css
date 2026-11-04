@@ -382,6 +382,16 @@
     html:not([data-theme="light"]) .practice-icon { background: rgba(91, 75, 31, .14); }
     html:not([data-theme="light"]) .contact-fast { border: 2px solid #5b4b1f; background: rgba(91, 75, 31, .1); }
     html:not([data-theme="light"]) .contact-fast strong { color: #f1d27e; }
+    html:not([data-theme="light"]) .who-icon { background: rgba(91, 75, 31, .14); }
+    html:not([data-theme="light"]) .practice-inner { border: 2px solid #5b4b1f; }
+    html:not([data-theme="light"]) .practice-copy mark.hl { color: #f1d27e; }
+    html:not([data-theme="light"]) .practice-copy .eyebrow { color: #f1d27e; }
+    html:not([data-theme="light"]) .practice-chips li { background: rgba(91, 75, 31, .14); color: #f1d27e; }
+    html:not([data-theme="light"]) .practice-shot { background: #14181f; }
+    html:not([data-theme="light"]) .practice-browser { background: #191f28; }
+    html:not([data-theme="light"]) .practice-browser i { background: #282d35; }
+    html:not([data-theme="light"]) .practice-browser b { background: #14181f; color: #d5dae4; }
+    html:not([data-theme="light"]) .hero-practice a { color: #f1d27e; }
     html:not([data-theme="light"]) body { background: var(--dm-bg); color: var(--ink); }
     html:not([data-theme="light"]) .language-toggle img { filter: invert(1); }
     html:not([data-theme="light"]) h1, html:not([data-theme="light"]) h2, html:not([data-theme="light"]) h3, html:not([data-theme="light"]) h4 { color: var(--dm-head); }
@@ -472,6 +482,23 @@
     html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta):hover::before, html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta):focus-visible::before { transform: scaleX(1); }
     html:not([data-theme="light"]) .contact-fast { border-color: #f5c542; background: rgba(245, 197, 66, .1); color: #ffffff; }
     html:not([data-theme="light"]) .contact-fast strong { color: #f5c542; }
+    html:not([data-theme="light"]) .who-tile { background: #151f2e; border-color: #2b3a4f; }
+    html:not([data-theme="light"]) .who-tags li { border-color: #2b3a4f; color: #dbe5f5; }
+    html:not([data-theme="light"]) .practice-inner { border-color: #f5c542; background: radial-gradient(ellipse 60% 80% at 100% 0%, rgba(47, 123, 255, .35), transparent 70%), linear-gradient(160deg, #0f2659 0%, #0a1838 70%); }
+    html:not([data-theme="light"]) .practice-copy h2 { color: #ffffff; }
+    html:not([data-theme="light"]) .practice-chips li { background: rgba(245, 197, 66, .14); color: #f5c542; }
+    html:not([data-theme="light"]) .practice-shot { background: #ffffff; }
+    html:not([data-theme="light"]) .practice-browser { background: #e9eef6; }
+    html:not([data-theme="light"]) .practice-browser b { background: #ffffff; color: #0d1b3a; }
+    html:not([data-theme="light"]) .hero-practice a { color: #f5c542; }
+    html:not([data-theme="light"]) #fuer-wen, html:not([data-theme="light"]) #methode, html:not([data-theme="light"]) #ueber-mich { background: #131e31; border-top: 1px solid #22314a; border-bottom: 1px solid #22314a; }
+    html:not([data-theme="light"]) #angebote, html:not([data-theme="light"]) #ueben, html:not([data-theme="light"]) #kontakt { background: #0a101a; }
+    html:not([data-theme="light"]) .card, html:not([data-theme="light"]) .price-card, html:not([data-theme="light"]) .who-tile, html:not([data-theme="light"]) .audience-card, html:not([data-theme="light"]) .offer-card { background: #1b2840; border-color: #34496a; }
+    html:not([data-theme="light"]) .price-card--featured { background: #1e2d49; border-color: #f5c542; }
+    html:not([data-theme="light"]) #methode .steps-carousel .process-step { background: #1b2840; border-color: #34496a; border-top-color: #f5c542; }
+    html:not([data-theme="light"]) #methode .steps-dot { border-color: #34496a; }
+    html:not([data-theme="light"]) .who-tags li { border-color: #3d5378; background: #22314d; }
+    html:not([data-theme="light"]) .card h3, html:not([data-theme="light"]) .who-tile h3, html:not([data-theme="light"]) .price-card h3 { color: #ffffff; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -854,6 +881,16 @@ html[data-theme="dark"] .nw-chat-nudge-x:hover { background: #181d26; }
 html[data-theme="dark"] .practice-icon { background: rgba(91, 75, 31, .14); }
 html[data-theme="dark"] .contact-fast { border: 2px solid #5b4b1f; background: rgba(91, 75, 31, .1); }
 html[data-theme="dark"] .contact-fast strong { color: #f1d27e; }
+html[data-theme="dark"] .who-icon { background: rgba(91, 75, 31, .14); }
+html[data-theme="dark"] .practice-inner { border: 2px solid #5b4b1f; }
+html[data-theme="dark"] .practice-copy mark.hl { color: #f1d27e; }
+html[data-theme="dark"] .practice-copy .eyebrow { color: #f1d27e; }
+html[data-theme="dark"] .practice-chips li { background: rgba(91, 75, 31, .14); color: #f1d27e; }
+html[data-theme="dark"] .practice-shot { background: #14181f; }
+html[data-theme="dark"] .practice-browser { background: #191f28; }
+html[data-theme="dark"] .practice-browser i { background: #282d35; }
+html[data-theme="dark"] .practice-browser b { background: #14181f; color: #d5dae4; }
+html[data-theme="dark"] .hero-practice a { color: #f1d27e; }
 html[data-theme="dark"] body { background: var(--dm-bg); color: var(--ink); }
 html[data-theme="dark"] .language-toggle img { filter: invert(1); }
 html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4 { color: var(--dm-head); }
@@ -944,6 +981,23 @@ html[data-theme="dark"] .site-header nav > a:not(.nav-cta)::before { content: ""
 html[data-theme="dark"] .site-header nav > a:not(.nav-cta):hover::before, html[data-theme="dark"] .site-header nav > a:not(.nav-cta):focus-visible::before { transform: scaleX(1); }
 html[data-theme="dark"] .contact-fast { border-color: #f5c542; background: rgba(245, 197, 66, .1); color: #ffffff; }
 html[data-theme="dark"] .contact-fast strong { color: #f5c542; }
+html[data-theme="dark"] .who-tile { background: #151f2e; border-color: #2b3a4f; }
+html[data-theme="dark"] .who-tags li { border-color: #2b3a4f; color: #dbe5f5; }
+html[data-theme="dark"] .practice-inner { border-color: #f5c542; background: radial-gradient(ellipse 60% 80% at 100% 0%, rgba(47, 123, 255, .35), transparent 70%), linear-gradient(160deg, #0f2659 0%, #0a1838 70%); }
+html[data-theme="dark"] .practice-copy h2 { color: #ffffff; }
+html[data-theme="dark"] .practice-chips li { background: rgba(245, 197, 66, .14); color: #f5c542; }
+html[data-theme="dark"] .practice-shot { background: #ffffff; }
+html[data-theme="dark"] .practice-browser { background: #e9eef6; }
+html[data-theme="dark"] .practice-browser b { background: #ffffff; color: #0d1b3a; }
+html[data-theme="dark"] .hero-practice a { color: #f5c542; }
+html[data-theme="dark"] #fuer-wen, html[data-theme="dark"] #methode, html[data-theme="dark"] #ueber-mich { background: #131e31; border-top: 1px solid #22314a; border-bottom: 1px solid #22314a; }
+html[data-theme="dark"] #angebote, html[data-theme="dark"] #ueben, html[data-theme="dark"] #kontakt { background: #0a101a; }
+html[data-theme="dark"] .card, html[data-theme="dark"] .price-card, html[data-theme="dark"] .who-tile, html[data-theme="dark"] .audience-card, html[data-theme="dark"] .offer-card { background: #1b2840; border-color: #34496a; }
+html[data-theme="dark"] .price-card--featured { background: #1e2d49; border-color: #f5c542; }
+html[data-theme="dark"] #methode .steps-carousel .process-step { background: #1b2840; border-color: #34496a; border-top-color: #f5c542; }
+html[data-theme="dark"] #methode .steps-dot { border-color: #34496a; }
+html[data-theme="dark"] .who-tags li { border-color: #3d5378; background: #22314d; }
+html[data-theme="dark"] .card h3, html[data-theme="dark"] .who-tile h3, html[data-theme="dark"] .price-card h3 { color: #ffffff; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }

@@ -1302,3 +1302,43 @@ body { overflow-x: clip; }
 /* contact: "Just reach out – I reply within a few hours" stands out */
 .contact-fast { display: inline-block; margin: 6px 0 14px; padding: 10px 18px; border: 2px solid #f5c542; border-radius: 14px; background: rgba(245, 197, 66, .1); color: #ffffff; font-size: 1.08rem; font-weight: 600; }
 .contact-fast strong { color: #f5c542; }
+
+/* "Who is it for?" – four slim tiles instead of big cards (David, 2026-11-04: too bulky) */
+.who-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; max-width: 1180px; margin: 0 auto; }
+.who-tile { padding: 22px 20px; border: 1px solid #2b3a4f; border-radius: 18px; background: #151f2e; }
+.who-icon { display: grid; place-items: center; width: 44px; height: 44px; margin-bottom: 12px; border-radius: 12px; background: rgba(245, 197, 66, .14); font-size: 1.35rem; }
+.who-tile h3 { margin: 0 0 6px; font-size: 1.1rem; }
+.who-tile p { margin: 0 0 14px; color: #b7c3d3; font-size: .95rem; line-height: 1.5; }
+.who-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.who-tags li { padding: 4px 10px; border: 1px solid #2b3a4f; border-radius: 999px; color: #dbe5f5; font-size: .8rem; }
+.who-tags li::before { display: none; }
+@media (max-width: 1000px) { .who-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .who-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* practice band: a highlighted section that sends people to learn.nawee.net (David, 2026-11-04) */
+#ueben.practice-band { padding-left: 16px; padding-right: 16px; }
+.practice-inner { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 40px; align-items: center; max-width: 1180px; margin: 0 auto; padding: 44px; border: 2px solid #f5c542; border-radius: 26px;
+    background: radial-gradient(ellipse 60% 80% at 100% 0%, rgba(47, 123, 255, .35), transparent 70%), linear-gradient(160deg, #0f2659 0%, #0a1838 70%); box-shadow: 0 24px 60px rgba(8, 21, 55, .45); }
+.practice-copy h2 { margin: 6px 0 12px; color: #ffffff; font-size: clamp(1.9rem, 3.4vw, 2.7rem); line-height: 1.15; }
+.practice-copy mark.hl { background: none; color: #f5c542; }
+.practice-copy .eyebrow { color: #f5c542; }
+.practice-lead { color: #dbe5f5; font-size: 1.08rem; line-height: 1.6; }
+.practice-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; padding: 0; list-style: none; }
+.practice-chips li { padding: 6px 12px; border-radius: 999px; background: rgba(245, 197, 66, .14); color: #f5c542; font-size: .88rem; font-weight: 700; }
+.practice-chips li::before, .practice-points li::before { display: none; }
+.practice-points { display: grid; gap: 8px; margin: 0 0 24px; padding: 0; list-style: none; }
+.practice-points li { display: flex; gap: 10px; align-items: baseline; color: #dbe5f5; }
+.practice-btn { font-size: 1.05rem; padding: 14px 24px; }
+.practice-shot { display: block; overflow: hidden; border-radius: 16px; background: #ffffff; box-shadow: 0 20px 50px rgba(0, 0, 0, .45); transform: rotate(1.2deg); transition: transform .25s; }
+.practice-shot:hover { transform: rotate(0deg) scale(1.02); }
+.practice-shot img { display: block; width: 100%; height: auto; }
+.practice-browser { display: flex; align-items: center; gap: 6px; padding: 9px 12px; background: #e9eef6; }
+.practice-browser i { width: 10px; height: 10px; border-radius: 50%; background: #c5cfdd; }
+.practice-browser b { margin-left: 10px; padding: 2px 12px; border-radius: 999px; background: #ffffff; color: #0d1b3a; font-size: .78rem; font-weight: 600; }
+.hero-practice { margin: 14px 0 0; text-align: center; color: #dbe5f5; font-size: .98rem; }
+.hero-practice a { color: #f5c542; font-weight: 700; }
+@media (max-width: 900px) { .practice-inner { grid-template-columns: minmax(0, 1fr); padding: 28px 22px; } .practice-shot { transform: none; } }
+
+/* headings: no joined letters (fi ligature) and a touch more letter spacing so f/i and w/i don't touch (David, 2026-11-04) */
+h1, h2, h3, .me-hero h1, .me-hero h1 span, .practice-copy h2 { font-variant-ligatures: no-common-ligatures no-discretionary-ligatures; font-feature-settings: "liga" 0, "dlig" 0; }
+.me-hero h1, .me-hero.me-hero--banner h1 { letter-spacing: -.005em; }
