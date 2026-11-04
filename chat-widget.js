@@ -20,7 +20,6 @@
             thanks: (mail) => `Danke! Ihre Nachricht ist angekommen. Ich antworte Ihnen so bald wie möglich an ${mail}.`,
             error: 'Das hat leider nicht geklappt. Schreiben Sie mir gern direkt an <a href="mailto:david@nawee.net">david@nawee.net</a>.',
             invalid: "Bitte schreiben Sie eine Nachricht und geben Sie eine gültige E-Mail-Adresse an.",
-            request: "Hallo David, ich möchte eine Stunde anfragen.\nStunde: Einzelstunde / Kleingruppe / 10er-Paket / 1:1 Plus\nPreis: Ermäßigt / Standard / Unterstützer\nOnline oder vor Ort: \nPassende Zeiten: \nMein Niveau und Ziel: ",
         },
         en: {
             open: "Send David a message", close: "Close chat",
@@ -34,9 +33,22 @@
             thanks: (mail) => `Thanks! Your message has arrived. I’ll get back to you at ${mail} as soon as I can.`,
             error: 'Sorry, that didn’t work. Feel free to email me directly at <a href="mailto:david@nawee.net">david@nawee.net</a>.',
             invalid: "Please write a message and enter a valid email address.",
-            request: "Hi David, I’d like to request a lesson.\nLesson: 1:1 / small group / 10-lesson package / 1:1 Plus\nPrice: Reduced / Standard / Supporter\nOnline or in person: \nTimes that suit me: \nMy level and goal: ",
         },
     }[lang];
+
+    // Lesson request choices (shown when someone clicks "Request a lesson" or a price card's "Request" link).
+    // ⚠️ Keep in sync with the price cards in index.html / index-en.html when prices change.
+    const LESSONS = {
+        de: { lesson: "Stunde", price: "Preis", where: "Ort", online: "Online", inPerson: "Vor Ort (Hannover)",
+              title: "Stunde anfragen", details: "Passende Zeiten, Ihr Niveau und Ziel (optional)", pick: "Bitte wählen Sie eine Stunde aus.",
+              types: [["1on1", "Einzelstunde · 60 Min."], ["1on1-30", "Einzelstunde · 30 Min. · 19 €"], ["group", "Kleingruppe online · 12 €"], ["pack", "10er-Paket · 280 €"], ["plus", "1:1 Plus · 45 €"]],
+              tiers: [["reduced", "Ermäßigt · 22 €"], ["standard", "Standard · 30 €"], ["supporter", "Unterstützer · 40 €"]] },
+        en: { lesson: "Lesson", price: "Price", where: "Where", online: "Online", inPerson: "In person (Hannover)",
+              title: "Request a lesson", details: "Times that suit you, your level and goal (optional)", pick: "Please choose a lesson.",
+              types: [["1on1", "1:1 lesson · 60 min"], ["1on1-30", "1:1 lesson · 30 min · €19"], ["group", "Small group online · €12"], ["pack", "10-lesson package · €280"], ["plus", "1:1 Plus · €45"]],
+              tiers: [["reduced", "Reduced · €22"], ["standard", "Standard · €30"], ["supporter", "Supporter · €40"]] },
+    }[lang];
+    const TIERED = ["1on1"];  // lesson types where the visitor picks a price tier
 
     const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
     const AVATAR = "assets/david-avatar.jpg";
@@ -53,6 +65,14 @@
             <div class="nw-chat-body">
                 <div class="nw-msg nw-msg--david"><strong>${T.hello}</strong> ${T.intro}</div>
                 <form class="nw-chat-form" novalidate>
+                    <div class="nw-req" hidden>
+                        <p class="nw-req-h">${LESSONS.lesson}</p>
+                        <div class="nw-pills" data-group="type">${LESSONS.types.map(([v, t]) => `<button type="button" class="nw-pill" data-v="${v}" aria-pressed="false">${t}</button>`).join("")}</div>
+                        <div data-tier-wrap hidden><p class="nw-req-h">${LESSONS.price}</p>
+                        <div class="nw-pills" data-group="tier">${LESSONS.tiers.map(([v, t]) => `<button type="button" class="nw-pill" data-v="${v}" aria-pressed="false">${t}</button>`).join("")}</div></div>
+                        <p class="nw-req-h">${LESSONS.where}</p>
+                        <div class="nw-pills" data-group="where"><button type="button" class="nw-pill" data-v="online" aria-pressed="false">${LESSONS.online}</button><button type="button" class="nw-pill" data-v="inperson" aria-pressed="false">${LESSONS.inPerson}</button></div>
+                    </div>
                     <label class="nw-sr" for="nw-chat-message">${T.message}</label>
                     <textarea id="nw-chat-message" name="message" rows="4" maxlength="2000" placeholder="${T.message}" required></textarea>
                     <label class="nw-sr" for="nw-chat-email">${T.email}</label>
@@ -106,21 +126,44 @@
     };
     button.addEventListener("click", () => setOpen(panel.hidden));
     nudge.querySelector(".nw-chat-nudge-text").addEventListener("click", () => setOpen(true));
-    // "Request a lesson" buttons (data-lesson-request): open the chat with a short request template to fill in.
-    // Without JavaScript the button's own link (an email with the same template) still works.
+    // "Request a lesson" (data-lesson-request="<type>", optional data-tier): the chat shows lesson choices as buttons.
+    // Opening the chat any other way shows the normal message form. Without JavaScript the link (an email) still works.
+    const req = root.querySelector(".nw-req"), tierWrap = root.querySelector("[data-tier-wrap]");
+    const chosen = {};
+    const pick = (group, value) => {
+        chosen[group] = value;
+        req.querySelectorAll(`[data-group="${group}"] .nw-pill`).forEach((p) => p.setAttribute("aria-pressed", String(p.dataset.v === value)));
+        if (group === "type") tierWrap.hidden = !TIERED.includes(value);
+    };
+    const setRequestMode = (on, type, tier) => {
+        req.hidden = !on;
+        field("message").placeholder = on ? LESSONS.details : T.message;
+        field("message").rows = on ? 3 : 4;
+        if (on) { pick("type", type || chosen.type || ""); pick("tier", tier || chosen.tier || "standard"); pick("where", chosen.where || "online"); }
+    };
+    req.addEventListener("click", (e) => { const p = e.target.closest(".nw-pill"); if (p) pick(p.closest("[data-group]").dataset.group, p.dataset.v); });
     document.addEventListener("click", (e) => {
         const b = e.target.closest("[data-lesson-request]");
         if (!b || !form.isConnected) return;
         e.preventDefault();
+        setRequestMode(true, b.dataset.lessonRequest, b.dataset.tier);
         setOpen(true);
-        if (!field("message").value.trim()) { field("message").value = T.request; field("message").rows = 8; }
     });
+    button.addEventListener("click", () => setRequestMode(false));
+    nudge.querySelector(".nw-chat-nudge-text").addEventListener("click", () => setRequestMode(false));
     root.querySelector(".nw-chat-x").addEventListener("click", () => { setOpen(false); button.focus(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !panel.hidden) { setOpen(false); button.focus(); } });
 
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        const message = field("message").value.trim();
+        let message = field("message").value.trim();
+        if (!req.hidden) {  // lesson request: the choices become the first lines of the message
+            if (!chosen.type) { note.textContent = LESSONS.pick; return; }
+            const label = (list, v) => (list.find(([k]) => k === v) || [, v])[1];
+            message = [`${LESSONS.title}`, `${LESSONS.lesson}: ${label(LESSONS.types, chosen.type)}`,
+                ...(TIERED.includes(chosen.type) ? [`${LESSONS.price}: ${label(LESSONS.tiers, chosen.tier)}`] : []),
+                `${LESSONS.where}: ${chosen.where === "inperson" ? LESSONS.inPerson : LESSONS.online}`, message].filter(Boolean).join("\n");
+        }
         const email = field("email").value.trim();
         const name = field("name").value.trim();
         if (field("website").value) return; // honeypot: bots fill every field

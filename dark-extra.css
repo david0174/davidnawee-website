@@ -284,3 +284,17 @@ mark.hl, .practice-copy mark.hl, .me-hero.me-hero--banner mark.hl { color: #f5c5
 .who-tile:nth-child(2):hover, .who-tile:nth-child(2):focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .2), 0 14px 36px rgba(245, 197, 66, .28); }
 .who-tile:nth-child(3):hover, .who-tile:nth-child(3):focus-within { border-color: #50aa6e; box-shadow: 0 0 0 1px rgba(80, 170, 110, .25), 0 14px 36px rgba(80, 170, 110, .3); }
 @media (prefers-reduced-motion: reduce) { .who-tile:hover, .who-tile:focus-within { transform: none; } }
+
+/* lesson request: choices as pills inside the (light) chat panel; price tiers + "Request this" links on the price cards (2026-11-05) */
+.nw-req { display: grid; gap: 6px; }
+.nw-req-h { margin: 4px 0 0; font-size: .74rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #5b6576; }
+.nw-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.nw-pill { padding: 6px 11px; border: 1px solid #cfdaea; border-radius: 999px; background: #ffffff; color: #1f2a3d; font: inherit; font-size: .84rem; cursor: pointer; transition: background .15s, border-color .15s; }
+.nw-pill:hover { border-color: #1554c0; }
+.nw-pill[aria-pressed="true"] { background: #1554c0; border-color: #1554c0; color: #ffffff; font-weight: 600; }
+button.tier { font: inherit; background: transparent; cursor: pointer; transition: border-color .2s, background .2s, transform .2s; }
+button.tier:hover, button.tier:focus-visible { border-color: #f5c542; background: rgba(245, 197, 66, .16); transform: translateY(-2px); }
+.price-card { position: relative; }
+.card-request { margin-top: auto; padding-top: 12px; color: #f5c542; font-weight: 700; text-decoration: none; align-self: flex-start; }
+.card-request:hover, .card-request:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+.plus-strip .card-request { display: inline-block; margin-top: 6px; padding-top: 0; }

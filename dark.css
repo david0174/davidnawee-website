@@ -575,6 +575,18 @@
     html:not([data-theme="light"]) .who-tile:nth-child(1):hover, html:not([data-theme="light"]) .who-tile:nth-child(1):focus-within { border-color: #4d8fe0; box-shadow: 0 0 0 1px rgba(77, 143, 224, .25), 0 14px 36px rgba(77, 143, 224, .3); }
     html:not([data-theme="light"]) .who-tile:nth-child(2):hover, html:not([data-theme="light"]) .who-tile:nth-child(2):focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .2), 0 14px 36px rgba(245, 197, 66, .28); }
     html:not([data-theme="light"]) .who-tile:nth-child(3):hover, html:not([data-theme="light"]) .who-tile:nth-child(3):focus-within { border-color: #50aa6e; box-shadow: 0 0 0 1px rgba(80, 170, 110, .25), 0 14px 36px rgba(80, 170, 110, .3); }
+    html:not([data-theme="light"]) .nw-req { display: grid; gap: 6px; }
+    html:not([data-theme="light"]) .nw-req-h { margin: 4px 0 0; font-size: .74rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #5b6576; }
+    html:not([data-theme="light"]) .nw-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+    html:not([data-theme="light"]) .nw-pill { padding: 6px 11px; border: 1px solid #cfdaea; border-radius: 999px; background: #ffffff; color: #1f2a3d; font: inherit; font-size: .84rem; cursor: pointer; transition: background .15s, border-color .15s; }
+    html:not([data-theme="light"]) .nw-pill:hover { border-color: #1554c0; }
+    html:not([data-theme="light"]) .nw-pill[aria-pressed="true"] { background: #1554c0; border-color: #1554c0; color: #ffffff; font-weight: 600; }
+    html:not([data-theme="light"]) button.tier { font: inherit; background: transparent; cursor: pointer; transition: border-color .2s, background .2s, transform .2s; }
+    html:not([data-theme="light"]) button.tier:hover, html:not([data-theme="light"]) button.tier:focus-visible { border-color: #f5c542; background: rgba(245, 197, 66, .16); transform: translateY(-2px); }
+    html:not([data-theme="light"]) .price-card { position: relative; }
+    html:not([data-theme="light"]) .card-request { margin-top: auto; padding-top: 12px; color: #f5c542; font-weight: 700; text-decoration: none; align-self: flex-start; }
+    html:not([data-theme="light"]) .card-request:hover, html:not([data-theme="light"]) .card-request:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+    html:not([data-theme="light"]) .plus-strip .card-request { display: inline-block; margin-top: 6px; padding-top: 0; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -1150,6 +1162,18 @@ html[data-theme="dark"] .who-tile:hover, html[data-theme="dark"] .who-tile:focus
 html[data-theme="dark"] .who-tile:nth-child(1):hover, html[data-theme="dark"] .who-tile:nth-child(1):focus-within { border-color: #4d8fe0; box-shadow: 0 0 0 1px rgba(77, 143, 224, .25), 0 14px 36px rgba(77, 143, 224, .3); }
 html[data-theme="dark"] .who-tile:nth-child(2):hover, html[data-theme="dark"] .who-tile:nth-child(2):focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .2), 0 14px 36px rgba(245, 197, 66, .28); }
 html[data-theme="dark"] .who-tile:nth-child(3):hover, html[data-theme="dark"] .who-tile:nth-child(3):focus-within { border-color: #50aa6e; box-shadow: 0 0 0 1px rgba(80, 170, 110, .25), 0 14px 36px rgba(80, 170, 110, .3); }
+html[data-theme="dark"] .nw-req { display: grid; gap: 6px; }
+html[data-theme="dark"] .nw-req-h { margin: 4px 0 0; font-size: .74rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #5b6576; }
+html[data-theme="dark"] .nw-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+html[data-theme="dark"] .nw-pill { padding: 6px 11px; border: 1px solid #cfdaea; border-radius: 999px; background: #ffffff; color: #1f2a3d; font: inherit; font-size: .84rem; cursor: pointer; transition: background .15s, border-color .15s; }
+html[data-theme="dark"] .nw-pill:hover { border-color: #1554c0; }
+html[data-theme="dark"] .nw-pill[aria-pressed="true"] { background: #1554c0; border-color: #1554c0; color: #ffffff; font-weight: 600; }
+html[data-theme="dark"] button.tier { font: inherit; background: transparent; cursor: pointer; transition: border-color .2s, background .2s, transform .2s; }
+html[data-theme="dark"] button.tier:hover, html[data-theme="dark"] button.tier:focus-visible { border-color: #f5c542; background: rgba(245, 197, 66, .16); transform: translateY(-2px); }
+html[data-theme="dark"] .price-card { position: relative; }
+html[data-theme="dark"] .card-request { margin-top: auto; padding-top: 12px; color: #f5c542; font-weight: 700; text-decoration: none; align-self: flex-start; }
+html[data-theme="dark"] .card-request:hover, html[data-theme="dark"] .card-request:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+html[data-theme="dark"] .plus-strip .card-request { display: inline-block; margin-top: 6px; padding-top: 0; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }
