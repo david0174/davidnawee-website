@@ -130,3 +130,15 @@ h1, h2, h3, h4 { color: var(--dm-head); }
 .secondary:hover, .secondary:focus-visible, .button.secondary:hover, .button.secondary:focus-visible,
 .me-hero.me-hero--banner .button.secondary:hover, .me-hero.me-hero--banner .button.secondary:focus-visible,
 button.button.secondary:hover { background: #f5c542; border-color: #f5c542; color: #0d1b3a; }
+
+/* click-through steps: keep gold + navy as designed (the generator would darken them) */
+#methode .steps-dot-num { background: #1d3263; color: #f5c542; }
+#methode .steps-dot.is-active, #methode .steps-dot:hover { border-color: #f5c542; color: #ffffff; }
+#methode .steps-dot.is-active .steps-dot-num { background: #f5c542; color: #0d1b3a; }
+#methode .steps-dot.is-done .steps-dot-num { background: #2e8b57; color: #ffffff; }
+#methode .steps-carousel .process-step { border-color: #2b3a4f; border-top-color: #f5c542; background: #151f2e; }
+#methode .steps-track { background: #1d2a3d; }
+#methode .steps-teaser { color: #f5c542; }
+
+/* tagline row stays centred at every width */
+.banner-tagline { justify-content: center; }

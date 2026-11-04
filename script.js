@@ -395,3 +395,90 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
     }, { threshold: 0.2 });
     lists.forEach((list) => { list.classList.add("js-steps"); seen.observe(list); });
 })();
+
+// "How we work together" as a click-through (David, 2026-11-04): one big tile per step, a step bar on top,
+// Back / Next below; the last Next books the free intro call. Without JS the four steps simply show side by side.
+(function () {
+    const list = document.querySelector("#methode .process-steps");
+    if (!list) return;
+    const steps = [...list.querySelectorAll(".process-step")];
+    if (steps.length < 2) return;
+    const de = (document.documentElement.lang || "").startsWith("de");
+    const L = de
+        ? { next: "Nächster Schritt", back: "Zurück", of: (a, b) => `Schritt ${a} von ${b}`, book: "Kostenloses Kennenlernen buchen", upNext: "Als Nächstes:", ready: "Bereit? Lassen Sie uns sprechen!" }
+        : { next: "Next step", back: "Back", of: (a, b) => `Step ${a} of ${b}`, book: "Book your free intro call", upNext: "Up next:", ready: "You’re ready – let’s talk!" };
+    const calLink = list.querySelector('a[href*="cal.com"]');
+    const cal = calLink ? calLink.getAttribute("href") : "https://cal.com/nawee/15min";
+
+    list.classList.remove("js-steps");
+    list.classList.add("steps-carousel");
+
+    const bar = document.createElement("div");
+    bar.className = "steps-progress";
+    steps.forEach((step, i) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "steps-dot";
+        const title = step.querySelector("h3") ? step.querySelector("h3").textContent : "";
+        dot.innerHTML = `<span class="steps-dot-num">${i + 1}</span><span class="steps-dot-label"></span>`;
+        dot.querySelector(".steps-dot-label").textContent = title;
+        dot.addEventListener("click", () => show(i));
+        bar.appendChild(dot);
+    });
+    list.before(bar);
+    // momentum: a gold bar that fills with every step
+    const track = document.createElement("div");
+    track.className = "steps-track";
+    track.innerHTML = "<span></span>";
+    bar.after(track);
+    const fill = track.querySelector("span");
+
+    const controls = document.createElement("div");
+    controls.className = "steps-controls";
+    controls.innerHTML = `<button type="button" class="button secondary steps-back"></button><span class="steps-count" aria-live="polite"></span><button type="button" class="button primary steps-next"></button>`;
+    list.after(controls);
+    // momentum: a peek at what comes next
+    const teaser = document.createElement("button");
+    teaser.type = "button";
+    teaser.className = "steps-teaser";
+    controls.after(teaser);
+    teaser.addEventListener("click", () => next.click());
+    const back = controls.querySelector(".steps-back");
+    const next = controls.querySelector(".steps-next");
+    const count = controls.querySelector(".steps-count");
+    back.textContent = `← ${L.back}`;
+
+    let current = 0;
+    function show(i) {
+        current = Math.max(0, Math.min(steps.length - 1, i));
+        steps.forEach((step, k) => { step.hidden = k !== current; step.classList.toggle("is-active", k === current); });
+        bar.querySelectorAll(".steps-dot").forEach((dot, k) => {
+            dot.classList.toggle("is-active", k === current);
+            dot.classList.toggle("is-done", k < current);
+            dot.setAttribute("aria-current", k === current ? "step" : "false");
+        });
+        back.disabled = current === 0;
+        count.textContent = L.of(current + 1, steps.length);
+        const last = current === steps.length - 1;
+        next.textContent = last ? `${L.book} →` : `${L.next} →`;
+        next.dataset.book = last ? "1" : "";
+        fill.style.width = `${((current + 1) / steps.length) * 100}%`;
+        const nextTitle = !last && steps[current + 1].querySelector("h3") ? steps[current + 1].querySelector("h3").textContent : "";
+        teaser.textContent = last ? L.ready : `${L.upNext} ${nextTitle} →`;
+    }
+    back.addEventListener("click", () => show(current - 1));
+    next.addEventListener("click", () => {
+        if (next.dataset.book === "1") { window.open(cal, "_blank", "noopener"); return; }
+        show(current + 1);
+    });
+    // swipe on phones
+    let x0 = null;
+    list.addEventListener("touchstart", (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    list.addEventListener("touchend", (e) => {
+        if (x0 === null) return;
+        const dx = e.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 40) show(current + (dx < 0 ? 1 : -1));
+        x0 = null;
+    });
+    show(0);
+})();

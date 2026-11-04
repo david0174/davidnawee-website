@@ -1234,3 +1234,46 @@ body { overflow-x: clip; }
 .price-card--featured { border: 2px solid #f5c542; box-shadow: 0 14px 34px rgba(245, 197, 66, .12); }
 .price-free { margin: 12px auto 0; text-align: center; color: var(--muted); font-size: .95rem; }
 .price-free a { color: #9cbcf0; font-weight: 600; }
+
+/* "How we work together" click-through (script.js adds .steps-carousel) */
+#methode .steps-progress { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 820px; margin: 0 auto 22px; }
+#methode .steps-dot { display: flex; align-items: center; gap: 8px; padding: 6px 14px 6px 6px; border: 1px solid #2b3a4f; border-radius: 999px; background: transparent; color: #b7c3d3; font: inherit; font-size: .9rem; cursor: pointer; transition: border-color .2s, color .2s; }
+#methode .steps-dot:hover { border-color: #f5c542; color: #ffffff; }
+#methode .steps-dot-num { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: #1d3263; color: #f5c542; font-weight: 700; }
+#methode .steps-dot.is-active { border-color: #f5c542; color: #ffffff; }
+#methode .steps-dot.is-active .steps-dot-num { background: #f5c542; color: #0d1b3a; }
+#methode .steps-dot.is-done .steps-dot-num { background: #2e8b57; color: #ffffff; }
+#methode .process-steps.steps-carousel { display: block; max-width: 760px; margin: 0 auto; }
+#methode .steps-carousel .process-step { padding: 40px 44px; border: 1px solid #2b3a4f; border-top: 4px solid #f5c542; border-radius: 22px; background: #151f2e; text-align: left; opacity: 1; transform: none; }
+#methode .steps-carousel .process-step.is-active { animation: steps-in .35s ease; }
+#methode .steps-carousel .process-step::before { display: none; }
+#methode .steps-carousel .process-num { position: static; width: 64px; height: 64px; margin: 0 0 18px; font-size: 1.8rem; box-shadow: none; }
+#methode .steps-carousel .process-tag { font-size: .8rem; }
+#methode .steps-carousel .process-step h3 { margin: 6px 0 10px; font-size: 1.7rem; }
+#methode .steps-carousel .process-step p { font-size: 1.15rem; line-height: 1.6; }
+#methode .steps-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; max-width: 760px; margin: 18px auto 0; }
+#methode .steps-count { color: #b7c3d3; font-size: .9rem; }
+#methode .steps-back[disabled] { opacity: .35; pointer-events: none; }
+@keyframes steps-in { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: none; } }
+@media (max-width: 600px) {
+    #methode .steps-dot-label { display: none; }
+    #methode .steps-dot { padding: 6px; }
+    #methode .steps-carousel .process-step { padding: 28px 22px; }
+    #methode .steps-carousel .process-step h3 { font-size: 1.4rem; }
+    #methode .steps-controls { flex-wrap: wrap; }
+    #methode .steps-count { order: -1; width: 100%; text-align: center; }
+    #methode .steps-controls .button { flex: 1; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) { #methode .steps-carousel .process-step.is-active { animation: none; } }
+/* momentum: filling progress bar, a peek at the next step, a gently glowing Next button */
+#methode .steps-track { max-width: 760px; height: 6px; margin: 0 auto 22px; border-radius: 999px; background: #1d2a3d; overflow: hidden; }
+#methode .steps-track span { display: block; width: 25%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #1554c0, #f5c542); transition: width .5s ease; }
+#methode .steps-teaser { display: block; margin: 14px auto 0; padding: 4px 8px; border: 0; background: none; color: #f5c542; font: inherit; font-weight: 700; font-size: 1rem; cursor: pointer; }
+#methode .steps-teaser:hover { text-decoration: underline; }
+@media (prefers-reduced-motion: no-preference) {
+    #methode .steps-next { animation: steps-glow 2.6s ease-in-out infinite; }
+}
+@keyframes steps-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(245, 197, 66, 0); } 50% { box-shadow: 0 0 0 6px rgba(245, 197, 66, .28); } }
+
+/* tagline row stays centred at every width */
+.banner-tagline { justify-content: center; }
