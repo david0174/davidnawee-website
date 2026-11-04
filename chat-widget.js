@@ -160,6 +160,13 @@
         setOpen(true);
     });
     button.addEventListener("click", () => setRequestMode(false));
+    // "Write me" buttons on the page (data-open-chat): open the normal chat (fallback without JS: their own link)
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest("[data-open-chat]") || !form.isConnected) return;
+        e.preventDefault();
+        setRequestMode(false);
+        setOpen(true);
+    });
     root.querySelector("[data-quick-request]").addEventListener("click", () => { setRequestMode(true); field("message").focus(); });
     nudge.querySelector(".nw-chat-nudge-text").addEventListener("click", () => setRequestMode(false));
     root.querySelector(".nw-chat-x").addEventListener("click", () => { setOpen(false); button.focus(); });
