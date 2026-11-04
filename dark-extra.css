@@ -270,3 +270,9 @@ mark.hl, .practice-copy mark.hl, .me-hero.me-hero--banner mark.hl { color: #f5c5
     background: #f5c542; color: #0d1b3a; font-size: .72rem; font-weight: 800; letter-spacing: .04em; white-space: nowrap; pointer-events: none; transform: scale(.87); transform-origin: top right;
 }
 @media (prefers-reduced-motion: reduce) { .language-toggle:hover { transform: none; } }
+
+/* menu underline grows visibly from the centre (David, 2026-11-05): slower, smooth ease-out, soft gold glow; shrinks back faster */
+.site-header nav > a:not(.nav-cta)::before { transform-origin: center; transition: transform .18s ease-in; box-shadow: 0 0 8px rgba(245, 197, 66, .55); }
+.site-header nav > a:not(.nav-cta):hover::before, .site-header nav > a:not(.nav-cta):focus-visible::before { transition: transform .4s cubic-bezier(.22, 1, .36, 1); }
+.site-header nav > a:not(.nav-cta) { transition: color .3s ease; }
+@media (prefers-reduced-motion: reduce) { .site-header nav > a:not(.nav-cta)::before { transition: none; } }
