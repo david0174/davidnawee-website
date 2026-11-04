@@ -380,3 +380,4 @@ footer.ft { padding-top: 28px; }
 }
 #methode .steps-next[data-book="1"] { animation: steps-glow-gold 1.8s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { #methode .steps-next[data-book="1"] { animation: none; box-shadow: 0 0 0 2px #f5c542, 0 0 22px rgba(245, 197, 66, .55); } }
+.who-or { margin: 0 6px; color: #8fa0b8; }

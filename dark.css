@@ -638,6 +638,7 @@
     html:not([data-theme="light"]) #methode .steps-sound:hover, html:not([data-theme="light"]) #methode .steps-sound:focus-visible { border-color: #f5c542; box-shadow: 0 0 14px rgba(245, 197, 66, .35); }
     html:not([data-theme="light"]) .nl-strip .newsletter-fields input[type="email"]:focus, html:not([data-theme="light"]) .nl-strip .newsletter-fields input[type="email"]:focus-visible { outline: none; border-color: #f5c542; box-shadow: 0 0 0 1px #f5c542, 0 0 18px rgba(245, 197, 66, .45); }
     html:not([data-theme="light"]) #methode .steps-next[data-book="1"] { animation: steps-glow-gold 1.8s ease-in-out infinite; }
+    html:not([data-theme="light"]) .who-or { margin: 0 6px; color: #8fa0b8; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -1276,6 +1277,7 @@ html[data-theme="dark"] #methode .steps-sound { align-self: center; width: 38px;
 html[data-theme="dark"] #methode .steps-sound:hover, html[data-theme="dark"] #methode .steps-sound:focus-visible { border-color: #f5c542; box-shadow: 0 0 14px rgba(245, 197, 66, .35); }
 html[data-theme="dark"] .nl-strip .newsletter-fields input[type="email"]:focus, html[data-theme="dark"] .nl-strip .newsletter-fields input[type="email"]:focus-visible { outline: none; border-color: #f5c542; box-shadow: 0 0 0 1px #f5c542, 0 0 18px rgba(245, 197, 66, .45); }
 html[data-theme="dark"] #methode .steps-next[data-book="1"] { animation: steps-glow-gold 1.8s ease-in-out infinite; }
+html[data-theme="dark"] .who-or { margin: 0 6px; color: #8fa0b8; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }
