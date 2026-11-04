@@ -570,6 +570,11 @@
     html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta)::before { transform-origin: center; transition: transform .18s ease-in; box-shadow: 0 0 8px rgba(245, 197, 66, .55); }
     html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta):hover::before, html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta):focus-visible::before { transition: transform .4s cubic-bezier(.22, 1, .36, 1); }
     html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta) { transition: color .3s ease; }
+    html:not([data-theme="light"]) .who-tile { transition: transform .25s cubic-bezier(.22, 1, .36, 1), border-color .25s, box-shadow .25s; }
+    html:not([data-theme="light"]) .who-tile:hover, html:not([data-theme="light"]) .who-tile:focus-within { transform: translateY(-6px) scale(1.02); }
+    html:not([data-theme="light"]) .who-tile:nth-child(1):hover, html:not([data-theme="light"]) .who-tile:nth-child(1):focus-within { border-color: #4d8fe0; box-shadow: 0 0 0 1px rgba(77, 143, 224, .25), 0 14px 36px rgba(77, 143, 224, .3); }
+    html:not([data-theme="light"]) .who-tile:nth-child(2):hover, html:not([data-theme="light"]) .who-tile:nth-child(2):focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .2), 0 14px 36px rgba(245, 197, 66, .28); }
+    html:not([data-theme="light"]) .who-tile:nth-child(3):hover, html:not([data-theme="light"]) .who-tile:nth-child(3):focus-within { border-color: #50aa6e; box-shadow: 0 0 0 1px rgba(80, 170, 110, .25), 0 14px 36px rgba(80, 170, 110, .3); }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -1140,6 +1145,11 @@ html[data-theme="dark"] .language-toggle[aria-expanded="false"]:hover::after, ht
 html[data-theme="dark"] .site-header nav > a:not(.nav-cta)::before { transform-origin: center; transition: transform .18s ease-in; box-shadow: 0 0 8px rgba(245, 197, 66, .55); }
 html[data-theme="dark"] .site-header nav > a:not(.nav-cta):hover::before, html[data-theme="dark"] .site-header nav > a:not(.nav-cta):focus-visible::before { transition: transform .4s cubic-bezier(.22, 1, .36, 1); }
 html[data-theme="dark"] .site-header nav > a:not(.nav-cta) { transition: color .3s ease; }
+html[data-theme="dark"] .who-tile { transition: transform .25s cubic-bezier(.22, 1, .36, 1), border-color .25s, box-shadow .25s; }
+html[data-theme="dark"] .who-tile:hover, html[data-theme="dark"] .who-tile:focus-within { transform: translateY(-6px) scale(1.02); }
+html[data-theme="dark"] .who-tile:nth-child(1):hover, html[data-theme="dark"] .who-tile:nth-child(1):focus-within { border-color: #4d8fe0; box-shadow: 0 0 0 1px rgba(77, 143, 224, .25), 0 14px 36px rgba(77, 143, 224, .3); }
+html[data-theme="dark"] .who-tile:nth-child(2):hover, html[data-theme="dark"] .who-tile:nth-child(2):focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .2), 0 14px 36px rgba(245, 197, 66, .28); }
+html[data-theme="dark"] .who-tile:nth-child(3):hover, html[data-theme="dark"] .who-tile:nth-child(3):focus-within { border-color: #50aa6e; box-shadow: 0 0 0 1px rgba(80, 170, 110, .25), 0 14px 36px rgba(80, 170, 110, .3); }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }
@@ -1207,8 +1217,10 @@ html[data-theme="dark"] .site-header nav > a:not(.nav-cta) { transition: color .
 @media (prefers-color-scheme: dark) and (prefers-reduced-motion: reduce) {
     html:not([data-theme="light"]) .language-toggle:hover { transform: none; }
     html:not([data-theme="light"]) .site-header nav > a:not(.nav-cta)::before { transition: none; }
+    html:not([data-theme="light"]) .who-tile:hover, html:not([data-theme="light"]) .who-tile:focus-within { transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
     html[data-theme="dark"] .language-toggle:hover { transform: none; }
     html[data-theme="dark"] .site-header nav > a:not(.nav-cta)::before { transition: none; }
+    html[data-theme="dark"] .who-tile:hover, html[data-theme="dark"] .who-tile:focus-within { transform: none; }
 }

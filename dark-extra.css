@@ -276,3 +276,11 @@ mark.hl, .practice-copy mark.hl, .me-hero.me-hero--banner mark.hl { color: #f5c5
 .site-header nav > a:not(.nav-cta):hover::before, .site-header nav > a:not(.nav-cta):focus-visible::before { transition: transform .4s cubic-bezier(.22, 1, .36, 1); }
 .site-header nav > a:not(.nav-cta) { transition: color .3s ease; }
 @media (prefers-reduced-motion: reduce) { .site-header nav > a:not(.nav-cta)::before { transition: none; } }
+
+/* "Who is it for?" tiles pop out on hover in their own colour (blue / gold / green), like the price tiles (2026-11-05) */
+.who-tile { transition: transform .25s cubic-bezier(.22, 1, .36, 1), border-color .25s, box-shadow .25s; }
+.who-tile:hover, .who-tile:focus-within { transform: translateY(-6px) scale(1.02); }
+.who-tile:nth-child(1):hover, .who-tile:nth-child(1):focus-within { border-color: #4d8fe0; box-shadow: 0 0 0 1px rgba(77, 143, 224, .25), 0 14px 36px rgba(77, 143, 224, .3); }
+.who-tile:nth-child(2):hover, .who-tile:nth-child(2):focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .2), 0 14px 36px rgba(245, 197, 66, .28); }
+.who-tile:nth-child(3):hover, .who-tile:nth-child(3):focus-within { border-color: #50aa6e; box-shadow: 0 0 0 1px rgba(80, 170, 110, .25), 0 14px 36px rgba(80, 170, 110, .3); }
+@media (prefers-reduced-motion: reduce) { .who-tile:hover, .who-tile:focus-within { transform: none; } }
