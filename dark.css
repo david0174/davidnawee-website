@@ -604,6 +604,13 @@
     html:not([data-theme="light"]) footer.ft .ft-legal a { color: #8fa0b8; }
     html:not([data-theme="light"]) footer.ft .ft-nav, html:not([data-theme="light"]) footer.ft .ft-contact { align-items: flex-start; text-align: left; }
     html:not([data-theme="light"]) footer.ft nav.ft-nav > a, html:not([data-theme="light"]) footer.ft .ft-legal > a { display: inline; margin: 0; padding: 0; text-align: left; break-inside: auto; }
+    html:not([data-theme="light"]) .price-grid--2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; max-width: 860px; margin-left: auto; margin-right: auto; }
+    html:not([data-theme="light"]) .price-pack { margin: 0 0 8px; padding: 8px 12px; border: 1px solid #34496a; border-radius: 12px; background: rgba(245, 197, 66, .06); display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+    html:not([data-theme="light"]) .price-pack b { color: #ffffff; }
+    html:not([data-theme="light"]) .price-pack span { color: #b7c3d3; font-size: .9rem; }
+    html:not([data-theme="light"]) #angebote .cards.price-grid.price-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 860px; width: 100%; margin-left: auto; margin-right: auto; }
+    html:not([data-theme="light"]) #angebote .price-afford { max-width: 860px; border-radius: 22px; }
+    html:not([data-theme="light"]) #angebote .price-pack { flex-direction: column; align-items: flex-start; gap: 2px; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -1208,6 +1215,13 @@ html[data-theme="dark"] .ft-legal { display: flex; flex-wrap: wrap; gap: 4px 16p
 html[data-theme="dark"] footer.ft .ft-legal a { color: #8fa0b8; }
 html[data-theme="dark"] footer.ft .ft-nav, html[data-theme="dark"] footer.ft .ft-contact { align-items: flex-start; text-align: left; }
 html[data-theme="dark"] footer.ft nav.ft-nav > a, html[data-theme="dark"] footer.ft .ft-legal > a { display: inline; margin: 0; padding: 0; text-align: left; break-inside: auto; }
+html[data-theme="dark"] .price-grid--2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; max-width: 860px; margin-left: auto; margin-right: auto; }
+html[data-theme="dark"] .price-pack { margin: 0 0 8px; padding: 8px 12px; border: 1px solid #34496a; border-radius: 12px; background: rgba(245, 197, 66, .06); display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+html[data-theme="dark"] .price-pack b { color: #ffffff; }
+html[data-theme="dark"] .price-pack span { color: #b7c3d3; font-size: .9rem; }
+html[data-theme="dark"] #angebote .cards.price-grid.price-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 860px; width: 100%; margin-left: auto; margin-right: auto; }
+html[data-theme="dark"] #angebote .price-afford { max-width: 860px; border-radius: 22px; }
+html[data-theme="dark"] #angebote .price-pack { flex-direction: column; align-items: flex-start; gap: 2px; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }
@@ -1287,4 +1301,12 @@ html[data-theme="dark"] footer.ft nav.ft-nav > a, html[data-theme="dark"] footer
     html[data-theme="dark"] .language-toggle:hover { transform: none; }
     html[data-theme="dark"] .site-header nav > a:not(.nav-cta)::before { transition: none; }
     html[data-theme="dark"] .who-tile:hover, html[data-theme="dark"] .who-tile:focus-within { transform: none; }
+}
+@media (prefers-color-scheme: dark) and (max-width: 700px) {
+    html:not([data-theme="light"]) .price-grid--2 { grid-template-columns: 1fr; }
+    html:not([data-theme="light"]) #angebote .cards.price-grid.price-grid--2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+    html[data-theme="dark"] .price-grid--2 { grid-template-columns: 1fr; }
+    html[data-theme="dark"] #angebote .cards.price-grid.price-grid--2 { grid-template-columns: 1fr; }
 }

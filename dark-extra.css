@@ -322,3 +322,14 @@ footer.ft .ft-legal a { color: #8fa0b8; }
 }
 footer.ft .ft-nav, footer.ft .ft-contact { align-items: flex-start; text-align: left; }
 footer.ft nav.ft-nav > a, footer.ft .ft-legal > a { display: inline; margin: 0; padding: 0; text-align: left; break-inside: auto; }
+
+/* prices: two offers (General / Professional English), fixed prices + package line (2026-11-05) */
+.price-grid--2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; max-width: 860px; margin-left: auto; margin-right: auto; }
+.price-pack { margin: 0 0 8px; padding: 8px 12px; border: 1px solid #34496a; border-radius: 12px; background: rgba(245, 197, 66, .06); display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.price-pack b { color: #ffffff; }
+.price-pack span { color: #b7c3d3; font-size: .9rem; }
+@media (max-width: 700px) { .price-grid--2 { grid-template-columns: 1fr; } }
+#angebote .cards.price-grid.price-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 860px; width: 100%; margin-left: auto; margin-right: auto; }
+#angebote .price-afford { max-width: 860px; border-radius: 22px; }
+@media (max-width: 700px) { #angebote .cards.price-grid.price-grid--2 { grid-template-columns: 1fr; } }
+#angebote .price-pack { flex-direction: column; align-items: flex-start; gap: 2px; }

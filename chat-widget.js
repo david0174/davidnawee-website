@@ -41,14 +41,14 @@
     const LESSONS = {
         de: { lesson: "Stunde", price: "Preis", where: "Ort", online: "Online", inPerson: "Vor Ort (Hannover)",
               title: "Stunde anfragen", details: "Passende Zeiten, Ihr Niveau und Ziel (optional)", pick: "Bitte wählen Sie eine Stunde aus.",
-              types: [["1on1", "Einzelstunde · 60 Min."], ["1on1-30", "Einzelstunde · 30 Min. · 19 €"], ["group", "Kleingruppe online · 12 €"], ["pack", "10er-Paket · 280 €"], ["plus", "1:1 Plus · 45 €"]],
-              tiers: [["reduced", "Ermäßigt · 22 €"], ["standard", "Standard · 30 €"], ["supporter", "Unterstützer · 40 €"]] },
+              types: [["general", "Allgemeines Englisch · 60 Min. · 30 €"], ["general-pack", "Allgemeines Englisch · 10er-Paket · 270 €"], ["pro", "Berufsenglisch · 60 Min. · 45 €"], ["pro-pack", "Berufsenglisch · 10er-Paket · 405 €"]],
+              tiers: [] },
         en: { lesson: "Lesson", price: "Price", where: "Where", online: "Online", inPerson: "In person (Hannover)",
               title: "Request a lesson", details: "Times that suit you, your level and goal (optional)", pick: "Please choose a lesson.",
-              types: [["1on1", "1:1 lesson · 60 min"], ["1on1-30", "1:1 lesson · 30 min · €19"], ["group", "Small group online · €12"], ["pack", "10-lesson package · €280"], ["plus", "1:1 Plus · €45"]],
-              tiers: [["reduced", "Reduced · €22"], ["standard", "Standard · €30"], ["supporter", "Supporter · €40"]] },
+              types: [["general", "General English · 60 min · €30"], ["general-pack", "General English · 10-lesson package · €270"], ["pro", "Professional English · 60 min · €45"], ["pro-pack", "Professional English · 10-lesson package · €405"]],
+              tiers: [] },
     }[lang];
-    const TIERED = ["1on1"];  // lesson types where the visitor picks a price tier
+    const TIERED = [];  // lesson types where the visitor picks a price tier (none since 2026-11-05: fixed prices)
 
     const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
     const AVATAR = "assets/david-avatar.jpg";
@@ -139,7 +139,7 @@
         req.hidden = !on;
         field("message").placeholder = on ? LESSONS.details : T.message;
         field("message").rows = on ? 3 : 4;
-        if (on) { pick("type", type || chosen.type || ""); pick("tier", tier || chosen.tier || "standard"); pick("where", chosen.where || "online"); }
+        if (on) { pick("type", type || chosen.type || ""); if (TIERED.length) pick("tier", tier || chosen.tier || ""); pick("where", chosen.where || "online"); }
     };
     req.addEventListener("click", (e) => { const p = e.target.closest(".nw-pill"); if (p) pick(p.closest("[data-group]").dataset.group, p.dataset.v); });
     document.addEventListener("click", (e) => {
