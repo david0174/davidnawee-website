@@ -6425,3 +6425,10 @@ footer .footer-links .footer-heading {
     outline: 2px solid var(--blue);
     outline-offset: 2px;
 }
+
+/* Smooth page changes (2026-11-05): a short cross-fade between pages of this site instead of a white flash.
+   Browsers without view transitions just change pages as before; off for "reduce motion". */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .2s; }
+.site-header { view-transition-name: site-header; }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
