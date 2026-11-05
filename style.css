@@ -6448,3 +6448,10 @@ footer .footer-links .footer-heading {
 .biz-explain .card-request { display: inline-block; margin: 0 0 18px; }
 @media (max-width: 860px) { .biz-areas { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .biz-areas { grid-template-columns: 1fr; } }
+
+/* Social icons (2026-11-05): lift + glow in the network's own colour on hover / keyboard focus */
+.footer-linkedin, .footer-instagram, .footer-facebook { transition: transform .18s ease, filter .18s ease; }
+.footer-linkedin:hover, .footer-linkedin:focus-visible { transform: translateY(-2px) scale(1.08); filter: drop-shadow(0 0 6px rgba(10, 102, 194, .85)) drop-shadow(0 0 12px rgba(10, 102, 194, .45)); }
+.footer-instagram:hover, .footer-instagram:focus-visible { transform: translateY(-2px) scale(1.08); filter: drop-shadow(0 0 6px rgba(225, 48, 108, .85)) drop-shadow(0 0 12px rgba(225, 48, 108, .45)); }
+.footer-facebook:hover, .footer-facebook:focus-visible { transform: translateY(-2px) scale(1.08); filter: drop-shadow(0 0 6px rgba(24, 119, 242, .85)) drop-shadow(0 0 12px rgba(24, 119, 242, .45)); }
+@media (prefers-reduced-motion: reduce) { .footer-linkedin:hover, .footer-instagram:hover, .footer-facebook:hover { transform: none; } }
