@@ -6432,3 +6432,19 @@ footer .footer-links .footer-heading {
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .2s; }
 .site-header { view-transition-name: site-header; }
 @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+
+/* "What does Business English include?" (2026-11-05): collapsed box under the price cards, six areas as tiles */
+.card-more { display: inline-block; margin: 0 0 10px; font-size: .92rem; font-weight: 600; color: var(--blue, #2b5c9e); text-decoration: none; }
+.card-more:hover { text-decoration: underline; }
+.biz-explain { max-width: 860px; margin: 22px auto 0; padding: 0 20px; border: 1px solid var(--line, #e3e8ef); border-radius: 16px; background: #ffffff; scroll-margin-top: 90px; }
+.biz-explain summary { padding: 16px 0; font-weight: 700; font-size: 1.05rem; cursor: pointer; list-style-position: inside; }
+.biz-explain[open] summary { border-bottom: 1px solid var(--line, #e3e8ef); }
+.biz-lead { margin: 14px 0 12px; }
+.biz-areas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0 0 16px; padding: 0; list-style: none; }
+.biz-areas li { display: grid; gap: 4px; align-content: start; padding: 14px; border-radius: 12px; background: #f6f8fb; }
+.biz-areas strong { font-size: 1rem; }
+.biz-areas li > span:last-child { font-size: .92rem; line-height: 1.45; color: var(--muted, #5b6573); }
+.biz-ico { font-size: 1.4rem; }
+.biz-explain .card-request { display: inline-block; margin: 0 0 18px; }
+@media (max-width: 860px) { .biz-areas { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .biz-areas { grid-template-columns: 1fr; } }

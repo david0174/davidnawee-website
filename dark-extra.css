@@ -416,3 +416,4 @@ footer.ft { padding-top: 28px; }
 .eyebrow, .section-heading .eyebrow, p.eyebrow { color: #f5c542; }
 a.text-link { color: #f5c542; font-weight: 700; }
 a.text-link:hover, a.text-link:focus-visible { color: #ffd966; text-decoration: underline; text-underline-offset: 4px; }
+.card-more { color: #f5c542; }

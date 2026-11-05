@@ -511,3 +511,12 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
         obs.disconnect();
     }, { threshold: 0.35 }).observe(strip);
 })();
+
+// "What does Business English include?" (2026-11-05): links to #business-english open the collapsed box on the homepage
+(() => {
+    const box = document.getElementById("business-english");
+    if (!box) return;
+    const openBox = () => { box.open = true; };
+    document.addEventListener("click", (e) => { if (e.target.closest('a[href="#business-english"]')) openBox(); });
+    if (location.hash === "#business-english") openBox();
+})();
