@@ -6455,3 +6455,35 @@ footer .footer-links .footer-heading {
 .footer-instagram:hover, .footer-instagram:focus-visible { transform: translateY(-2px) scale(1.08); filter: drop-shadow(0 0 6px rgba(225, 48, 108, .85)) drop-shadow(0 0 12px rgba(225, 48, 108, .45)); }
 .footer-facebook:hover, .footer-facebook:focus-visible { transform: translateY(-2px) scale(1.08); filter: drop-shadow(0 0 6px rgba(24, 119, 242, .85)) drop-shadow(0 0 12px rgba(24, 119, 242, .45)); }
 @media (prefers-reduced-motion: reduce) { .footer-linkedin:hover, .footer-instagram:hover, .footer-facebook:hover { transform: none; } }
+
+/* Photos of David (2026-11-06): hero photo next to the headline, online-lesson photo in step 3, teaching photo on About me */
+.me-hero.me-hero--banner.me-hero--photo { grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); max-width: 1220px; text-align: left; }
+/* brand.css loads after style.css – so these selectors are one step more specific */
+.me-hero.me-hero--banner.me-hero--photo .hero-actions,
+.me-hero.me-hero--banner.me-hero--photo .banner-pillars,
+.me-hero.me-hero--banner.me-hero--photo .banner-tagline { justify-content: flex-start; }
+.me-hero.me-hero--banner.me-hero--photo .banner-sub { margin-left: 0; }
+.me-hero.me-hero--banner.me-hero--photo .hero-practice { text-align: left; }
+.hero-photo { position: relative; z-index: 1; margin: 0; }
+.hero-photo img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 1131; object-fit: cover; border-radius: 24px; box-shadow: 0 0 0 3px #f5c542, 0 18px 50px rgba(0, 0, 0, .35); }
+@media (max-width: 1000px) {
+    .me-hero.me-hero--banner.me-hero--photo { grid-template-columns: minmax(0, 1fr); text-align: center; }
+    .me-hero.me-hero--banner.me-hero--photo .hero-actions,
+    .me-hero.me-hero--banner.me-hero--photo .banner-pillars,
+    .me-hero.me-hero--banner.me-hero--photo .banner-tagline { justify-content: center; }
+    .me-hero.me-hero--banner.me-hero--photo .banner-sub { margin-left: auto; }
+    .me-hero.me-hero--banner.me-hero--photo .hero-practice { text-align: center; }
+    .hero-photo { max-width: 520px; margin: 4px auto 0; }
+}
+.process-photo { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; margin: 4px 0 14px; }
+.about-photo2 { margin: 18px 0 0; }
+.about-photo2 img { display: block; width: 100%; height: auto; border-radius: 20px; }
+.about-photo2 figcaption { margin-top: 8px; font-size: .9rem; color: var(--muted); text-align: center; }
+/* the second About photo keeps its own shape (the portrait rules give every image a fixed height) */
+.about-image .about-photo2 img { height: auto; aspect-ratio: 900 / 779; object-fit: cover; }
+@media (max-width: 1000px) {
+    .about-image { height: auto; }
+    /* phones: the photo first (smaller), then the headline – a face builds trust before the text */
+    .me-hero.me-hero--banner.me-hero--photo .hero-photo { order: -1; max-width: 300px; margin: 0 auto 6px; }
+}
+.process-photo { max-width: 360px; }
