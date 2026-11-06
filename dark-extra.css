@@ -436,3 +436,10 @@ a.text-link:hover, a.text-link:focus-visible { color: #ffd966; text-decoration: 
 /* new order (2026-11-06): who → process → prices → practice – keep lighter / darker alternating */
 #methode { background: #0a101a; border-top: 0; border-bottom: 0; }
 #angebote { background: #131e31; border-top: 1px solid #22314a; border-bottom: 1px solid #22314a; }
+/* Your teachers (2026-11-06) */
+#lehrer { background: #131e31; border-top: 1px solid #22314a; border-bottom: 1px solid #22314a; }
+#angebote { background: #0a101a; border-top: 0; border-bottom: 0; }
+.tutor-card { background: #1b2840; border-color: #34496a; }
+.tutor-card:hover, .tutor-card:focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .2), 0 0 36px rgba(245, 197, 66, .28); }
+.tutor-card h3 { color: #ffffff; } .tutor-role { color: #f5c542; } .tutor-bio { color: #c9d6ec; }
+.tutor-tags li { border-color: #3d5378; background: #22314d; color: #dbe5f5; } .tutor-more { color: #f5c542; }

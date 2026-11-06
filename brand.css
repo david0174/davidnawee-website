@@ -1619,3 +1619,35 @@ html[data-theme="light"] .price-consult-note a { color: #1554c0; font-weight: 70
     html:not([data-theme="dark"]) .price-consult-note { color: #6b7a90; }
     html:not([data-theme="dark"]) .price-consult-note a { color: #1554c0; font-weight: 700; }
 }
+
+/* Your teachers (2026-11-06) */
+.tutor-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; max-width: 900px; margin: 0 auto; }
+.tutor-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 28px 26px; border-radius: 22px; border: 1px solid; transition: transform .25s cubic-bezier(.22, 1, .36, 1), box-shadow .25s, border-color .25s; }
+.tutor-card:hover, .tutor-card:focus-within { transform: translateY(-6px); }
+.tutor-photo { width: 132px; height: 132px; border-radius: 50%; object-fit: cover; border: 3px solid #f5c542; margin-bottom: 14px; }
+.tutor-card h3 { margin: 0 0 4px; font-family: var(--display); font-size: 1.5rem; }
+.tutor-role { margin: 0 0 12px; font-size: .82rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.tutor-bio { margin: 0 0 14px; line-height: 1.6; }
+.tutor-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 0 0 18px; padding: 0; list-style: none; }
+.tutor-tags li { padding: 4px 11px; border-radius: 999px; border: 1px solid; font-size: .82rem; }
+.tutor-tags li::before { display: none; }
+.tutor-actions { margin-top: auto; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 16px; }
+.tutor-more { font-weight: 700; text-decoration: none; } .tutor-more:hover { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 760px) { .tutor-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .tutor-card:hover, .tutor-card:focus-within { transform: none; } }
+html[data-theme="light"] .tutor-card { background: #ffffff; border-color: #dde5f0; box-shadow: 0 10px 28px rgba(20, 33, 61, .07); }
+html[data-theme="light"] .tutor-card:hover, html[data-theme="light"] .tutor-card:focus-within { border-color: #e0b02e; box-shadow: 0 16px 40px rgba(224, 176, 46, .22); }
+html[data-theme="light"] .tutor-card h3 { color: #0d2a6b; }
+html[data-theme="light"] .tutor-role { color: #9a7410; }
+html[data-theme="light"] .tutor-bio { color: #4a5568; }
+html[data-theme="light"] .tutor-tags li { border-color: #d3dceb; background: #f5f8fc; color: #2a3a55; }
+html[data-theme="light"] .tutor-more { color: #1554c0; }
+@media (prefers-color-scheme: light) {
+    html:not([data-theme="dark"]) .tutor-card { background: #ffffff; border-color: #dde5f0; box-shadow: 0 10px 28px rgba(20, 33, 61, .07); }
+    html:not([data-theme="dark"]) .tutor-card:hover, html:not([data-theme="dark"]) .tutor-card:focus-within { border-color: #e0b02e; box-shadow: 0 16px 40px rgba(224, 176, 46, .22); }
+    html:not([data-theme="dark"]) .tutor-card h3 { color: #0d2a6b; }
+    html:not([data-theme="dark"]) .tutor-role { color: #9a7410; }
+    html:not([data-theme="dark"]) .tutor-bio { color: #4a5568; }
+    html:not([data-theme="dark"]) .tutor-tags li { border-color: #d3dceb; background: #f5f8fc; color: #2a3a55; }
+    html:not([data-theme="dark"]) .tutor-more { color: #1554c0; }
+}
