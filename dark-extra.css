@@ -427,3 +427,4 @@ a.text-link:hover, a.text-link:focus-visible { color: #ffd966; text-decoration: 
 .site-header .menu-toggle span { background: #ffffff; }
 .button.button-gold { background: #f5c542; border-color: #f5c542; color: #14213d; }
 .button.button-gold:hover, .button.button-gold:focus-visible { background: #f8d264; border-color: #f8d264; color: #14213d; }
+.biz-close { border-color: #3d5378; color: #e7edf6; }

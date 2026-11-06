@@ -565,5 +565,7 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
     if (!box) return;
     const openBox = () => { box.open = true; };
     document.addEventListener("click", (e) => { if (e.target.closest('a[href="#business-english"]')) openBox(); });
+    // "Close ▴" at the end of the box: close it and keep the box's summary line in view
+    box.addEventListener("click", (e) => { if (e.target.closest("[data-biz-close]")) { box.open = false; box.scrollIntoView({ behavior: "smooth", block: "nearest" }); } });
     if (location.hash === "#business-english") openBox();
 })();

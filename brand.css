@@ -1573,3 +1573,18 @@ html[data-theme="light"] .path-or { color: #8a96a8; }
 .button.button-gold:hover, .button.button-gold:focus-visible { background: #f8d264; border-color: #f8d264; color: #14213d; box-shadow: 0 8px 24px rgba(245, 197, 66, .5); }
 .two-paths { margin: 4px auto 26px; }
 .two-paths { margin-top: 22px; }
+
+/* two path tiles react on hover (both modes) – lift + coloured glow, like the price tiles (2026-11-06) */
+.path { transition: transform .25s cubic-bezier(.22, 1, .36, 1), box-shadow .25s, border-color .25s; }
+.path:hover, .path:focus-within { transform: translateY(-6px) scale(1.015); }
+.path--lessons:hover, .path--lessons:focus-within { border-color: #4d8fe0; box-shadow: 0 0 0 1px rgba(77, 143, 224, .25), 0 16px 40px rgba(77, 143, 224, .28); }
+.path--free:hover, .path--free:focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .3), 0 16px 40px rgba(245, 197, 66, .35); }
+@media (prefers-reduced-motion: reduce) { .path:hover, .path:focus-within { transform: none; } }
+/* blue buttons react clearly on hover in light mode too: brighter blue, small lift, glow */
+.primary, .nav-cta { transition: background .2s, box-shadow .2s, transform .2s; }
+html[data-theme="light"] .primary:hover, html[data-theme="light"] .primary:focus-visible, html[data-theme="light"] .button.primary:hover, html[data-theme="light"] .button.primary:focus-visible, html[data-theme="light"] .nav-cta:hover, html[data-theme="light"] .nav-cta:focus-visible { background: #2f74e6; border-color: #2f74e6; color: #ffffff; transform: translateY(-2px); box-shadow: 0 0 0 3px rgba(47, 116, 230, .18), 0 12px 30px rgba(47, 116, 230, .4); }
+@media (prefers-color-scheme: light) {
+    html:not([data-theme="dark"]) .primary:hover, html:not([data-theme="dark"]) .primary:focus-visible, html:not([data-theme="dark"]) .button.primary:hover, html:not([data-theme="dark"]) .button.primary:focus-visible, html:not([data-theme="dark"]) .nav-cta:hover, html:not([data-theme="dark"]) .nav-cta:focus-visible { background: #2f74e6; border-color: #2f74e6; color: #ffffff; transform: translateY(-2px); box-shadow: 0 0 0 3px rgba(47, 116, 230, .18), 0 12px 30px rgba(47, 116, 230, .4); }
+}
+.biz-close { display: inline-flex; align-items: center; gap: 6px; margin: 0 0 18px; padding: 8px 16px; border: 1px solid #c9d5e6; border-radius: 999px; background: transparent; color: inherit; font: inherit; font-weight: 700; cursor: pointer; transition: border-color .2s, background .2s; }
+.biz-close:hover, .biz-close:focus-visible { border-color: #f5c542; background: rgba(245, 197, 66, .12); }
