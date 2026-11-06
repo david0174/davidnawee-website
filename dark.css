@@ -729,6 +729,8 @@
     html:not([data-theme="light"]) .price-consult-chat { color: #f5c542; }
     html:not([data-theme="light"]) .price-consult-note { color: #8fa0b8; }
     html:not([data-theme="light"]) .price-consult-note a { color: #f5c542; font-weight: 700; }
+    html:not([data-theme="light"]) #methode { background: #0a101a; border-top: 0; border-bottom: 0; }
+    html:not([data-theme="light"]) #angebote { background: #131e31; border-top: 1px solid #22314a; border-bottom: 1px solid #22314a; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -1458,6 +1460,8 @@ html[data-theme="dark"] .price-consult-copy p:last-child { color: #c9d6ec; }
 html[data-theme="dark"] .price-consult-chat { color: #f5c542; }
 html[data-theme="dark"] .price-consult-note { color: #8fa0b8; }
 html[data-theme="dark"] .price-consult-note a { color: #f5c542; font-weight: 700; }
+html[data-theme="dark"] #methode { background: #0a101a; border-top: 0; border-bottom: 0; }
+html[data-theme="dark"] #angebote { background: #131e31; border-top: 1px solid #22314a; border-bottom: 1px solid #22314a; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }

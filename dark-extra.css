@@ -433,3 +433,6 @@ a.text-link:hover, a.text-link:focus-visible { color: #ffd966; text-decoration: 
 .price-consult:hover { box-shadow: 0 0 46px rgba(47, 116, 230, .38); }
 .price-consult .eyebrow { color: #f5c542; } .price-consult h3 { color: #ffffff; } .price-consult-copy p:last-child { color: #c9d6ec; }
 .price-consult-chat { color: #f5c542; } .price-consult-note { color: #8fa0b8; } .price-consult-note a { color: #f5c542; font-weight: 700; }
+/* new order (2026-11-06): who → process → prices → practice – keep lighter / darker alternating */
+#methode { background: #0a101a; border-top: 0; border-bottom: 0; }
+#angebote { background: #131e31; border-top: 1px solid #22314a; border-bottom: 1px solid #22314a; }
