@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Nawee – Visitenkarte</title>
-    <meta name="description" content="Digitale Visitenkarte von David Nawee, KI-Trainer und Kommunikationscoach in Hannover und online.">
+    <meta name="description" content="Digitale Visitenkarte von David Nawee, Englischlehrer und Muttersprachler aus den USA – Hannover und online.">
     <meta name="robots" content="noindex">
     <meta name="theme-color" content="#172b45">
     <link rel="icon" type="image/png" href="assets/favicon-nawee.png">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon-nawee.png">
-    <meta property="og:title" content="David Nawee – Englischlehrer &amp; Coach (Muttersprachler)">
+    <meta property="og:title" content="David Nawee – Englischlehrer (Muttersprachler)">
     <meta property="og:description" content="Englischunterricht mit Muttersprachler – jedes Niveau, jedes Budget – Hannover &amp; online">
     <meta property="og:image" content="https://nawee.net/assets/david-portrait.jpg">
     <!-- Cloudflare Web Analytics: cookie-free visit statistics (see privacy policy, section 3) --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4dfcab1048a842c7a2b8a92bf5b7c93a"}'></script><!-- End Cloudflare Web Analytics -->
@@ -52,8 +52,8 @@
         <div class="top">
             <img src="assets/david-portrait.jpg" alt="David Nawee">
             <h1>David Nawee</h1>
-            <p class="role">Englischlehrer &amp; Coach<br>Muttersprachler (USA)</p>
-            <p class="role-en">English Teacher &amp; Coach<br>Native speaker (US)</p>
+            <p class="role">Englischlehrer<br>Muttersprachler (USA)</p>
+            <p class="role-en">English Teacher<br>Native speaker (US)</p>
             <p class="place">Hannover · Online</p>
         </div>
         <div class="actions">
@@ -61,7 +61,7 @@
             <a class="btn" href="tel:+4951193676970"><span class="ic" aria-hidden="true">📞</span><span>Anrufen · Call<small>+49 511 936 76970</small></span></a>
             <a class="btn" href="mailto:david@nawee.net"><span class="ic" aria-hidden="true">✉️</span><span>E-Mail<small>david@nawee.net</small></span></a>
             <a class="btn" href="https://cal.com/nawee/15min" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">📅</span><span>Kostenloses Erstgespräch<small>Free 15-minute intro call</small></span></a>
-            <a class="btn" href="https://nawee.net/"><span class="ic" aria-hidden="true">🌐</span><span>nawee.net<small>Consulting · Coaching · Workshops</small></span></a>
+            <a class="btn" href="https://nawee.net/"><span class="ic" aria-hidden="true">🌐</span><span>nawee.net<small>Englischunterricht · English lessons</small></span></a>
             <a class="btn" href="https://learn.nawee.net/" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">📚</span><span>learn.nawee.net<small>Kostenlos Englisch lernen · Learn English for free</small></span></a>
             <a class="btn" href="https://www.linkedin.com/company/146650137" target="_blank" rel="noopener noreferrer"><span class="ic" aria-hidden="true">in</span><span>LinkedIn</span></a>
             <button class="btn" type="button" data-share><span class="ic" aria-hidden="true">🔗</span><span>Karte teilen<small>Share this card</small></span></button>
@@ -79,7 +79,7 @@
     // share the card: the phone's share menu (WhatsApp, Mail, …) or copy the link
     document.querySelector("[data-share]").addEventListener("click", async () => {
         const url = "https://nawee.net/karte.html";
-        const data = { title: "David Nawee – Englischlehrer & Coach (Muttersprachler)", url };
+        const data = { title: "David Nawee – Englischlehrer (Muttersprachler)", url };
         if (navigator.share) { try { await navigator.share(data); } catch { /* closed */ } return; }
         try { await navigator.clipboard.writeText(url); } catch { return; }
         const t = document.querySelector("[data-toast]");
