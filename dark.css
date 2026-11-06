@@ -425,6 +425,13 @@
     html:not([data-theme="light"]) .button.button-gold { color: #d5d9e2; }
     html:not([data-theme="light"]) .button.button-gold:hover, html:not([data-theme="light"]) .button.button-gold:focus-visible { background: #5c4c1e; border-color: #5c4c1e; color: #d5d9e2; }
     html:not([data-theme="light"]) .biz-close { border: 1px solid #232a34; }
+    html:not([data-theme="light"])[data-theme="light"] .price-consult { background: linear-gradient(140deg, #0d192d, #14181f 65%); }
+    html:not([data-theme="light"])[data-theme="light"] .price-consult .eyebrow { color: #7ea9f1; }
+    html:not([data-theme="light"])[data-theme="light"] .price-consult h3 { color: #80a2f0; }
+    html:not([data-theme="light"])[data-theme="light"] .price-consult-copy p:last-child { color: #ccced2; }
+    html:not([data-theme="light"])[data-theme="light"] .price-consult-chat { color: #7ea9f1; }
+    html:not([data-theme="light"])[data-theme="light"] .price-consult-note { color: #c3c6c9; }
+    html:not([data-theme="light"])[data-theme="light"] .price-consult-note a { color: #7ea9f1; }
     html:not([data-theme="light"]) body { background: var(--dm-bg); color: var(--ink); }
     html:not([data-theme="light"]) .language-toggle img { filter: invert(1); }
     html:not([data-theme="light"]) h1, html:not([data-theme="light"]) h2, html:not([data-theme="light"]) h3, html:not([data-theme="light"]) h4 { color: var(--dm-head); }
@@ -714,6 +721,14 @@
     html:not([data-theme="light"]) .button.button-gold { background: #f5c542; border-color: #f5c542; color: #14213d; }
     html:not([data-theme="light"]) .button.button-gold:hover, html:not([data-theme="light"]) .button.button-gold:focus-visible { background: #f8d264; border-color: #f8d264; color: #14213d; }
     html:not([data-theme="light"]) .biz-close { border-color: #3d5378; color: #e7edf6; }
+    html:not([data-theme="light"]) .price-consult { border-color: #2f74e6; background: linear-gradient(140deg, rgba(47, 116, 230, .22), #15213a 65%); box-shadow: 0 0 36px rgba(47, 116, 230, .22); }
+    html:not([data-theme="light"]) .price-consult:hover { box-shadow: 0 0 46px rgba(47, 116, 230, .38); }
+    html:not([data-theme="light"]) .price-consult .eyebrow { color: #f5c542; }
+    html:not([data-theme="light"]) .price-consult h3 { color: #ffffff; }
+    html:not([data-theme="light"]) .price-consult-copy p:last-child { color: #c9d6ec; }
+    html:not([data-theme="light"]) .price-consult-chat { color: #f5c542; }
+    html:not([data-theme="light"]) .price-consult-note { color: #8fa0b8; }
+    html:not([data-theme="light"]) .price-consult-note a { color: #f5c542; font-weight: 700; }
 }
 html[data-theme="dark"] { --ink: #e7edf6; --muted: #b7c3d3; --line: #2b3a4f; --soft: #151f2c; --blue-soft: #1a2738;
     --dm-bg: #0f1621; --dm-surface: #172231; --dm-band: #0b111a; --dm-head: #eef3fa; --dm-link: #9cbcf0;
@@ -1139,6 +1154,13 @@ html[data-theme="dark"][data-theme="light"] .path-more { color: #7ea9f1; }
 html[data-theme="dark"] .button.button-gold { color: #d5d9e2; }
 html[data-theme="dark"] .button.button-gold:hover, html[data-theme="dark"] .button.button-gold:focus-visible { background: #5c4c1e; border-color: #5c4c1e; color: #d5d9e2; }
 html[data-theme="dark"] .biz-close { border: 1px solid #232a34; }
+html[data-theme="dark"][data-theme="light"] .price-consult { background: linear-gradient(140deg, #0d192d, #14181f 65%); }
+html[data-theme="dark"][data-theme="light"] .price-consult .eyebrow { color: #7ea9f1; }
+html[data-theme="dark"][data-theme="light"] .price-consult h3 { color: #80a2f0; }
+html[data-theme="dark"][data-theme="light"] .price-consult-copy p:last-child { color: #ccced2; }
+html[data-theme="dark"][data-theme="light"] .price-consult-chat { color: #7ea9f1; }
+html[data-theme="dark"][data-theme="light"] .price-consult-note { color: #c3c6c9; }
+html[data-theme="dark"][data-theme="light"] .price-consult-note a { color: #7ea9f1; }
 html[data-theme="dark"] body { background: var(--dm-bg); color: var(--ink); }
 html[data-theme="dark"] .language-toggle img { filter: invert(1); }
 html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4 { color: var(--dm-head); }
@@ -1428,6 +1450,14 @@ html[data-theme="dark"] .site-header .menu-toggle span { background: #ffffff; }
 html[data-theme="dark"] .button.button-gold { background: #f5c542; border-color: #f5c542; color: #14213d; }
 html[data-theme="dark"] .button.button-gold:hover, html[data-theme="dark"] .button.button-gold:focus-visible { background: #f8d264; border-color: #f8d264; color: #14213d; }
 html[data-theme="dark"] .biz-close { border-color: #3d5378; color: #e7edf6; }
+html[data-theme="dark"] .price-consult { border-color: #2f74e6; background: linear-gradient(140deg, rgba(47, 116, 230, .22), #15213a 65%); box-shadow: 0 0 36px rgba(47, 116, 230, .22); }
+html[data-theme="dark"] .price-consult:hover { box-shadow: 0 0 46px rgba(47, 116, 230, .38); }
+html[data-theme="dark"] .price-consult .eyebrow { color: #f5c542; }
+html[data-theme="dark"] .price-consult h3 { color: #ffffff; }
+html[data-theme="dark"] .price-consult-copy p:last-child { color: #c9d6ec; }
+html[data-theme="dark"] .price-consult-chat { color: #f5c542; }
+html[data-theme="dark"] .price-consult-note { color: #8fa0b8; }
+html[data-theme="dark"] .price-consult-note a { color: #f5c542; font-weight: 700; }
 @media (prefers-color-scheme: dark) and (max-width: 900px) {
     html:not([data-theme="light"]) .method-item, html:not([data-theme="light"]) .method-item:first-child, html:not([data-theme="light"]) .method-item:last-child { border-bottom: 1px solid #1b2634; }
     html:not([data-theme="light"]) .method-item:nth-child(odd) { border-right: 1px solid #1b2634; }
@@ -1540,6 +1570,13 @@ html[data-theme="dark"] .biz-close { border-color: #3d5378; color: #e7edf6; }
     html:not([data-theme="light"]):not([data-theme="dark"]) .path-h { color: #80a2f0; }
     html:not([data-theme="light"]):not([data-theme="dark"]) .path-p { color: #ccced2; }
     html:not([data-theme="light"]):not([data-theme="dark"]) .path-more { color: #7ea9f1; }
+    html:not([data-theme="light"]):not([data-theme="dark"]) .price-consult { background: linear-gradient(140deg, #0d192d, #14181f 65%); }
+    html:not([data-theme="light"]):not([data-theme="dark"]) .price-consult .eyebrow { color: #7ea9f1; }
+    html:not([data-theme="light"]):not([data-theme="dark"]) .price-consult h3 { color: #80a2f0; }
+    html:not([data-theme="light"]):not([data-theme="dark"]) .price-consult-copy p:last-child { color: #ccced2; }
+    html:not([data-theme="light"]):not([data-theme="dark"]) .price-consult-chat { color: #7ea9f1; }
+    html:not([data-theme="light"]):not([data-theme="dark"]) .price-consult-note { color: #c3c6c9; }
+    html:not([data-theme="light"]):not([data-theme="dark"]) .price-consult-note a { color: #7ea9f1; }
 }
 @media (prefers-color-scheme: light) {
     html[data-theme="dark"]:not([data-theme="dark"]) .site-header nav > a:not(.nav-cta):hover, html[data-theme="dark"]:not([data-theme="dark"]) .site-header nav > a:not(.nav-cta):focus-visible { color: #7ea9f1; }
@@ -1599,6 +1636,13 @@ html[data-theme="dark"] .biz-close { border-color: #3d5378; color: #e7edf6; }
     html[data-theme="dark"]:not([data-theme="dark"]) .path-h { color: #80a2f0; }
     html[data-theme="dark"]:not([data-theme="dark"]) .path-p { color: #ccced2; }
     html[data-theme="dark"]:not([data-theme="dark"]) .path-more { color: #7ea9f1; }
+    html[data-theme="dark"]:not([data-theme="dark"]) .price-consult { background: linear-gradient(140deg, #0d192d, #14181f 65%); }
+    html[data-theme="dark"]:not([data-theme="dark"]) .price-consult .eyebrow { color: #7ea9f1; }
+    html[data-theme="dark"]:not([data-theme="dark"]) .price-consult h3 { color: #80a2f0; }
+    html[data-theme="dark"]:not([data-theme="dark"]) .price-consult-copy p:last-child { color: #ccced2; }
+    html[data-theme="dark"]:not([data-theme="dark"]) .price-consult-chat { color: #7ea9f1; }
+    html[data-theme="dark"]:not([data-theme="dark"]) .price-consult-note { color: #c3c6c9; }
+    html[data-theme="dark"]:not([data-theme="dark"]) .price-consult-note a { color: #7ea9f1; }
 }
 @media (prefers-color-scheme: dark) and (max-width: 640px) {
     html:not([data-theme="light"]) .plus-strip { grid-template-columns: 1fr; padding: 14px 16px; }

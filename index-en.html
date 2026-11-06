@@ -9,9 +9,9 @@
     <link rel="alternate" hreflang="de" href="https://nawee.net/">
     <link rel="alternate" hreflang="en" href="https://nawee.net/index-en.html">
     <link rel="alternate" hreflang="x-default" href="https://nawee.net/">
-    <link rel="stylesheet" href="style.css?v=20261106i">
-    <link rel="stylesheet" href="brand.css?v=20261106i">
-    <link rel="stylesheet" href="dark.css?v=20261106i">
+    <link rel="stylesheet" href="style.css?v=20261106j">
+    <link rel="stylesheet" href="brand.css?v=20261106j">
+    <link rel="stylesheet" href="dark.css?v=20261106j">
     <script>try{var t=localStorage.getItem("dn-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
     
     <link rel="icon" type="image/png" href="assets/favicon-nawee.png">
@@ -165,12 +165,17 @@
                 <button type="button" class="biz-close" data-biz-close>Close <span aria-hidden="true">▴</span></button>
             </details>
             <p class="price-afford">💬 <strong>Are these prices too high for you?</strong> Write me – we’ll find a price that works. Please don’t avoid booking lessons just because of the number on the website. <a href="#kontakt" data-open-chat>Write me →</a></p>
-            <p class="price-free">Start for free: a 15-minute intro call and free practice on <a href="https://learn.nawee.net/index-en.html">learn.nawee.net</a>.</p>
-            <p class="price-note">Online lessons have no extra costs. For lessons in person I add travel costs depending on the distance – I’ll tell you the total upfront. No VAT is charged under the German small business rule (§ 19 UStG).</p>
-            <div class="hero-actions price-actions">
-                <a class="button primary" href="#kontakt" data-lesson-request>Request a lesson <span aria-hidden="true">→</span></a>
-                <a class="button secondary" href="#kontakt" data-open-chat>Write me <span aria-hidden="true">→</span></a>
+            <!-- free intro call combined with the prices (David, 2026-11-06) – replaces the separate contact section -->
+            <div class="price-consult" id="kontakt">
+                <div class="price-consult-copy"><p class="eyebrow">FREE INTRO CALL</p><h3>Not sure what fits? <mark class="hl">Let’s talk.</mark></h3><p>15 minutes, free and without obligation – your level, your goals and the lessons that fit your budget.</p></div>
+                <div class="price-consult-actions">
+                    <a class="button primary" href="https://cal.com/nawee/15min" target="_blank" rel="noopener">Book a free call <span aria-hidden="true">→</span></a>
+                    <a class="button secondary" href="#kontakt" data-lesson-request>Request a lesson <span aria-hidden="true">→</span></a>
+                    <a class="price-consult-chat" href="#kontakt" data-open-chat>Write me →</a>
+                </div>
+                <p class="price-consult-note">💬 I reply personally – usually within a few hours. · Or practice on your own for free on <a href="https://learn.nawee.net/index-en.html">learn.nawee.net</a></p>
             </div>
+            <p class="price-note">Online lessons have no extra costs. For lessons in person I add travel costs depending on the distance – I’ll tell you the total upfront. No VAT is charged under the German small business rule (§ 19 UStG).</p>
         </section>
 
 
@@ -240,18 +245,6 @@
             <p class="testimonial-note">All quotes come from real clients and are published with their permission.</p>
         </section>
 
-        <section class="section contact-band" id="kontakt">
-            <div class="contact-band-inner">
-                <p class="eyebrow">FREE INITIAL CONSULTATION</p>
-                <h2>Let’s find out <mark class="hl">what you need.</mark></h2>
-                <p class="contact-band-lead">A free 15-minute call – your level, your goals and the lessons that fit your budget.</p>
-                <div class="hero-actions">
-                    <a class="button primary" href="https://cal.com/nawee/15min" target="_blank" rel="noopener">Book a free call <span aria-hidden="true">→</span></a>
-                    <a class="button secondary" href="#kontakt" data-open-chat>Write me <span aria-hidden="true">→</span></a>
-                </div>
-                <p class="contact-band-note">💬 I reply personally – usually within a few hours.</p>
-            </div>
-        </section>
 
     </main>
 
@@ -325,7 +318,7 @@
     <div class="sticky-cta">
         <a class="button primary" href="https://cal.com/nawee/15min" target="_blank" rel="noopener">Book a free consultation <span>→</span></a>
     </div>
-    <script src="script.js?v=20261106i"></script>
+    <script src="script.js?v=20261106j"></script>
     <script src="chat-widget.js?v=20261105v"></script>
     <script src="testimonials.js?v=20261105v"></script>
 <script>

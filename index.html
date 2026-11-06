@@ -9,9 +9,9 @@
     <link rel="alternate" hreflang="de" href="https://nawee.net/">
     <link rel="alternate" hreflang="en" href="https://nawee.net/index-en.html">
     <link rel="alternate" hreflang="x-default" href="https://nawee.net/">
-    <link rel="stylesheet" href="style.css?v=20261106i">
-    <link rel="stylesheet" href="brand.css?v=20261106i">
-    <link rel="stylesheet" href="dark.css?v=20261106i">
+    <link rel="stylesheet" href="style.css?v=20261106j">
+    <link rel="stylesheet" href="brand.css?v=20261106j">
+    <link rel="stylesheet" href="dark.css?v=20261106j">
     <script>try{var t=localStorage.getItem("dn-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
     
     <link rel="icon" type="image/png" href="assets/favicon-nawee.png">
@@ -165,12 +165,17 @@
                 <button type="button" class="biz-close" data-biz-close>Schließen <span aria-hidden="true">▴</span></button>
             </details>
             <p class="price-afford">💬 <strong>Sind Ihnen die Preise zu hoch?</strong> Schreiben Sie mir – wir finden einen Preis, der passt. Lassen Sie sich bitte nicht von der Zahl auf der Website davon abhalten, Stunden zu buchen. <a href="#kontakt" data-open-chat>Schreiben Sie mir →</a></p>
-            <p class="price-free">Kostenlos starten: ein 15-minütiges Kennenlernen und kostenlos üben auf <a href="https://learn.nawee.net/">learn.nawee.net</a>.</p>
-            <p class="price-note">Online-Unterricht ohne Zusatzkosten. Bei Unterricht vor Ort kommen je nach Entfernung Fahrtkosten hinzu – den Gesamtpreis nenne ich Ihnen vorher. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
-            <div class="hero-actions price-actions">
-                <a class="button primary" href="#kontakt" data-lesson-request>Stunde anfragen <span aria-hidden="true">→</span></a>
-                <a class="button secondary" href="#kontakt" data-open-chat>Schreiben Sie mir <span aria-hidden="true">→</span></a>
+            <!-- free intro call combined with the prices (David, 2026-11-06) – replaces the separate contact section -->
+            <div class="price-consult" id="kontakt">
+                <div class="price-consult-copy"><p class="eyebrow">KOSTENLOSES ERSTGESPRÄCH</p><h3>Nicht sicher, was passt? <mark class="hl">Lassen Sie uns sprechen.</mark></h3><p>15 Minuten, kostenlos und unverbindlich – Ihr Niveau, Ihre Ziele und der Unterricht, der zu Ihrem Budget passt.</p></div>
+                <div class="price-consult-actions">
+                    <a class="button primary" href="https://cal.com/nawee/15min" target="_blank" rel="noopener">Kostenloses Gespräch buchen <span aria-hidden="true">→</span></a>
+                    <a class="button secondary" href="#kontakt" data-lesson-request>Stunde anfragen <span aria-hidden="true">→</span></a>
+                    <a class="price-consult-chat" href="#kontakt" data-open-chat>Schreiben Sie mir →</a>
+                </div>
+                <p class="price-consult-note">💬 Ich antworte persönlich – meist innerhalb weniger Stunden. · Oder kostenlos selbst üben auf <a href="https://learn.nawee.net/">learn.nawee.net</a></p>
             </div>
+            <p class="price-note">Online-Unterricht ohne Zusatzkosten. Bei Unterricht vor Ort kommen je nach Entfernung Fahrtkosten hinzu – den Gesamtpreis nenne ich Ihnen vorher. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
         </section>
 
 
@@ -240,18 +245,6 @@
             <p class="testimonial-note">Alle Zitate stammen von echten Kundinnen und Kunden und werden mit ihrer Zustimmung veröffentlicht.</p>
         </section>
 
-        <section class="section contact-band" id="kontakt">
-            <div class="contact-band-inner">
-                <p class="eyebrow">KOSTENLOSES ERSTGESPRÄCH</p>
-                <h2>Lassen Sie uns herausfinden, <mark class="hl">was Sie brauchen.</mark></h2>
-                <p class="contact-band-lead">Ein kostenloses 15-Minuten-Gespräch – Ihr Niveau, Ihre Ziele und der Unterricht, der zu Ihrem Budget passt.</p>
-                <div class="hero-actions">
-                    <a class="button primary" href="https://cal.com/nawee/15min" target="_blank" rel="noopener">Kostenloses Gespräch buchen <span aria-hidden="true">→</span></a>
-                    <a class="button secondary" href="#kontakt" data-open-chat>Schreiben Sie mir <span aria-hidden="true">→</span></a>
-                </div>
-                <p class="contact-band-note">💬 Ich antworte persönlich – meist innerhalb weniger Stunden.</p>
-            </div>
-        </section>
 
     </main>
 
@@ -325,7 +318,7 @@
     <div class="sticky-cta">
         <a class="button primary" href="https://cal.com/nawee/15min" target="_blank" rel="noopener">Kostenloses Erstgespräch buchen <span>→</span></a>
     </div>
-    <script src="script.js?v=20261106i"></script>
+    <script src="script.js?v=20261106j"></script>
     <script src="chat-widget.js?v=20261105v"></script>
     <script src="testimonials.js?v=20261105v"></script>
 <script>
