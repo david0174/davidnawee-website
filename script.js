@@ -270,14 +270,61 @@ document.querySelectorAll(".hero-audience").forEach((tab) => {
 })();
 
 
-// DARK ONLY (David, 2026-11-03): nawee.net always uses the dark look – no light/dark switch any more.
-// <html data-theme="dark"> is set in every page; this only swaps the logo to its white-lettering version.
+// THEME BUTTON – light/dark (back again, David 2026-11-06). Without a choice the site follows the device (dark.css); the choice is remembered
+// in localStorage ("dn-theme") and set on <html data-theme> by a tiny script in <head> before the page paints.
 (function () {
-    document.documentElement.dataset.theme = "dark";
-    document.querySelectorAll("img.logo").forEach((img) => {
-        img.src = img.src.replace(/logo_notext(-dark)?\.png/, "logo_notext-dark.png");
-    });
-    // tab icon: the blue 'N' tile (David, 2026-11-03) – no dark variant any more
+    const root = document.documentElement;
+    const media = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+    const isDark = () => root.dataset.theme ? root.dataset.theme === "dark" : !!(media && media.matches);
+    const lang = (root.lang || "en").slice(0, 2);
+    const LABELS = { de: ["Dunkles Design", "Helles Design"], he: ["מצב כהה", "מצב בהיר"], en: ["Dark mode", "Light mode"] };
+    const [toDark, toLight] = LABELS[lang] || LABELS.en;
+    const MOON = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.7 14.6A8.5 8.5 0 0 1 9.4 3.3a.7.7 0 0 0-.9-.9A10 10 0 1 0 21.6 15.5a.7.7 0 0 0-.9-.9z"/></svg>';
+    const SUN = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1.8v2.4M12 19.8v2.4M1.8 12h2.4M19.8 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M4.8 19.2l1.7-1.7M17.5 6.5l1.7-1.7"/></g></svg>';
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "theme-toggle";
+
+    // on small screens the switch sits inside the burger menu as a labelled row (the language button stays in the header)
+    const menuButton = document.createElement("button");
+    menuButton.type = "button";
+    menuButton.className = "theme-toggle-row";
+
+    function render() {
+        const dark = isDark();
+        button.innerHTML = dark ? SUN : MOON;
+        button.setAttribute("aria-label", dark ? toLight : toDark);
+        button.title = dark ? toLight : toDark;
+        menuButton.innerHTML = `${dark ? SUN : MOON}<span>${dark ? toLight : toDark}</span>`;
+        // Nawee logo: white lettering in dark mode (same files as nawee.net)
+        document.querySelectorAll("img.logo").forEach((img) => {
+            img.src = img.src.replace(/logo_notext(-dark)?\.png/, dark ? "logo_notext-dark.png" : "logo_notext.png");
+        });
+        // tab icon: grey-to-black N in dark mode
+        document.querySelectorAll('link[rel="icon"]').forEach((link) => {
+            link.href = link.href.replace(/favicon-nawee(-dark)?\.png/, dark ? "favicon-nawee-dark.png" : "favicon-nawee.png");
+        });
+    }
+
+    const toggleTheme = () => {
+        const next = isDark() ? "light" : "dark";
+        root.dataset.theme = next;
+        try { localStorage.setItem("dn-theme", next); } catch (e) { /* private mode: works until reload */ }
+        render();
+    };
+    button.addEventListener("click", toggleTheme);
+    menuButton.addEventListener("click", toggleTheme);
+    if (media && media.addEventListener) media.addEventListener("change", render);
+
+    const header = document.querySelector(".site-header");
+    if (header) {
+        const spot = header.querySelector(".language-switch, .menu-switch");
+        if (spot) spot.before(button); else header.appendChild(button);
+        const menu = header.querySelector(".mobile-menu");
+        if (menu) { const langs = menu.querySelector(".mobile-menu-languages"); if (langs) langs.before(menuButton); else menu.appendChild(menuButton); }
+    }
+    render();
 })();
 
 // Newsletter (English tips, learning list – footer strip on every page): send the form to Brevo in the background and show the result in place
