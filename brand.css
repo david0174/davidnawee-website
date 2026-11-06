@@ -1651,3 +1651,11 @@ html[data-theme="light"] .tutor-more { color: #1554c0; }
     html:not([data-theme="dark"]) .tutor-tags li { border-color: #d3dceb; background: #f5f8fc; color: #2a3a55; }
     html:not([data-theme="dark"]) .tutor-more { color: #1554c0; }
 }
+
+/* hover colours per card (2026-11-06), both modes: General English blue, Professional gold; David blue, Omer green (ids beat the old gold hover) */
+#angebote .price-grid .price-card:nth-child(1):hover, #angebote .price-grid .price-card:nth-child(1):focus-within { border-color: #4d8fe0; box-shadow: 0 0 0 1px rgba(77, 143, 224, .3), 0 16px 40px rgba(77, 143, 224, .32); }
+#angebote .price-grid .price-card:nth-child(2):hover, #angebote .price-grid .price-card:nth-child(2):focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .3), 0 16px 40px rgba(245, 197, 66, .34); }
+#lehrer .tutor-card:nth-child(1):hover, #lehrer .tutor-card:nth-child(1):focus-within { border-color: #4d8fe0; box-shadow: 0 0 0 1px rgba(77, 143, 224, .3), 0 16px 40px rgba(77, 143, 224, .32); }
+#lehrer .tutor-card:nth-child(2):hover, #lehrer .tutor-card:nth-child(2):focus-within { border-color: #3fae6a; box-shadow: 0 0 0 1px rgba(63, 174, 106, .3), 0 16px 40px rgba(63, 174, 106, .32); }
+#lehrer .tutor-card:nth-child(1) .tutor-photo { border-color: #4d8fe0; }
+#lehrer .tutor-card:nth-child(2) .tutor-photo { border-color: #3fae6a; }
