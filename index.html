@@ -9,9 +9,9 @@
     <link rel="alternate" hreflang="de" href="https://nawee.net/">
     <link rel="alternate" hreflang="en" href="https://nawee.net/index-en.html">
     <link rel="alternate" hreflang="x-default" href="https://nawee.net/">
-    <link rel="stylesheet" href="style.css?v=20261106e">
-    <link rel="stylesheet" href="brand.css?v=20261106e">
-    <link rel="stylesheet" href="dark.css?v=20261106e">
+    <link rel="stylesheet" href="style.css?v=20261106g">
+    <link rel="stylesheet" href="brand.css?v=20261106g">
+    <link rel="stylesheet" href="dark.css?v=20261106g">
     <script>try{var t=localStorage.getItem("dn-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
     
     <link rel="icon" type="image/png" href="assets/favicon-nawee.png">
@@ -38,7 +38,7 @@
 
         <nav aria-label="Hauptnavigation">
             <a href="index.html#angebote">Preise</a>
-            <a href="https://learn.nawee.net/">Kostenlos üben</a>
+            <a class="nav-free" href="https://learn.nawee.net/">Kostenlos üben <span class="nav-free-badge">GRATIS</span></a>
             <a href="ueber-mich.html">Über mich</a>
             <a class="nav-cta" href="https://cal.com/nawee/15min" target="_blank" rel="noopener">Erstgespräch buchen</a>
             <div class="language-switch">
@@ -83,17 +83,20 @@
                 <p class="eyebrow">ENGLISCH MIT MUTTERSPRACHLER · HANNOVER &amp; ONLINE</p>
                 <h1>Englisch sprechen – <mark class="hl">mit Sicherheit.</mark></h1>
                 <p class="banner-sub">Unterricht für jedes Niveau und jedes Budget – mit einem Muttersprachler aus den USA, online oder in Hannover.</p>
+                <!-- two paths (David, 2026-11-06): lessons with David OR learn on your own for free on learn.nawee.net – equally visible -->
+                <div class="two-paths">
+                    <div class="path path--lessons"><p class="path-tag">🎓 Mit mir lernen</p><h2 class="path-h">Einzelunterricht mit einem Muttersprachler</h2><p class="path-p">Online oder in Hannover – auf Ihre Ziele zugeschnitten. Ab 30 €.</p>
+                        <div class="path-actions"><a class="button primary" href="https://cal.com/nawee/15min" target="_blank" rel="noopener">Kostenloses Erstgespräch <span aria-hidden="true">→</span></a><a class="path-more" href="#angebote">Zu den Preisen →</a></div></div>
+                    <span class="path-or" aria-hidden="true">oder</span>
+                    <div class="path path--free"><p class="path-tag">📱 Selbst lernen <span class="path-badge">GRATIS</span></p><h2 class="path-h">Kostenlos auf learn.nawee.net</h2><p class="path-p">Lektionen, Bildkarten, Lesetexte und Spiele – ohne Anmeldung, sofort loslegen.</p>
+                        <div class="path-actions"><a class="button button-gold" href="https://learn.nawee.net/" target="_blank" rel="noopener">Jetzt kostenlos lernen <span aria-hidden="true">→</span></a></div></div>
+                </div>
                 <p class="banner-tagline"><span>Lernen. Kommunizieren. Anpassen. Wachsen.</span></p>
                 <ul class="banner-pillars">
                     <li><a class="pillar pillar--ai" href="#angebote"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 10a2 2 0 0 1-2 2H7l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 8h1.5a2 2 0 0 1 2 2v11l-4-4H12a2 2 0 0 1-2-2v-1"/><path d="M6.5 7h.01M9 7h.01M11.5 7h.01"/></svg><strong>Sprechen &amp; Sicherheit</strong><span>Echte Gespräche – vom Small Talk bis zum Meeting, ohne Angst vor Fehlern.</span></a></li>
                     <li><a class="pillar pillar--biz" href="#business-english"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18M10 12v2h4v-2"/></svg><strong>Business English</strong><span>Meetings, Präsentationen, E-Mails und Vorstellungsgespräche auf Englisch.</span></a></li>
                     <li><a class="pillar pillar--com" href="#angebote"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c2 2 10 2 12 0v-5"/><path d="M22 9v6"/></svg><strong>Schule, Prüfungen &amp; Anfänger</strong><span>Vom ersten Wort bis zur Prüfungsvorbereitung – in Ihrem Tempo.</span></a></li>
                 </ul>
-                <div class="hero-actions">
-                    <a class="button primary" href="https://cal.com/nawee/15min" target="_blank" rel="noopener">Kostenloses Erstgespräch <span aria-hidden="true">→</span></a>
-                    <a class="button secondary" href="#angebote">Zu den Preisen <span aria-hidden="true">→</span></a>
-                </div>
-                <p class="hero-practice">Oder üben Sie gleich jetzt kostenlos auf <a href="https://learn.nawee.net/" target="_blank" rel="noopener">learn.nawee.net →</a></p>
             </div>
         </section>
 
@@ -322,7 +325,7 @@
     <div class="sticky-cta">
         <a class="button primary" href="https://cal.com/nawee/15min" target="_blank" rel="noopener">Kostenloses Erstgespräch buchen <span>→</span></a>
     </div>
-    <script src="script.js?v=20261106e"></script>
+    <script src="script.js?v=20261106g"></script>
     <script src="chat-widget.js?v=20261105v"></script>
     <script src="testimonials.js?v=20261105v"></script>
 <script>

@@ -417,3 +417,13 @@ footer.ft { padding-top: 28px; }
 a.text-link { color: #f5c542; font-weight: 700; }
 a.text-link:hover, a.text-link:focus-visible { color: #ffd966; text-decoration: underline; text-underline-offset: 4px; }
 .card-more { color: #f5c542; }
+/* two paths in the hero (2026-11-06) */
+.path--lessons { background: rgba(15, 30, 60, .55); border-color: #3d5378; }
+.path--free { background: linear-gradient(160deg, rgba(245, 197, 66, .16), rgba(15, 30, 60, .55) 70%); border-color: #f5c542; box-shadow: 0 0 28px rgba(245, 197, 66, .18); }
+.path-tag { color: #9cbcf0; } .path--free .path-tag { color: #f5c542; }
+.path-h { color: #ffffff; } .path-p { color: #c9d6ec; } .path-more { color: #f5c542; } .path-or { color: #8fa0b8; }
+.path-badge, .nav-free-badge { background: #f5c542; color: #0d1b3a; }
+/* burger: white lines on the dark header on every phone (iPhone, 2026-11-06) */
+.site-header .menu-toggle span { background: #ffffff; }
+.button.button-gold { background: #f5c542; border-color: #f5c542; color: #14213d; }
+.button.button-gold:hover, .button.button-gold:focus-visible { background: #f8d264; border-color: #f8d264; color: #14213d; }
