@@ -443,3 +443,4 @@ a.text-link:hover, a.text-link:focus-visible { color: #ffd966; text-decoration: 
 .tutor-card:hover, .tutor-card:focus-within { border-color: #f5c542; box-shadow: 0 0 0 1px rgba(245, 197, 66, .2), 0 0 36px rgba(245, 197, 66, .28); }
 .tutor-card h3 { color: #ffffff; } .tutor-role { color: #f5c542; } .tutor-bio { color: #c9d6ec; }
 .tutor-tags li { border-color: #3d5378; background: #22314d; color: #dbe5f5; } .tutor-more { color: #f5c542; }
+.tutor-langs { color: #dbe5f5; } .tutor-langs-h { color: #ffffff; }

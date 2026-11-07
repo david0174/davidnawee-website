@@ -1659,3 +1659,12 @@ html[data-theme="light"] .tutor-more { color: #1554c0; }
 #lehrer .tutor-card:nth-child(2):hover, #lehrer .tutor-card:nth-child(2):focus-within { border-color: #3fae6a; box-shadow: 0 0 0 1px rgba(63, 174, 106, .3), 0 16px 40px rgba(63, 174, 106, .32); }
 #lehrer .tutor-card:nth-child(1) .tutor-photo { border-color: #4d8fe0; }
 #lehrer .tutor-card:nth-child(2) .tutor-photo { border-color: #3fae6a; }
+/* languages each teacher speaks (2026-11-07) */
+.tutor-langs { margin: -4px 0 12px; font-size: .92rem; font-weight: 600; }
+.tutor-langs-h { font-weight: 800; }
+html[data-theme="light"] .tutor-langs { color: #2a3a55; }
+html[data-theme="light"] .tutor-langs-h { color: #0d2a6b; }
+@media (prefers-color-scheme: light) {
+    html:not([data-theme="dark"]) .tutor-langs { color: #2a3a55; }
+    html:not([data-theme="dark"]) .tutor-langs-h { color: #0d2a6b; }
+}
